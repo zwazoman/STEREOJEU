@@ -32,12 +32,24 @@ public class GrossesBidouilles : MonoBehaviour
     [field : SerializeField] 
     public EventReference _grosConnard { get; private set; }
 
-    [SerializeField] TimelineClip _grosClip;
+    [SerializeField] TimelineAsset _grosClip;
+
+    [SerializeField] SignalAsset _grosSignal;
 
     private void Start()
     {
-        
+        TrackAsset track = _grosClip.GetOutputTrack(1);
+        if (track is SignalTrack)
+        {
+            print("c'est un signal");
+            SignalTrack signal = (SignalTrack)track;
+            SignalEmitter emitter = signal.CreateMarker<SignalEmitter>(15.00);
+            emitter.asset = _grosSignal;
+        }
     }
 
-
+    public void SAMERE()
+    {
+        print("SA MERE");
+    }
 }
