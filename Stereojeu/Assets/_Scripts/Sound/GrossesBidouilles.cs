@@ -1,19 +1,20 @@
 using FMODUnity;
 using UnityEngine;
+using UnityEngine.Timeline;
 
-public class FMODEventManager : MonoBehaviour
+public class GrossesBidouilles : MonoBehaviour
 {
     #region Singleton
-    private static FMODEventManager instance;
+    private static GrossesBidouilles instance;
 
-    public static FMODEventManager Instance
+    public static GrossesBidouilles Instance
     {
         get
         {
             if (instance == null)
             {
                 GameObject go = new GameObject("FMOD Event Manager");
-                instance = go.AddComponent<FMODEventManager>();
+                instance = go.AddComponent<GrossesBidouilles>();
             }
             return instance;
         }
@@ -28,10 +29,15 @@ public class FMODEventManager : MonoBehaviour
     }
     #endregion
 
-
     [field : SerializeField] 
     public EventReference _grosConnard { get; private set; }
 
+    [SerializeField] TimelineClip _grosClip;
+
+    private void Start()
+    {
+        
+    }
 
 
 }
