@@ -139,13 +139,13 @@ class ScriptUsageTimeline : MonoBehaviour
     {
         switch (markerName)
         {
-            case "Touch":
+            case "Touch anticipation":
                 OnTouchMarker.Invoke();
                 break;
-            case "Swipe":
+            case "Swipe anticipation":
                 OnSwipeMarker.Invoke();
                 break;
-            case "Spin":
+            case "Spin anticipation":
                 OnSpinMarker.Invoke();
                 break;
         }
