@@ -216,6 +216,72 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &315963946
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 315963948}
+  - component: {fileID: 315963947}
+  m_Layer: 0
+  m_Name: EVENTS FMOD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &315963947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315963946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27a7a214a77cf824781a6af00fe46699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName:
+    Guid:
+      Data1: 1441483135
+      Data2: 1199943124
+      Data3: 1074534538
+      Data4: 1464257452
+    Path: event:/MainTimeline
+  OnBar:
+    m_PersistentCalls:
+      m_Calls: []
+  OnBeat:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTouchMarker:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSwipeMarker:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSpinMarker:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!4 &315963948
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315963946}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1011173719
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,18 +405,18 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1745481857}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 96d1b56eab9042747a57766bedffbba9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   <_grosConnard>k__BackingField:
     Guid:
-      Data1: 1812965777
-      Data2: 1148232581
-      Data3: 142615957
-      Data4: -1021815715
-    Path: event:/connard
+      Data1: 1441483135
+      Data2: 1199943124
+      Data3: 1074534538
+      Data4: 1464257452
+    Path: event:/MainTimeline
   _grosClip: {fileID: 11400000, guid: 232545dc6f544a04baa5925333ea208c, type: 2}
   _grosSignal: {fileID: 11400000, guid: 46961226a1fa304429aa8a29abfe25ea, type: 2}
 --- !u!4 &1745481859
@@ -457,3 +523,4 @@ SceneRoots:
   - {fileID: 114351406}
   - {fileID: 1745481859}
   - {fileID: 2025740103}
+  - {fileID: 315963948}

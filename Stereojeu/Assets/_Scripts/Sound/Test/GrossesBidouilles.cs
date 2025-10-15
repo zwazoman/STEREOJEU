@@ -38,14 +38,21 @@ public class GrossesBidouilles : MonoBehaviour
 
     private void Start()
     {
-        TrackAsset track = _grosClip.GetOutputTrack(1);
-        if (track is SignalTrack)
-        {
-            print("c'est un signal");
-            SignalTrack signal = (SignalTrack)track;
-            SignalEmitter emitter = signal.CreateMarker<SignalEmitter>(15.00);
-            emitter.asset = _grosSignal;
-        }
+        RuntimeManager.PlayOneShot(_grosConnard);
+
+        
+
+
+        SAMERE();
+
+        //TrackAsset track = _grosClip.GetOutputTrack(1);
+        //if (track is SignalTrack)
+        //{
+        //    print("c'est un signal");
+        //    SignalTrack signal = (SignalTrack)track;
+        //    SignalEmitter emitter = signal.CreateMarker<SignalEmitter>(15.00);
+        //    emitter.asset = _grosSignal;
+        //}
     }
 
     public void SAMERE()
