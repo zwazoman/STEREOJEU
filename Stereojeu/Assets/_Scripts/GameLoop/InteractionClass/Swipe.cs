@@ -9,13 +9,14 @@ public class Swipe : Interactable
 
     private bool _isDragging;
 
-    [SerializeField] private float _tolerance = 30f; // marge d’erreur sur l’angle total
+    [SerializeField] private float _tolerance = 30f;
 
     public Vector2 CorrectDirection;
-    public bool SuccesSwipe;
+    public bool SuccesSwipe { get; private set; }
 
     public override void InteractionStart()
     {
+        if (!IsActive) return;
         _isDragging = true;
         _startPos = GetPointerPosition();
         InteractionWainting().Forget();
@@ -24,6 +25,7 @@ public class Swipe : Interactable
 
     public override void InteractionStop()
     {
+        if (!IsActive) return;
         _isDragging = false;
         _endPos = GetPointerPosition();
 

@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class GameLoop : MonoBehaviour
 {
-    [SerializeField] private List<Press> _pressItemList = new();
-    [SerializeField] private List<Swipe> _swipeItemList = new();
-    [SerializeField] private List<Rotate> _rotateItemList = new();
+    [SerializeField] private List<Interactable> _interactableItemList = new();
+
+    [SerializeField] private QTEResults _results;
+    [SerializeField] private QTECreator _qTECreator;
 
     private void Start()
     {
@@ -15,13 +16,38 @@ public class GameLoop : MonoBehaviour
 
     private async UniTaskVoid Game()
     {
-        print("start");
-        await UniTask.WaitUntil(() => _pressItemList[0].WasPress);
-        print("Press");
-        await UniTask.WaitUntil(() => _swipeItemList[0].SuccesSwipe);
-        print("Swipe");
-        await UniTask.WaitUntil(() => _rotateItemList[0].SuccesRotation);
-        print("Rotation");
+        foreach (Interactable item in _interactableItemList)
+        {
+            item.Activate();
+            _results.PreventNextStep(item.gameObject);
+
+            if (item is Press press)
+            {
+                _qTECreator.CreateQTE(3, press).Forget();
+                await UniTask.WaitUntil(() => press.WasPress);
+            }
+            else if (item is Swipe swipe)
+            {
+                _qTECreator.CreateQTE(3, swipe).Forget();
+                await UniTask.WaitUntil(() => swipe.SuccesSwipe);
+            }
+            else if (item is Rotate rotate)
+            {
+                _qTECreator.CreateQTE(3, rotate).Forget();
+                await UniTask.WaitUntil(() => rotate.SuccesRotation);
+            }
+
+            item.Deactivate();
+        }
     }
 
+
+    //print("start");
+    //_verifInput.PreventNextStape(_pressItemList[0].gameObject);
+    //await UniTask.WaitUntil(() => _interactableItemList[0].WasPress);
+    //print("Press");
+    //await UniTask.WaitUntil(() => _swipeItemList[0].SuccesSwipe);
+    //print("Swipe");
+    //await UniTask.WaitUntil(() => _rotateItemList[0].SuccesRotation);
+    //print("Rotation");
 }

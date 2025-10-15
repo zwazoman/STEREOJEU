@@ -12,10 +12,11 @@ public class Rotate : Interactable
     private float _totalRotation = 0f;
     private bool _isDragging;
 
-    public bool SuccesRotation;
+    public bool SuccesRotation { get; private set; }
 
     public override void InteractionStart()
     {
+        if (!IsActive) return;
         _isDragging = true;
         _totalRotation = 0f;
 
@@ -26,6 +27,7 @@ public class Rotate : Interactable
 
     public override void InteractionStop()
     {
+        if (!IsActive) return;
         _isDragging = false;
         print(_totalRotation);
         SuccesRotation = Mathf.Abs(_totalRotation) >= (_requiredRotation - _tolerance);

@@ -2,12 +2,13 @@ public class Press : Interactable
 {
     public bool WasPress { get; private set; }
 
-    public override void InteractionStart() { WasPress = true; }
-
-    public override void InteractionStop()
+    public override void InteractionStart() 
     {
-        throw new System.NotImplementedException();
+        if (!IsActive) return;
+        WasPress = true;
     }
+
+    public override void InteractionStop() { }
 
     public void ResetState() { WasPress = false; }
 }
