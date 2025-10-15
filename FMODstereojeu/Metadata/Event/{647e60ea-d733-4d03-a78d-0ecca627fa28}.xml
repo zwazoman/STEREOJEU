@@ -25,6 +25,7 @@
 		<relationship name="markerTracks">
 			<destination>{a6aceb4b-0bc6-4ec4-a5d7-2b47a72a660b}</destination>
 			<destination>{b36b7346-5e31-4589-b560-8e98de44a6e2}</destination>
+			<destination>{586a60d5-1e77-48be-8975-6c670d825db3}</destination>
 		</relationship>
 		<relationship name="timeline">
 			<destination>{69d08387-2fce-470e-856a-a7d7883a1315}</destination>
@@ -54,6 +55,7 @@
 	<object class="EventAutomatableProperties" id="{8baf2f04-69e2-44f6-b798-f87aa84ead06}" />
 	<object class="MarkerTrack" id="{a6aceb4b-0bc6-4ec4-a5d7-2b47a72a660b}" />
 	<object class="MarkerTrack" id="{b36b7346-5e31-4589-b560-8e98de44a6e2}" />
+	<object class="MarkerTrack" id="{586a60d5-1e77-48be-8975-6c670d825db3}" />
 	<object class="Timeline" id="{69d08387-2fce-470e-856a-a7d7883a1315}" />
 	<object class="EventMixerMaster" id="{d2c2fcf7-6cf6-483f-a666-93163906f087}">
 		<relationship name="effectChain">
