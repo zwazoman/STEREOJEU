@@ -5,6 +5,31 @@ using UnityEngine.Events;
 
 class ScriptUsageTimeline : MonoBehaviour
 {
+    #region Singleton
+    private static ScriptUsageTimeline instance;
+
+    public static ScriptUsageTimeline Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                GameObject go = new GameObject("Script Usage Time line");
+                instance = go.AddComponent<ScriptUsageTimeline>();
+            }
+            return instance;
+        }
+    }
+
+    private void Awake()
+    {
+        if (instance == null || instance == this)
+            instance = this;
+        else
+            Destroy(this);
+    }
+    #endregion
+
     class TimelineInfo
     {
         public int CurrentMusicBar = 0;
@@ -15,9 +40,13 @@ class ScriptUsageTimeline : MonoBehaviour
     GCHandle timelineHandle;
 
     public FMODUnity.EventReference EventName;
+
+    [Header("Tempo")]
     public UnityEvent OnBar;
     public UnityEvent OnBeat;
 
+    [Header("Markers")]
+    public UnityEvent OnMarker;
     public UnityEvent OnTouchMarker;
     public UnityEvent OnSwipeMarker;
     public UnityEvent OnSpinMarker;
@@ -43,7 +72,6 @@ class ScriptUsageTimeline : MonoBehaviour
         musicInstance.setCallback(beatCallback, FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_BEAT | FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_MARKER);
         musicInstance.start();
     }
-
     void OnDestroy()
     {
         musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
@@ -92,6 +120,7 @@ class ScriptUsageTimeline : MonoBehaviour
                     {
                         var parameter = (FMOD.Studio.TIMELINE_MARKER_PROPERTIES)Marshal.PtrToStructure(parameterPtr, typeof(FMOD.Studio.TIMELINE_MARKER_PROPERTIES));
                         timelineInfo.LastMarker = parameter.name;
+                        OnMarker.Invoke();
                         ActivateEventWithMarker(timelineInfo.LastMarker);
                         break;
                     }
@@ -110,13 +139,13 @@ class ScriptUsageTimeline : MonoBehaviour
     {
         switch (markerName)
         {
-            case "Touch":
+            case "Touch anticipation":
                 OnTouchMarker.Invoke();
                 break;
-            case "Swipe":
+            case "Swipe anticipation":
                 OnSwipeMarker.Invoke();
                 break;
-            case "Spin":
+            case "Spin anticipation":
                 OnSpinMarker.Invoke();
                 break;
         }
