@@ -226,6 +226,7 @@ GameObject:
   m_Component:
   - component: {fileID: 315963948}
   - component: {fileID: 315963947}
+  - component: {fileID: 315963949}
   m_Layer: 0
   m_Name: EVENTS FMOD
   m_TagString: Untagged
@@ -297,6 +298,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &315963949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315963946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b0e04e2572f9a940a47465f6f3c2f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  Parameter: Loop Param
+  TriggerEvent: 0
+  Value: 0
 --- !u!1 &1011173719
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,6 +443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _director: {fileID: 2025740102}
   _barDuration: 2.181818
+  ShouldLoop: 1
 --- !u!4 &1502643068
 Transform:
   m_ObjectHideFlags: 0
@@ -587,16 +605,31 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: 46961226a1fa304429aa8a29abfe25ea, type: 2}
+    - {fileID: 11400000, guid: 18d323842845ceb498a6979cb04f71b2, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1502643066}
-          m_TargetAssemblyTypeName: 
-          m_MethodName: 
+        - m_Target: {fileID: 1502643067}
+          m_TargetAssemblyTypeName: TimelineUtilities, Assembly-CSharp
+          m_MethodName: Loop
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: 
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 315963949}
+          m_TargetAssemblyTypeName: FMODUnity.StudioGlobalParameterTrigger, FMODUnity
+          m_MethodName: TriggerParameters
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
