@@ -2,7 +2,7 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class SpinInteraction : Interaction //Marche pas mdr
+public class SpinInteraction : Interactable //Marche pas mdr
 {
     [SerializeField] private Transform _centerTransform;
     [SerializeField] private float _requiredRotation = 360f;

@@ -4,9 +4,9 @@ using UnityEngine;
 public class QTETimer
 {
     private float timeRemaining;
-    private Interaction _interactable;
+    private Interactable _interactable;
 
-    public QTETimer(float duration, Interaction item)
+    public QTETimer(float duration, Interactable item)
     {
         timeRemaining = duration;
         _interactable = item;
