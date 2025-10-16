@@ -2,7 +2,7 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Swipe : Interactable
+public class SwipeInteraction : Interaction
 {
     private Vector2 _startPos;
     private Vector2 _endPos;

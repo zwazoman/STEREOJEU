@@ -2,7 +2,7 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class Rotate : Interactable
+public class SpinInteraction : Interaction //Marche pas mdr
 {
     [SerializeField] private Transform _centerTransform;
     [SerializeField] private float _requiredRotation = 360f;
@@ -42,10 +42,10 @@ public class Rotate : Interactable
             Vector2 currentPos = GetPointerPosition();
             Vector2 currentVector = (currentPos - (Vector2)_centerTransform.position).normalized;
 
-            float signedAngle = Vector2.Angle(_startVector, currentVector); // Calcul de l’angle entre le vecteur de départ et le vecteur courant
+            float signedAngle = Vector2.Angle(_startVector, currentVector);
 
-            _totalRotation += signedAngle; // cumul de l’angle parcouru
-            _startVector = currentVector;  // met à jour pour la prochaine frame
+            _totalRotation += signedAngle;
+            _startVector = currentVector;
 
         }
         InteractionStop();

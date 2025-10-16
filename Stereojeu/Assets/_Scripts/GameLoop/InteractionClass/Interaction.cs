@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public abstract class Interactable : MonoBehaviour
+public abstract class Interaction : MonoBehaviour
 {
     public bool IsActive { get; private set; } = false;
 

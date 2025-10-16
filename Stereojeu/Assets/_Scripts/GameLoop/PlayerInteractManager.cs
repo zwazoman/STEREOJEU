@@ -7,7 +7,7 @@ public class PlayerInteractMananger : MonoBehaviour
     [SerializeField] private LayerMask detectableLayers;
     [SerializeField] private Camera targetCamera;
 
-    private Interactable _interactable;
+    private Interaction _interactable;
 
     private bool _isHolding;
 
@@ -45,11 +45,11 @@ public class PlayerInteractMananger : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, detectableLayers))
         {
-            _interactable = hit.collider.GetComponent<Interactable>();
+            _interactable = hit.collider.GetComponent<Interaction>();
             if (_interactable != null)
             {
                 _isHolding = true;
-                if (_interactable is not Press)
+                if (_interactable is not ButtonInteraction)
                 {
                     HoldInput().Forget();
                 }
