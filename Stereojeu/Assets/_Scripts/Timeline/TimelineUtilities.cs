@@ -10,6 +10,8 @@ public class TimelineUtilities : MonoBehaviour
     [Header("Parameters")]
     [SerializeField] float _barDuration = 2.181818f;
 
+    [HideInInspector] public bool ShouldLoop = true;
+
     private void Awake()
     {
         _director = FindFirstObjectByType<PlayableDirector>();
