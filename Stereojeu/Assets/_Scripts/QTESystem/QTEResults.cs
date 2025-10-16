@@ -15,8 +15,8 @@ public class QTEResults : MonoBehaviour
     public void PreventNextStep(GameObject go)
     {
         MeshRenderer mesh = go.GetComponent<MeshRenderer>();
-        _baseMaterial = mesh.material;
-        mesh.material = _nextMaterial;
+        _baseMaterial = mesh.sharedMaterial;
+        mesh.sharedMaterial = _nextMaterial;
     }
 
     public async UniTask FailQTE(MeshRenderer mesh)
