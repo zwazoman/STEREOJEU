@@ -12,11 +12,11 @@ public class PlayerInteractMananger : MonoBehaviour
     private bool _isHolding;
 
     #region NewInputSytem
-    private Interaction _controls;
+    private InteractionInput _controls;
 
     private void Awake()
     {
-        _controls = new Interaction();
+        _controls = new InteractionInput();
         _controls.Game.Clic.performed += OnClickPerformed;
         _controls.Game.Clic.canceled += OnClicCanceled;
 
@@ -49,7 +49,7 @@ public class PlayerInteractMananger : MonoBehaviour
             if (_interactable != null)
             {
                 _isHolding = true;
-                if (_interactable is not Press)
+                if (_interactable is not ButtonInteraction)
                 {
                     HoldInput().Forget();
                 }

@@ -19,13 +19,13 @@ public class QTETimer
             await UniTask.Yield();
             timeRemaining -= Time.deltaTime;
 
-            if (_interactable is Press pressItem && pressItem.WasPress)
+            if (_interactable is ButtonInteraction pressItem && pressItem.WasPress)
                 return QTEResult.Success;
 
-            if (_interactable is Swipe swipeItem && swipeItem.SuccesSwipe)
+            if (_interactable is SwipeInteraction swipeItem && swipeItem.SuccesSwipe)
                 return QTEResult.Success;
 
-            if (_interactable is Rotate rotateItem && rotateItem.SuccesRotation)
+            if (_interactable is SpinInteraction rotateItem && rotateItem.SuccesRotation)
                 return QTEResult.Success;
         }
 
