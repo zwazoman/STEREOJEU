@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Scene_Mateo.unity
+    guid: 9cb41085f4c3c00438c8ef75a69e064f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 44ee286e224d44b4eb315cbe3d3fa9c5, type: 3}
   m_UseUCBPForAssetBundles: 0
