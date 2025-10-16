@@ -137,6 +137,8 @@ class ScriptUsageTimeline : MonoBehaviour
 
     void ActivateEventWithMarker(string markerName)
     {
+        print(markerName);
+
         switch (markerName)
         {
             case "Touch anticipation":

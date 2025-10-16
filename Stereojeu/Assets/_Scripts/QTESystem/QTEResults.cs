@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class QTEResults : MonoBehaviour
 {
+    [SerializeField] private QTEDifficulty _difficulty;
+    [SerializeField] private QTEManager _managerQTE;
+
     [SerializeField] private Material _nextMaterial;
     [SerializeField] private Material _succesMaterialQTE;
     [SerializeField] private Material _failMaterialQTE;
@@ -19,14 +22,22 @@ public class QTEResults : MonoBehaviour
     public async UniTask FailQTE(MeshRenderer mesh)
     {
         mesh.material = _failMaterialQTE;
+        _difficulty.DecreaseQTERow();
+
+        _managerQTE.FailQTE = true;
+
         await UniTask.Delay(1000);
+
         ResetMaterial(mesh);
     }
 
     public async UniTask SuccesQTE(MeshRenderer mesh)
     {
         mesh.material = _succesMaterialQTE;
+        _difficulty.IncreaseQTERow();
+
         await UniTask.Delay(1000);
+
         ResetMaterial(mesh);
     }
 
