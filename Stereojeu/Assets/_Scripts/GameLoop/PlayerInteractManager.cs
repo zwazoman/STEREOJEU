@@ -7,16 +7,16 @@ public class PlayerInteractMananger : MonoBehaviour
     [SerializeField] private LayerMask detectableLayers;
     [SerializeField] private Camera targetCamera;
 
-    private Interaction _interactable;
+    private Interactable _interactable;
 
     private bool _isHolding;
 
     #region NewInputSytem
-    private Interaction _controls;
+    private InteractionInput _controls;
 
     private void Awake()
     {
-        _controls = new Interaction();
+        _controls = new InteractionInput();
         _controls.Game.Clic.performed += OnClickPerformed;
         _controls.Game.Clic.canceled += OnClicCanceled;
 
@@ -45,7 +45,7 @@ public class PlayerInteractMananger : MonoBehaviour
 
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, detectableLayers))
         {
-            _interactable = hit.collider.GetComponent<Interaction>();
+            _interactable = hit.collider.GetComponent<Interactable>();
             if (_interactable != null)
             {
                 _isHolding = true;

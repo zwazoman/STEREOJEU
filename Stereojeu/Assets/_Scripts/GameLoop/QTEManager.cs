@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class QTEManager : MonoBehaviour
 {
-    [SerializeField] private List<Interaction> _interactableItemList = new();
+    [SerializeField] private List<Interactable> _interactableItemList = new();
 
     [SerializeField] private QTEResults _results;
     [SerializeField] private QTECreator _qTECreator;
@@ -18,7 +18,7 @@ public class QTEManager : MonoBehaviour
 
     private async UniTaskVoid UnstackInteraction()
     {
-        foreach (Interaction item in _interactableItemList)
+        foreach (Interactable item in _interactableItemList)
         {
             item.Activate();
             _results.PreventNextStep(item.gameObject);

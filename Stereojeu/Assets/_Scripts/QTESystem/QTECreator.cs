@@ -6,7 +6,7 @@ public class QTECreator : MonoBehaviour
 {
     [SerializeField] private QTEResults _results;
 
-    public async UniTask CreateQTE(float duration, Interaction item)
+    public async UniTask CreateQTE(float duration, Interactable item)
     {
 
         QTETimer timer = new QTETimer(duration, item);

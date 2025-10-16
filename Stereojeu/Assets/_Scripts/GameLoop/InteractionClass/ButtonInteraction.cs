@@ -1,4 +1,4 @@
-public class ButtonInteraction : Interaction
+public class ButtonInteraction : Interactable
 {
     public bool WasPress { get; private set; }
 
