@@ -25,17 +25,17 @@ public class QTEManager : MonoBehaviour
 
             if (item is ButtonInteraction press)
             {
-                _qTECreator.CreateQTE(2, press).Forget(); //Plus tard j'attends Nestor
+                _qTECreator.CreateQTE(1.5f, press).Forget(); //Plus tard j'attends Nestor
                 await UniTask.WaitUntil(() => press.WasPress || FailQTE);
             }
             else if (item is SwipeInteraction swipe)
             {
-                _qTECreator.CreateQTE(2, swipe).Forget();
+                _qTECreator.CreateQTE(2.5f, swipe).Forget();
                 await UniTask.WaitUntil(() => swipe.SuccesSwipe || FailQTE);
             }
             else if (item is SpinInteraction rotate)
             {
-                _qTECreator.CreateQTE(2, rotate).Forget();
+                _qTECreator.CreateQTE(5, rotate).Forget();
                 await UniTask.WaitUntil(() => rotate.SuccesRotation || FailQTE);
             }
 

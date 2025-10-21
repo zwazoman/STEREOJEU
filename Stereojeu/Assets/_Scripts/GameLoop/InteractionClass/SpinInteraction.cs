@@ -1,53 +1,75 @@
-using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Cysharp.Threading.Tasks;
 
-public class SpinInteraction : Interactable //Marche pas mdr
+public class SpinInteraction : Interactable
 {
-    [SerializeField] private Transform _centerTransform;
-    [SerializeField] private float _requiredRotation = 360f;
-    [SerializeField] private float _tolerance = 30f;
+    [SerializeField] private Transform center;
+    [SerializeField] private float requiredRotation = 360f;
+    [SerializeField] private float tolerance = 30f;
+    [SerializeField] private int frameInterval = 2; // toutes les 2 frames
+    [SerializeField] private Camera cam;
 
-    private Vector2 _startVector;
-    private float _totalRotation = 0f;
-    private bool _isDragging;
+    private bool isDragging;
+    private float totalRotation;
+    private float previousAngle;
 
     public bool SuccesRotation { get; private set; }
 
     public override void InteractionStart()
     {
         if (!IsActive) return;
-        _isDragging = true;
-        _totalRotation = 0f;
 
-        Vector2 startPos = GetPointerPosition();
-        _startVector = (startPos - (Vector2)_centerTransform.position).normalized;
-        LoopCalcul().Forget();
+        isDragging = true;
+        SuccesRotation = false;
+        totalRotation = 0f;
+
+        Vector2 pos = GetPointerPosition();
+        Vector2 centerScreen = cam.WorldToScreenPoint(center.position);
+        Vector2 dir = pos - centerScreen;
+
+        previousAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+
+        RotationLoop().Forget();
     }
 
     public override void InteractionStop()
     {
-        if (!IsActive) return;
-        _isDragging = false;
-        print(_totalRotation);
-        SuccesRotation = Mathf.Abs(_totalRotation) >= (_requiredRotation - _tolerance);
+        if (!isDragging) return;
+        isDragging = false;
+
+        SuccesRotation = Mathf.Abs(totalRotation) >= (requiredRotation - tolerance);
+        Debug.Log($"Rotation totale: {totalRotation:F1} Succès: {SuccesRotation}");
     }
 
-    private async UniTaskVoid LoopCalcul()
+    private async UniTaskVoid RotationLoop()
     {
-        while (_isDragging)
+        int frameCount = 0;
+        Vector3 basePos = transform.position;
+
+        while (isDragging)
         {
-            //Calcul de la rotation entre 2 frames avec une vitesse minimum de rotation à respecter
             await UniTask.Yield();
-            Vector2 currentPos = GetPointerPosition();
-            Vector2 currentVector = (currentPos - (Vector2)_centerTransform.position).normalized;
 
-            float signedAngle = Vector2.Angle(_startVector, currentVector);
+            frameCount++;
+            if (frameCount % frameInterval != 0)
+                continue;
 
-            _totalRotation += signedAngle;
-            _startVector = currentVector;
+            Vector2 pos = GetPointerPosition();
+            Vector2 centerScreen = cam.WorldToScreenPoint(center.position);
+            Vector2 dir = pos - centerScreen;
+
+            float currentAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            float delta = Mathf.DeltaAngle(previousAngle, currentAngle);
+
+            totalRotation += delta;
+            previousAngle = currentAngle;
+
+            transform.position = basePos; // verrouille la position
+            transform.localRotation = Quaternion.Euler(0f, 0f, transform.localEulerAngles.z - delta);
 
         }
+
         InteractionStop();
     }
 
