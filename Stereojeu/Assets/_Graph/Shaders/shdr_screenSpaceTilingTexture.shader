@@ -30,6 +30,7 @@ Shader "Unlit/shdr_screenSpaceTilingTexture"
             {
                 UNITY_FOG_COORDS(1)
                 float4 vertex : SV_POSITION;
+                float4 viewPos : TEXCOORD1;
                 float3 scrPos : TEXCOORD2;
             };
 
@@ -42,15 +43,22 @@ Shader "Unlit/shdr_screenSpaceTilingTexture"
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.scrPos = ComputeScreenPos(o.vertex);
+                o.scrPos =  ComputeScreenPos(v.vertex);
+                //o.viewPos = UnityObjectToViewPos(v.vertex);
                 UNITY_TRANSFER_FOG(o,o.vertex);
                 return o;
             }
 
             fixed4 frag (v2f i) : SV_Target
             {
+
+                
+                // fragment shader
+                //fixed4 col = tex2D(_MainTex, i.viewPos.xy);
+                
                 // sample the texture
-                fixed4 col = tex2D(_MainTex, i.scrPos.xy) * _exposure;
+                
+                fixed4 col = tex2D(_MainTex, i.scrPos.xz) * _exposure;
                 return col;
             }
             ENDCG
