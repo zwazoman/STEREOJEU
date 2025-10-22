@@ -25,9 +25,6 @@ public class QTEManager : MonoBehaviour
     {
         foreach (Interactable item in _interactableItemList)
         {
-            item.Activate();
-            _results.PreventNextStep(item.gameObject);
-
             if (item is ButtonInteraction press)
             {
                 await UniTask.WaitUntil(() => press.WasPress || FailQTE);
@@ -48,17 +45,32 @@ public class QTEManager : MonoBehaviour
 
     public void ButtonQTE()
     {
+        print("QTEButton");
+
+        _interactableItemList[_index].Activate();//Active l'objet
+        _results.PreventNextStep(_interactableItemList[_index].gameObject);//Colorie en gris
+
         _qTECreator.CreateQTE(1.5f, _interactableItemList[_index]).Forget();
         _index++;
     }
     public void SwipeQTE()
     {
+        print("QTESwipe");
+
+        _interactableItemList[_index].Activate();//Active l'objet
+        _results.PreventNextStep(_interactableItemList[_index].gameObject);//Colorie en gris
+
         _qTECreator.CreateQTE(2, _interactableItemList[_index]).Forget();
         _index++;
     }
 
     public void SpinQTE()
     {
+        print("QTESpin");
+
+        _interactableItemList[_index].Activate();//Active l'objet
+        _results.PreventNextStep(_interactableItemList[_index].gameObject);//Colorie en gris
+
         _qTECreator.CreateQTE(4, _interactableItemList[_index]).Forget();
         _index++;
     }
