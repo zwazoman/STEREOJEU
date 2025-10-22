@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,9 +8,13 @@ public class QTEManager : MonoBehaviour
     [SerializeField] private List<Interactable> _interactableItemList = new();
 
     [SerializeField] private QTEResults _results;
+
     [SerializeField] private QTECreator _qTECreator;
 
     public bool FailQTE;
+
+    private Interactable _item;
+    private int _index;
 
     private void Start()
     {
@@ -25,22 +30,36 @@ public class QTEManager : MonoBehaviour
 
             if (item is ButtonInteraction press)
             {
-                _qTECreator.CreateQTE(1.5f, press).Forget(); //Plus tard j'attends Nestor
                 await UniTask.WaitUntil(() => press.WasPress || FailQTE);
             }
             else if (item is SwipeInteraction swipe)
             {
-                _qTECreator.CreateQTE(2.5f, swipe).Forget();
                 await UniTask.WaitUntil(() => swipe.SuccesSwipe || FailQTE);
             }
             else if (item is SpinInteraction rotate)
             {
-                _qTECreator.CreateQTE(5, rotate).Forget();
                 await UniTask.WaitUntil(() => rotate.SuccesRotation || FailQTE);
             }
 
             FailQTE = false;
             item.Deactivate();
         }
+    }
+
+    public void ButtonQTE()
+    {
+        _qTECreator.CreateQTE(1.5f, _interactableItemList[_index]).Forget();
+        _index++;
+    }
+    public void SwipeQTE()
+    {
+        _qTECreator.CreateQTE(2, _interactableItemList[_index]).Forget();
+        _index++;
+    }
+
+    public void SpinQTE()
+    {
+        _qTECreator.CreateQTE(4, _interactableItemList[_index]).Forget();
+        _index++;
     }
 }
