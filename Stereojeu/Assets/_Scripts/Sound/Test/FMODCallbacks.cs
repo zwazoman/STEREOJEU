@@ -3,19 +3,19 @@ using System;
 using System.Runtime.InteropServices;
 using UnityEngine.Events;
 
-class ScriptUsageTimeline : MonoBehaviour
+class FmodCallbacks : MonoBehaviour
 {
     #region Singleton
-    private static ScriptUsageTimeline instance;
+    private static FmodCallbacks instance;
 
-    public static ScriptUsageTimeline Instance
+    public static FmodCallbacks Instance
     {
         get
         {
             if (instance == null)
             {
                 GameObject go = new GameObject("Script Usage Time line");
-                instance = go.AddComponent<ScriptUsageTimeline>();
+                instance = go.AddComponent<FmodCallbacks>();
             }
             return instance;
         }
@@ -50,6 +50,10 @@ class ScriptUsageTimeline : MonoBehaviour
     public UnityEvent OnTouchMarker;
     public UnityEvent OnSwipeMarker;
     public UnityEvent OnSpinMarker;
+
+    [Header("Loop")]
+    public UnityEvent OnLoopEnd;
+    
 
     FMOD.Studio.EVENT_CALLBACK beatCallback;
     FMOD.Studio.EventInstance musicInstance;
@@ -142,14 +146,18 @@ class ScriptUsageTimeline : MonoBehaviour
         switch (markerName)
         {
             case "Touch anticipation":
-                OnTouchMarker.Invoke();
+                OnTouchMarker?.Invoke();
                 break;
             case "Swipe anticipation":
-                OnSwipeMarker.Invoke();
+                OnSwipeMarker?.Invoke();
                 break;
             case "Spin anticipation":
-                OnSpinMarker.Invoke();
+                OnSpinMarker?.Invoke();
                 break;
+            case "Loop End":
+                OnLoopEnd?.Invoke();
+                break;
+
         }
     }
 }
