@@ -357,10 +357,10 @@
 	<object class="MixerBusFader" id="{68871492-7c41-4123-893a-158387dbc328}" />
 	<object class="ParameterCondition" id="{f58bf09b-8084-4c1d-ab30-191e29d9b3c9}">
 		<property name="minimum">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<property name="maximum">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="parameter">
 			<destination>{a65ce97e-9ba4-4659-9702-111ab26e0350}</destination>
