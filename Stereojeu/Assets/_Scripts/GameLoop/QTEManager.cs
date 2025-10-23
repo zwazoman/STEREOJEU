@@ -11,9 +11,12 @@ public class QTEManager : MonoBehaviour
 
     [SerializeField] private QTECreator _qTECreator;
 
+    [SerializeField] private float _qTEButtonTiming;
+    [SerializeField] private float _qTESwipeTiming;
+    [SerializeField] private float _qTESpinTiming;
+
     public bool FailQTE;
 
-    private Interactable _item;
     private int _index;
 
     private void Start()
@@ -53,6 +56,7 @@ public class QTEManager : MonoBehaviour
         _qTECreator.CreateQTE(1.5f, _interactableItemList[_index]).Forget();
         _index++;
     }
+
     public void SwipeQTE()
     {
         print("QTESwipe");
