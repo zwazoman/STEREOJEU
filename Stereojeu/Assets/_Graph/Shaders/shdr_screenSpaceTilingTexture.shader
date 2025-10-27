@@ -9,7 +9,7 @@ Shader "Unlit/shdr_screenSpaceTilingTexture"
     {
         Tags { "RenderType"="Opaque" }
         LOD 100
-
+        Cull Front   
         Pass
         {
             CGPROGRAM
@@ -43,7 +43,10 @@ Shader "Unlit/shdr_screenSpaceTilingTexture"
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.scrPos =  ComputeScreenPos(v.vertex);
+                
+                o.scrPos =  v.vertex;
+                o.scrPos =  UnityObjectToViewPos(v.vertex).xyz;
+                o.scrPos.xy/=o.scrPos.z;
                 //o.viewPos = UnityObjectToViewPos(v.vertex);
                 UNITY_TRANSFER_FOG(o,o.vertex);
                 return o;
@@ -58,7 +61,8 @@ Shader "Unlit/shdr_screenSpaceTilingTexture"
                 
                 // sample the texture
                 
-                fixed4 col = tex2D(_MainTex, i.scrPos.xz) * _exposure;
+                fixed4 col = float4(i.scrPos,1);//tex2D(_MainTex, i.scrPos.xy*5) * _exposure;
+                col = tex2D(_MainTex, i.scrPos.xy) * float4(_exposure.xxx,1); 
                 return col;
             }
             ENDCG
