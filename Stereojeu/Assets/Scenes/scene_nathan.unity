@@ -130,6 +130,8 @@ GameObject:
   - component: {fileID: 87008351}
   - component: {fileID: 87008350}
   - component: {fileID: 87008349}
+  - component: {fileID: 87008353}
+  - component: {fileID: 87008352}
   m_Layer: 0
   m_Name: cam_manette
   m_TagString: Untagged
@@ -234,6 +236,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 529333514}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -89.968}
+--- !u!114 &87008352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87008348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b8bc9ccf6f278049bec243e52c54908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _callbacks: {fileID: 358691485}
+  _cameraFOV: {fileID: 87008353}
+  _pulseStrength: -0.5
+  _pulseDuration: 0.25
+  _pulseTiming: 0.5
+--- !u!114 &87008353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87008348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Offset: 0
+  ApplyAfter: 1
 --- !u!1 &93959449
 GameObject:
   m_ObjectHideFlags: 0
@@ -5408,6 +5441,7 @@ GameObject:
   m_Component:
   - component: {fileID: 358691484}
   - component: {fileID: 358691483}
+  - component: {fileID: 358691485}
   m_Layer: 0
   m_Name: EVENTS FMOD
   m_TagString: Untagged
@@ -5446,6 +5480,46 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &358691485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 358691482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27a7a214a77cf824781a6af00fe46699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventName:
+    Guid:
+      Data1: 1441483135
+      Data2: 1199943124
+      Data3: 1074534538
+      Data4: 1464257452
+    Path: event:/MainTimeline
+  OnBar:
+    m_PersistentCalls:
+      m_Calls: []
+  OnBeat:
+    m_PersistentCalls:
+      m_Calls: []
+  OnMarker:
+    m_PersistentCalls:
+      m_Calls: []
+  OnTouchMarker:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSwipeMarker:
+    m_PersistentCalls:
+      m_Calls: []
+  OnSpinMarker:
+    m_PersistentCalls:
+      m_Calls: []
+  OnLoopEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &363021547
 GameObject:
   m_ObjectHideFlags: 0
@@ -5574,6 +5648,8 @@ GameObject:
   - component: {fileID: 416825948}
   - component: {fileID: 416825947}
   - component: {fileID: 416825946}
+  - component: {fileID: 416825950}
+  - component: {fileID: 416825949}
   m_Layer: 0
   m_Name: cam_Ananas
   m_TagString: Untagged
@@ -5714,6 +5790,37 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416825943}
   m_Mesh: {fileID: -8565021308734564184, guid: 2741a070fa679dd4e8e1444a19361ab3, type: 3}
+--- !u!114 &416825949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416825943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b8bc9ccf6f278049bec243e52c54908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _callbacks: {fileID: 358691485}
+  _cameraFOV: {fileID: 416825950}
+  _pulseStrength: -0.5
+  _pulseDuration: 0.25
+  _pulseTiming: 0.5
+--- !u!114 &416825950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416825943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Offset: 0
+  ApplyAfter: 1
 --- !u!1 &438451447
 GameObject:
   m_ObjectHideFlags: 0
@@ -5725,6 +5832,8 @@ GameObject:
   - component: {fileID: 438451448}
   - component: {fileID: 438451450}
   - component: {fileID: 438451449}
+  - component: {fileID: 438451452}
+  - component: {fileID: 438451451}
   m_Layer: 0
   m_Name: cam_Tetris
   m_TagString: Untagged
@@ -5829,6 +5938,37 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &438451451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438451447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b8bc9ccf6f278049bec243e52c54908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _callbacks: {fileID: 358691485}
+  _cameraFOV: {fileID: 438451452}
+  _pulseStrength: -1
+  _pulseDuration: 0.25
+  _pulseTiming: 0.5
+--- !u!114 &438451452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438451447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Offset: 0
+  ApplyAfter: 1
 --- !u!1 &457965930
 GameObject:
   m_ObjectHideFlags: 0
@@ -6312,7 +6452,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 50
+  field of view: 32.5
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -6338,8 +6478,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682269121}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.49985534, y: 0.50014466, z: 0.50013465, w: 0.4998653}
-  m_LocalPosition: {x: 27.2, y: -1, z: 0}
+  m_LocalRotation: {x: 0.66206706, y: 0.24832858, z: 0.24832882, w: -0.66206723}
+  m_LocalPosition: {x: 23.303673, y: 5.500381, z: -4.982272}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6935,7 +7075,7 @@ Transform:
   m_GameObject: {fileID: 1063230045}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.0098}
+  m_LocalPosition: {x: -0, y: 2.25, z: -1.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6952,7 +7092,7 @@ Light:
   serializedVersion: 11
   m_Type: 2
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.81
   m_Range: 22.68
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -7164,6 +7304,8 @@ GameObject:
   - component: {fileID: 1165082567}
   - component: {fileID: 1165082569}
   - component: {fileID: 1165082568}
+  - component: {fileID: 1165082571}
+  - component: {fileID: 1165082570}
   m_Layer: 0
   m_Name: cam_Guitar
   m_TagString: Untagged
@@ -7268,6 +7410,37 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1165082570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165082566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b8bc9ccf6f278049bec243e52c54908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _callbacks: {fileID: 358691485}
+  _cameraFOV: {fileID: 1165082571}
+  _pulseStrength: -0.5
+  _pulseDuration: 0.25
+  _pulseTiming: 0.5
+--- !u!114 &1165082571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165082566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Offset: 0
+  ApplyAfter: 1
 --- !u!1 &1252960237
 GameObject:
   m_ObjectHideFlags: 0
@@ -7389,6 +7562,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1325538315}
   - component: {fileID: 1325538316}
+  - component: {fileID: 1325538318}
+  - component: {fileID: 1325538317}
   m_Layer: 0
   m_Name: cam_Disk
   m_TagString: Untagged
@@ -7454,78 +7629,37 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
---- !u!1 &1348502364
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1348502366}
-  - component: {fileID: 1348502365}
-  m_Layer: 0
-  m_Name: Sounds
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1348502365
+--- !u!114 &1325538317
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1348502364}
+  m_GameObject: {fileID: 1325538314}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27a7a214a77cf824781a6af00fe46699, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b8bc9ccf6f278049bec243e52c54908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EventName:
-    Guid:
-      Data1: 1441483135
-      Data2: 1199943124
-      Data3: 1074534538
-      Data4: 1464257452
-    Path: event:/MainTimeline
-  OnBar:
-    m_PersistentCalls:
-      m_Calls: []
-  OnBeat:
-    m_PersistentCalls:
-      m_Calls: []
-  OnMarker:
-    m_PersistentCalls:
-      m_Calls: []
-  OnTouchMarker:
-    m_PersistentCalls:
-      m_Calls: []
-  OnSwipeMarker:
-    m_PersistentCalls:
-      m_Calls: []
-  OnSpinMarker:
-    m_PersistentCalls:
-      m_Calls: []
-  OnLoopEnd:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!4 &1348502366
-Transform:
+  _callbacks: {fileID: 358691485}
+  _cameraFOV: {fileID: 1325538318}
+  _pulseStrength: -0.5
+  _pulseDuration: 0.25
+  _pulseTiming: 0.5
+--- !u!114 &1325538318
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1348502364}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 1325538314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Offset: 0
+  ApplyAfter: 1
 --- !u!1 &1392706946
 GameObject:
   m_ObjectHideFlags: 0
@@ -7537,6 +7671,8 @@ GameObject:
   - component: {fileID: 1392706947}
   - component: {fileID: 1392706949}
   - component: {fileID: 1392706948}
+  - component: {fileID: 1392706951}
+  - component: {fileID: 1392706950}
   m_Layer: 0
   m_Name: cam_cartouche
   m_TagString: Untagged
@@ -7641,6 +7777,37 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1392706950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392706946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b8bc9ccf6f278049bec243e52c54908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _callbacks: {fileID: 358691485}
+  _cameraFOV: {fileID: 1392706951}
+  _pulseStrength: -0.5
+  _pulseDuration: 0.25
+  _pulseTiming: 0.5
+--- !u!114 &1392706951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1392706946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Offset: 0
+  ApplyAfter: 1
 --- !u!1 &1397531524
 GameObject:
   m_ObjectHideFlags: 0
@@ -7884,6 +8051,8 @@ GameObject:
   - component: {fileID: 1462042127}
   - component: {fileID: 1462042129}
   - component: {fileID: 1462042128}
+  - component: {fileID: 1462042131}
+  - component: {fileID: 1462042130}
   m_Layer: 0
   m_Name: cam_Guitar_strumming
   m_TagString: Untagged
@@ -7988,6 +8157,37 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1462042130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462042126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b8bc9ccf6f278049bec243e52c54908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _callbacks: {fileID: 358691485}
+  _cameraFOV: {fileID: 1462042131}
+  _pulseStrength: -1
+  _pulseDuration: 0.25
+  _pulseTiming: 0.5
+--- !u!114 &1462042131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1462042126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Offset: 0
+  ApplyAfter: 1
 --- !u!1001 &1512354512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8323,6 +8523,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1575502402}
   - component: {fileID: 1575502403}
+  - component: {fileID: 1575502405}
   - component: {fileID: 1575502404}
   m_Layer: 0
   m_Name: cam_Platine
@@ -8398,6 +8599,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 1575502401}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b8bc9ccf6f278049bec243e52c54908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _callbacks: {fileID: 358691485}
+  _cameraFOV: {fileID: 1575502405}
+  _pulseStrength: -0.5
+  _pulseDuration: 0.25
+  _pulseTiming: 0.5
+--- !u!114 &1575502405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1575502401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -8448,6 +8666,8 @@ GameObject:
   - component: {fileID: 1650042312}
   - component: {fileID: 1650042314}
   - component: {fileID: 1650042313}
+  - component: {fileID: 1650042316}
+  - component: {fileID: 1650042315}
   m_Layer: 0
   m_Name: cam_geoffrey
   m_TagString: Untagged
@@ -8552,6 +8772,37 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1650042315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650042311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b8bc9ccf6f278049bec243e52c54908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _callbacks: {fileID: 358691485}
+  _cameraFOV: {fileID: 1650042316}
+  _pulseStrength: -1
+  _pulseDuration: 0.25
+  _pulseTiming: 0.5
+--- !u!114 &1650042316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650042311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Offset: 0
+  ApplyAfter: 1
 --- !u!1 &1684814455
 GameObject:
   m_ObjectHideFlags: 0
@@ -8683,6 +8934,8 @@ GameObject:
   - component: {fileID: 1929372824}
   - component: {fileID: 1929372826}
   - component: {fileID: 1929372825}
+  - component: {fileID: 1929372828}
+  - component: {fileID: 1929372827}
   m_Layer: 0
   m_Name: cam_Guitar_manche
   m_TagString: Untagged
@@ -8787,6 +9040,37 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!114 &1929372827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929372823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b8bc9ccf6f278049bec243e52c54908, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _callbacks: {fileID: 358691485}
+  _cameraFOV: {fileID: 1929372828}
+  _pulseStrength: -0.5
+  _pulseDuration: 0.25
+  _pulseTiming: 0.5
+--- !u!114 &1929372828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1929372823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Offset: 0
+  ApplyAfter: 1
 --- !u!1 &1991196129
 GameObject:
   m_ObjectHideFlags: 0
@@ -9433,7 +9717,6 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 358691484}
-  - {fileID: 1348502366}
   - {fileID: 682269124}
   - {fileID: 1397531526}
   - {fileID: 1574672331}
