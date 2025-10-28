@@ -284,7 +284,7 @@ MonoBehaviour:
   PivotOffset: {x: 0, y: 0, z: 0}
   AmplitudeGain: 0.35
   FrequencyGain: 1.4
-  m_NoiseOffsets: {x: 0, y: 0, z: 0}
+  m_NoiseOffsets: {x: -134.01974, y: 635.93286, z: -746.75757}
 --- !u!1 &93959449
 GameObject:
   m_ObjectHideFlags: 0
@@ -5635,6 +5635,61 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!1 &394194270
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 394194271}
+  - component: {fileID: 394194272}
+  m_Layer: 0
+  m_Name: camRootTetris
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &394194271
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394194270}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.00019748686, y: 0.70710677, z: 0.00019748686, w: 0.70710677}
+  m_LocalPosition: {x: 4.37, y: -6.66, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 438451448}
+  m_Father: {fileID: 1438022781}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0.032}
+--- !u!95 &394194272
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394194270}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &400212623
 GameObject:
   m_ObjectHideFlags: 0
@@ -5856,7 +5911,7 @@ MonoBehaviour:
   PivotOffset: {x: 0, y: 0, z: 0}
   AmplitudeGain: 0.35
   FrequencyGain: 1.4
-  m_NoiseOffsets: {x: 0, y: 0, z: 0}
+  m_NoiseOffsets: {x: 994.6518, y: -73.26425, z: -312.7576}
 --- !u!1 &438451447
 GameObject:
   m_ObjectHideFlags: 0
@@ -5868,8 +5923,8 @@ GameObject:
   - component: {fileID: 438451448}
   - component: {fileID: 438451450}
   - component: {fileID: 438451449}
-  - component: {fileID: 438451452}
   - component: {fileID: 438451451}
+  - component: {fileID: 438451452}
   - component: {fileID: 438451453}
   m_Layer: 0
   m_Name: cam_Tetris
@@ -5886,12 +5941,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 438451447}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00019748686, y: 0.70710677, z: 0.00019748686, w: 0.70710677}
-  m_LocalPosition: {x: 4.37, y: -6.81, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1438022781}
+  m_Father: {fileID: 394194271}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0.032}
 --- !u!114 &438451449
 MonoBehaviour:
@@ -6022,7 +6077,7 @@ MonoBehaviour:
   PivotOffset: {x: 0, y: 0, z: 0}
   AmplitudeGain: 0.35
   FrequencyGain: 1.4
-  m_NoiseOffsets: {x: 0, y: 0, z: 0}
+  m_NoiseOffsets: {x: 665.63153, y: -185.69885, z: -417.28198}
 --- !u!1 &457965930
 GameObject:
   m_ObjectHideFlags: 0
@@ -6538,7 +6593,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 20
+  field of view: 17.7
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -6564,8 +6619,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682269121}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -6.6}
+  m_LocalRotation: {x: 0.00019748686, y: 0.70710677, z: 0.00019748686, w: 0.70710677}
+  m_LocalPosition: {x: 4.37, y: -6.66, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7291,6 +7346,10 @@ PlayableDirector:
     value: {fileID: 706485262}
   - key: {fileID: -2579930535277153878, guid: aea40f1c42e38b84892d0b37018cac79, type: 2}
     value: {fileID: 1138953068}
+  - key: {fileID: -7382172754147240850, guid: aea40f1c42e38b84892d0b37018cac79, type: 2}
+    value: {fileID: 1851795023}
+  - key: {fileID: 3028654645566924368, guid: aea40f1c42e38b84892d0b37018cac79, type: 2}
+    value: {fileID: 394194272}
   m_ExposedReferences:
     m_References:
     - e710dc88bd0fea5499701a5c21e895bf: {fileID: 1325538316}
@@ -7545,7 +7604,7 @@ MonoBehaviour:
   PivotOffset: {x: 0, y: 0, z: 0}
   AmplitudeGain: 0.35
   FrequencyGain: 1.4
-  m_NoiseOffsets: {x: 0, y: 0, z: 0}
+  m_NoiseOffsets: {x: -125.39612, y: -750.9275, z: 948.328}
 --- !u!1 &1252960237
 GameObject:
   m_ObjectHideFlags: 0
@@ -7782,7 +7841,7 @@ MonoBehaviour:
   PivotOffset: {x: 0, y: 0, z: 0}
   AmplitudeGain: 0.35
   FrequencyGain: 1.4
-  m_NoiseOffsets: {x: 0, y: 0, z: 0}
+  m_NoiseOffsets: {x: 594.0068, y: 439.1911, z: 172.31522}
 --- !u!1 &1392706946
 GameObject:
   m_ObjectHideFlags: 0
@@ -7794,8 +7853,8 @@ GameObject:
   - component: {fileID: 1392706947}
   - component: {fileID: 1392706949}
   - component: {fileID: 1392706948}
-  - component: {fileID: 1392706951}
   - component: {fileID: 1392706950}
+  - component: {fileID: 1392706951}
   - component: {fileID: 1392706952}
   m_Layer: 0
   m_Name: cam_cartouche
@@ -7948,7 +8007,7 @@ MonoBehaviour:
   PivotOffset: {x: 0, y: 0, z: 0}
   AmplitudeGain: 0.35
   FrequencyGain: 1.4
-  m_NoiseOffsets: {x: 0, y: 0, z: 0}
+  m_NoiseOffsets: {x: -735.69226, y: -501.23312, z: 949.42236}
 --- !u!1 &1397531524
 GameObject:
   m_ObjectHideFlags: 0
@@ -8264,7 +8323,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 787910963}
-  - {fileID: 438451448}
+  - {fileID: 394194271}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1462042126
@@ -8432,7 +8491,7 @@ MonoBehaviour:
   PivotOffset: {x: 0, y: 0, z: 0}
   AmplitudeGain: 0.35
   FrequencyGain: 1.4
-  m_NoiseOffsets: {x: 0, y: 0, z: 0}
+  m_NoiseOffsets: {x: -688.49036, y: 173.80606, z: 64.79703}
 --- !u!1001 &1512354512
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8885,7 +8944,39 @@ MonoBehaviour:
   PivotOffset: {x: 0, y: 0, z: 0}
   AmplitudeGain: 0.35
   FrequencyGain: 1.4
-  m_NoiseOffsets: {x: 0, y: 0, z: 0}
+  m_NoiseOffsets: {x: -524.29675, y: -197.80698, z: -532.57275}
+--- !u!1 &1591033171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1591033172}
+  m_Layer: 0
+  m_Name: Console
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1591033172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591033171}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00000004216781, y: 1, z: -0.00000008940696, w: 0.0001574395}
+  m_LocalPosition: {x: 9.66, y: -7.81, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 543450653253402567}
+  m_Father: {fileID: 1851795022}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1623494643
 GameObject:
   m_ObjectHideFlags: 0
@@ -9085,7 +9176,7 @@ MonoBehaviour:
   PivotOffset: {x: 0, y: 0, z: 0}
   AmplitudeGain: 0.35
   FrequencyGain: 1.4
-  m_NoiseOffsets: {x: 0, y: 0, z: 0}
+  m_NoiseOffsets: {x: -989.0272, y: 5.045288, z: 539.5627}
 --- !u!1 &1684814455
 GameObject:
   m_ObjectHideFlags: 0
@@ -9268,6 +9359,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1851795022}
+  - component: {fileID: 1851795023}
   m_Layer: 0
   m_Name: Scene5_Console
   m_TagString: Untagged
@@ -9288,10 +9380,32 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 543450653253402567}
+  - {fileID: 1591033172}
   - {fileID: 1392706947}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1851795023
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851795021}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1929372823
 GameObject:
   m_ObjectHideFlags: 0
@@ -9457,7 +9571,7 @@ MonoBehaviour:
   PivotOffset: {x: 0, y: 0, z: 0}
   AmplitudeGain: 0.35
   FrequencyGain: 1.4
-  m_NoiseOffsets: {x: 0, y: 0, z: 0}
+  m_NoiseOffsets: {x: -567.80457, y: -504.15848, z: -344.83994}
 --- !u!1 &1991196129
 GameObject:
   m_ObjectHideFlags: 0
@@ -9633,14 +9747,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132149602264445}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000004216781, y: 1, z: -0.00000008940696, w: 0.0001574395}
-  m_LocalPosition: {x: 9.66, y: -7.81, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4711982271918658240}
   - {fileID: 6761728698057367800}
-  m_Father: {fileID: 1851795022}
+  m_Father: {fileID: 1591033172}
   m_LocalEulerAnglesHint: {x: -180, y: -0.018005371, z: 180}
 --- !u!1 &919132149602264445
 GameObject:
