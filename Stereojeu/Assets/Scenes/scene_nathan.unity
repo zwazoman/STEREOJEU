@@ -8254,8 +8254,8 @@ GameObject:
   - component: {fileID: 1462042127}
   - component: {fileID: 1462042129}
   - component: {fileID: 1462042128}
-  - component: {fileID: 1462042131}
   - component: {fileID: 1462042130}
+  - component: {fileID: 1462042131}
   - component: {fileID: 1462042132}
   m_Layer: 0
   m_Name: cam_Guitar_strumming
@@ -8273,7 +8273,7 @@ Transform:
   m_GameObject: {fileID: 1462042126}
   serializedVersion: 2
   m_LocalRotation: {x: 0.2714915, y: -0.7238254, z: -0.59392244, w: -0.22276767}
-  m_LocalPosition: {x: 25.45, y: 2.09, z: -1.22}
+  m_LocalPosition: {x: 27.03, y: 3.24, z: 0.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
