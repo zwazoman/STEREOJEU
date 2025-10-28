@@ -45,7 +45,7 @@ Material:
         m_Scale: {x: 3.4, y: 7.71}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 8103857f940fb824a881653d39aacdae, type: 3}
+        m_Texture: {fileID: 2800000, guid: cedd0cb80fd9c244e8f80445c3b31ab9, type: 3}
         m_Scale: {x: 0, y: 0}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -94,12 +94,13 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _exposure: 0.4
+    - _exposure: 1
     m_Colors:
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
     - _Color: {r: 0.3482306, g: 0.41211045, b: 0.4490565, a: 1}
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
+    - _color: {r: 0.031505827, g: 0.14323412, b: 0.22264141, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

@@ -4,6 +4,7 @@ Shader "Unlit/shdr_screenSpaceTilingTexture"
     {
         _MainTex ("Texture", 2D) = "white" {}
         _exposure("Exposure", Float) = 1
+        _color("Color", Color) = (0,0,0,0)
     }
     SubShader
     {
@@ -36,7 +37,7 @@ Shader "Unlit/shdr_screenSpaceTilingTexture"
 
             sampler2D _MainTex;
             float4 _MainTex_ST;
-            
+            float4 _color;
             float _exposure;
             
             v2f vert (appdata v)
@@ -54,15 +55,13 @@ Shader "Unlit/shdr_screenSpaceTilingTexture"
 
             fixed4 frag (v2f i) : SV_Target
             {
-
-                
                 // fragment shader
                 //fixed4 col = tex2D(_MainTex, i.viewPos.xy);
                 
                 // sample the texture
                 
                 fixed4 col = float4(i.scrPos,1);//tex2D(_MainTex, i.scrPos.xy*5) * _exposure;
-                col = tex2D(_MainTex, i.scrPos.xy) * float4(_exposure.xxx,1); 
+                col = tex2D(_MainTex, i.scrPos.xy) * float4(_exposure.xxx,1) * _color; 
                 return col;
             }
             ENDCG
