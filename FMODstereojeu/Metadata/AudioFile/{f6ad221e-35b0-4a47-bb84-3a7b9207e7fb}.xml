@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{23b53b27-cbbc-4566-b93d-f9f8f0ddca4d}">
+	<object class="AudioFile" id="{f6ad221e-35b0-4a47-bb84-3a7b9207e7fb}">
 		<property name="assetPath">
-			<value>Music/StereoJeu 8-bit_part.ogg</value>
+			<value>Music/StereoJeu 8-bit_part (1).ogg</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
