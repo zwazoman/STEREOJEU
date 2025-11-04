@@ -109,12 +109,12 @@ class FmodCallbacks : MonoBehaviour
             {
                 case FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_BEAT:
                     {
-                        print("BEAT");
+                        //print("BEAT");
                         OnBeat.Invoke();
                         var parameter = (FMOD.Studio.TIMELINE_BEAT_PROPERTIES)Marshal.PtrToStructure(parameterPtr, typeof(FMOD.Studio.TIMELINE_BEAT_PROPERTIES));
                         if (parameter.bar > timelineInfo.CurrentMusicBar)
                         {
-                            print("BAR");
+                            //print("BAR");
                             OnBar.Invoke();
                             timelineInfo.CurrentMusicBar = parameter.bar;
                         }

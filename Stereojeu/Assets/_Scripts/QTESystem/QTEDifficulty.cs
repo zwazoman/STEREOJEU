@@ -2,32 +2,32 @@ using UnityEngine;
 
 public class QTEDifficulty : MonoBehaviour
 {
-    [SerializeField] private int _succesQTErow;
+    [SerializeField] private int _succesQTERow;
 
     public void IncreaseQTERow() 
     { 
-        _succesQTErow++;
+        _succesQTERow++;
         SetupDifficulty();
     }
 
     public void DecreaseQTERow()
     {
-        if (_succesQTErow > 0)
-            _succesQTErow = 0;
+        if (_succesQTERow > 0)
+            _succesQTERow = 0;
         else
-            _succesQTErow--;
+            _succesQTERow--;
 
         SetupDifficulty();
     }
 
     public void SetupDifficulty()
     {
-        if (_succesQTErow > 4)
+        if (_succesQTERow > 4)
         {
             print("Le joueur est fort j'augmente la difficulté");
             //Stonks difficulty
         }
-        else if (_succesQTErow < -3)
+        else if (_succesQTERow < -3)
         {
             print("Le joueur fait de son mieux... Je diminue la difficulté");
             //DecreaseDifficulty

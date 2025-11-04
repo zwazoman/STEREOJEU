@@ -239,7 +239,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 32.5
+  field of view: 60.588947
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -273,8 +273,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83297150}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.66206706, y: 0.24832858, z: 0.24832882, w: -0.66206723}
-  m_LocalPosition: {x: 23.303673, y: 5.500381, z: -4.982272}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+  m_LocalPosition: {x: 0, y: -2.7399998, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -379,6 +379,18 @@ PlayableDirector:
     value: {fileID: 2050524240}
   - key: {fileID: -5263156447585591225, guid: aea40f1c42e38b84892d0b37018cac79, type: 2}
     value: {fileID: 1889170986}
+  - key: {fileID: -536149536868882194, guid: aea40f1c42e38b84892d0b37018cac79, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -2579930535277153878, guid: aea40f1c42e38b84892d0b37018cac79, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -5656705614268879692, guid: aea40f1c42e38b84892d0b37018cac79, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -7382172754147240850, guid: aea40f1c42e38b84892d0b37018cac79, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 3028654645566924368, guid: aea40f1c42e38b84892d0b37018cac79, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 3586195916455503107, guid: aea40f1c42e38b84892d0b37018cac79, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - e710dc88bd0fea5499701a5c21e895bf: {fileID: 1622642884}
@@ -1447,7 +1459,7 @@ MonoBehaviour:
   _results: {fileID: 471219841}
   _qTECreator: {fileID: 471219842}
   _qTEButtonTiming: 0.5
-  _qTESwipeTiming: 1
+  _qTESwipeTiming: 0.5
   _qTESpinTiming: 2
   FailQTE: 0
 --- !u!1 &495272655

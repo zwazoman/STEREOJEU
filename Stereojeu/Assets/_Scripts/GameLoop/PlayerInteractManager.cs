@@ -42,9 +42,10 @@ public class PlayerInteractMananger : MonoBehaviour
     private void DetectObject(Vector2 screenPosition)
     {
         Ray ray = targetCamera.ScreenPointToRay(screenPosition);
-
+        print("ray");
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, detectableLayers))
         {
+            print(hit.transform.gameObject.name);
             _interactable = hit.collider.GetComponent<Interactable>();
             if (_interactable != null)
             {

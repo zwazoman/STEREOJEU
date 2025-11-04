@@ -15,6 +15,7 @@ public class QTEManager : MonoBehaviour
     [SerializeField] private float _qTESwipeTiming;
     [SerializeField] private float _qTESpinTiming;
 
+
     public bool FailQTE;
 
     private int _index;
@@ -26,56 +27,57 @@ public class QTEManager : MonoBehaviour
 
     private async UniTaskVoid UnstackInteraction()
     {
-        foreach (Interactable item in _interactableItemList)
+        int i = 0;
+
+        while (i < _interactableItemList.Count)
         {
+            var item = _interactableItemList[i];
+
             if (item is ButtonInteraction press)
-            {
                 await UniTask.WaitUntil(() => press.WasPress || FailQTE);
-            }
             else if (item is SwipeInteraction swipe)
-            {
                 await UniTask.WaitUntil(() => swipe.SuccesSwipe || FailQTE);
-            }
             else if (item is SpinInteraction rotate)
-            {
                 await UniTask.WaitUntil(() => rotate.SuccesRotation || FailQTE);
-            }
+
+            _interactableItemList.RemoveAt(i);
 
             FailQTE = false;
             item.Deactivate();
+
         }
     }
 
-    public void ButtonQTE()
+    private Interactable PopNextItem()
     {
-        print("QTEButton");
+        if (_interactableItemList.Count == 0)
+            return null;
 
-        _interactableItemList[_index].Activate();//Active l'objet
-        _results.PreventNextStep(_interactableItemList[_index].gameObject);//Colorie en gris
-
-        _qTECreator.CreateQTE(1.5f, _interactableItemList[_index]).Forget();
-        _index++;
+        var item = _interactableItemList[0];
+        _interactableItemList.RemoveAt(0);
+        return item;
     }
 
-    public void SwipeQTE()
+    public void ButtonQTE() => HandleQTE(_qTEButtonTiming, "Button").Forget();
+    public void SwipeQTE() => HandleQTE(_qTESwipeTiming, "Swipe").Forget();
+    public void SpinQTE() => HandleQTE(_qTESpinTiming, "Spin").Forget();
+
+    private async UniTaskVoid HandleQTE(float anticipationTime, string type)
     {
-        print("QTESwipe");
+        print($"QTE {type} (anticipation M)");
 
-        _interactableItemList[_index].Activate();//Active l'objet
-        _results.PreventNextStep(_interactableItemList[_index].gameObject);//Colorie en gris
+        await UniTask.Delay(TimeSpan.FromSeconds(2 - anticipationTime));
 
-        _qTECreator.CreateQTE(2, _interactableItemList[_index]).Forget();
-        _index++;
-    }
+        Interactable item = PopNextItem();
+        if (item == null)
+        {
+            Debug.LogWarning($"Aucun interactable disponible pour QTE {type}");
+            return;
+        }
 
-    public void SpinQTE()
-    {
-        print("QTESpin");
+        item.Activate();
+        _results.PreventNextStep(item.gameObject);
 
-        _interactableItemList[_index].Activate();//Active l'objet
-        _results.PreventNextStep(_interactableItemList[_index].gameObject);//Colorie en gris
-
-        _qTECreator.CreateQTE(4, _interactableItemList[_index]).Forget();
-        _index++;
+        await _qTECreator.CreateQTE(anticipationTime, item);
     }
 }
