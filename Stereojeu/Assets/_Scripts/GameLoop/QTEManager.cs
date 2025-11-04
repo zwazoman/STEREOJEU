@@ -18,12 +18,7 @@ public class QTEManager : MonoBehaviour
 
     public bool FailQTE;
 
-    private int _index;
-
-    private void Start()
-    {
-        UnstackInteraction().Forget();
-    }
+    public void StartQTESystem() => UnstackInteraction().Forget();
 
     private async UniTaskVoid UnstackInteraction()
     {
@@ -44,7 +39,6 @@ public class QTEManager : MonoBehaviour
 
             FailQTE = false;
             item.Deactivate();
-
         }
     }
 
@@ -52,8 +46,8 @@ public class QTEManager : MonoBehaviour
     {
         if (_interactableItemList.Count == 0)
             return null;
-
-        var item = _interactableItemList[0];
+        print("Remove");
+        Interactable item = _interactableItemList[0];
         _interactableItemList.RemoveAt(0);
         return item;
     }

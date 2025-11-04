@@ -6,13 +6,13 @@ public class QTECreator : MonoBehaviour
 {
     [SerializeField] private QTEResults _results;
 
-    public async UniTask CreateQTE(float duration, Interactable item)
+    public async UniTask CreateQTE(float duration, Interactable item, bool isInfinite = false)
     {
 
         QTETimer timer = new QTETimer(duration, item);
         MeshRenderer mesh = item.GetComponent<MeshRenderer>();
 
-        QTEResult result = await timer.StartTimerAsync();
+        QTEResult result = await timer.StartTimerAsync(isInfinite);
 
         switch (result)
         {
