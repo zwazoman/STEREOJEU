@@ -60,6 +60,25 @@ class FmodCallbacks : MonoBehaviour
 
     void Start()
     {
+        //timelineInfo = new TimelineInfo();
+
+        //// Explicitly create the delegate object and assign it to a member so it doesn't get freed
+        //// by the garbage collected while it's being used
+        //beatCallback = new FMOD.Studio.EVENT_CALLBACK(BeatEventCallback);
+
+        //musicInstance = FMODUnity.RuntimeManager.CreateInstance(EventName);
+
+        //// Pin the class that will store the data modified during the callback
+        //timelineHandle = GCHandle.Alloc(timelineInfo);
+        //// Pass the object through the userdata of the instance
+        //musicInstance.setUserData(GCHandle.ToIntPtr(timelineHandle));
+
+        //musicInstance.setCallback(beatCallback, FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_BEAT | FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_MARKER);
+        //musicInstance.start();
+    }
+
+    public void StartMusic()
+    {
         timelineInfo = new TimelineInfo();
 
         // Explicitly create the delegate object and assign it to a member so it doesn't get freed
@@ -76,6 +95,7 @@ class FmodCallbacks : MonoBehaviour
         musicInstance.setCallback(beatCallback, FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_BEAT | FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_MARKER);
         musicInstance.start();
     }
+
     void OnDestroy()
     {
         musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
