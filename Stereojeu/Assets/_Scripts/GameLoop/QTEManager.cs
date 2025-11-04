@@ -18,12 +18,7 @@ public class QTEManager : MonoBehaviour
 
     public bool FailQTE;
 
-    private int _index;
-
-    private void Start()
-    {
-        UnstackInteraction().Forget();
-    }
+    public void StartQTESystem() => UnstackInteraction().Forget();
 
     private async UniTaskVoid UnstackInteraction()
     {

@@ -3,38 +3,51 @@ using UnityEngine;
 
 public class QTETimer
 {
-    private float timeRemaining;
+    private float _timeRemaining;
     private Interactable _interactable;
 
     public QTETimer(float duration, Interactable item)
     {
-        timeRemaining = duration;
+        _timeRemaining = duration;
         _interactable = item;
     }
 
-    public async UniTask<QTEResult> StartTimerAsync()
+    public async UniTask<QTEResult> StartTimerAsync(bool infinite)
     {
-        while (timeRemaining > 0)
+        if (infinite)
         {
-            await UniTask.Yield();
-            timeRemaining -= Time.deltaTime;
+            while(true)
+            {
+                await UniTask.Yield();
 
-            if (_interactable is ButtonInteraction pressItem && pressItem.WasPress)
-                return QTEResult.Success;
+                Debug.Log("j'attends");
 
-            if (_interactable is SwipeInteraction swipeItem && swipeItem.SuccesSwipe)
-                return QTEResult.Success;
-
-            if (_interactable is SpinInteraction rotateItem && rotateItem.SuccesRotation)
-                return QTEResult.Success;
+                if (_interactable is ButtonInteraction pressInteraction && pressInteraction.WasPress
+                    | (_interactable is SwipeInteraction swipeInteraction && swipeInteraction.SuccesSwipe)
+                    | (_interactable is SpinInteraction rotateInteraction && rotateInteraction.SuccesRotation))
+                    return QTEResult.Success;
+            }
         }
+        else
+        {
+            while (_timeRemaining > 0)
+            {
+                await UniTask.Yield();
+                _timeRemaining -= Time.deltaTime;
 
-        return QTEResult.Fail;
+                if (_interactable is ButtonInteraction pressInteraction && pressInteraction.WasPress
+                    | (_interactable is SwipeInteraction swipeInteraction && swipeInteraction.SuccesSwipe)
+                    | (_interactable is SpinInteraction rotateInteraction && rotateInteraction.SuccesRotation))
+                    return QTEResult.Success;
+            }
+
+            return QTEResult.Fail;
+        }
     }
 
     public float GetTimeRemaining()
     {
-        return timeRemaining;
+        return _timeRemaining;
     }
 
     public enum QTEResult

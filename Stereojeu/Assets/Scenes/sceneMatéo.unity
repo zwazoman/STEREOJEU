@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: 0
+  Offset: -0.2870153
   ApplyAfter: 1
 --- !u!114 &87008354
 MonoBehaviour:
@@ -6034,7 +6034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: 0
+  Offset: -0.2870153
   ApplyAfter: 1
 --- !u!114 &416825951
 MonoBehaviour:
@@ -6200,7 +6200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: 0
+  Offset: -0.5740305
   ApplyAfter: 1
 --- !u!114 &438451453
 MonoBehaviour:
@@ -6719,7 +6719,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60.588947
+  field of view: 17.12597
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -6745,8 +6745,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 682269121}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.50013834, y: 0.49986163, z: -0.49986163, w: 0.50013834}
-  m_LocalPosition: {x: 4.2023854, y: -3.828702, z: -1.5056362}
+  m_LocalRotation: {x: 0.00019748686, y: 0.70710677, z: 0.00019748686, w: 0.70710677}
+  m_LocalPosition: {x: 4.0523853, y: -3.9287019, z: -1.5056362}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7722,7 +7722,7 @@ PlayableDirector:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1098195167}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: aea40f1c42e38b84892d0b37018cac79, type: 2}
   m_InitialState: 1
@@ -8035,7 +8035,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: 0
+  Offset: -0.2870153
   ApplyAfter: 1
 --- !u!114 &1165082572
 MonoBehaviour:
@@ -8362,7 +8362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: 0
+  Offset: -0.2870153
   ApplyAfter: 1
 --- !u!114 &1325538319
 MonoBehaviour:
@@ -8501,6 +8501,7 @@ GameObject:
   - component: {fileID: 1391969872}
   - component: {fileID: 1391969871}
   - component: {fileID: 1391969870}
+  - component: {fileID: 1391969874}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -8582,13 +8583,29 @@ MonoBehaviour:
   - {fileID: 1512354524}
   - {fileID: 872543622}
   - {fileID: 1512354522}
-  - {fileID: 1915978904}
   - {fileID: 1512354520}
   _results: {fileID: 1391969871}
   _qTECreator: {fileID: 1391969872}
   _qTEButtonTiming: 0.5
   _qTESwipeTiming: 0.5
   _qTESpinTiming: 2
+  FailQTE: 0
+--- !u!114 &1391969874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1391969867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fad36ab219f1b0438e159e282c55e30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _playableDirector: {fileID: 1098195169}
+  _interactableItem: {fileID: 1915978904}
+  _managerQTE: {fileID: 1391969873}
+  _creatorQTE: {fileID: 1391969872}
   FailQTE: 0
 --- !u!1 &1392706946
 GameObject:
@@ -8737,7 +8754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: 0
+  Offset: -0.2870153
   ApplyAfter: 1
 --- !u!114 &1392706952
 MonoBehaviour:
@@ -9270,7 +9287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: 0
+  Offset: -0.5740305
   ApplyAfter: 1
 --- !u!114 &1462042132
 MonoBehaviour:
@@ -10065,7 +10082,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: 0
+  Offset: -0.2870153
   ApplyAfter: 1
 --- !u!114 &1575502406
 MonoBehaviour:
@@ -10251,7 +10268,7 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
-    FieldOfView: 30
+    FieldOfView: 60.58895
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -10299,7 +10316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: 0
+  Offset: -0.5740305
   ApplyAfter: 1
 --- !u!114 &1650042317
 MonoBehaviour:
@@ -10776,7 +10793,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: 0
+  Offset: -0.2870153
   ApplyAfter: 1
 --- !u!114 &1929372829
 MonoBehaviour:
