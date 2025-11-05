@@ -1,5 +1,4 @@
 using Cysharp.Threading.Tasks;
-using FMODUnity;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -51,10 +50,8 @@ public class PlayerInteractMananger : MonoBehaviour
     {
         screenPosition = screenPosition * _cameraHeight / Screen.height;
         Ray ray = targetCamera.ScreenPointToRay(screenPosition);
-        print("ray");
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, detectableLayers))
         {
-            print(hit.transform.gameObject.name);
             _interactable = hit.collider.GetComponent<Interactable>();
             if (_interactable != null)
             {

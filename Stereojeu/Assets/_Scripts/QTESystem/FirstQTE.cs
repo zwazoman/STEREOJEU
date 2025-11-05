@@ -25,7 +25,6 @@ public class FirstQTE : MonoBehaviour
         _creatorQTE.CreateQTE(0, _interactableItem, true).Forget();
 
         await UniTask.WaitUntil(() => _interactableItem.SuccesSwipe);
-        print("good");
         _interactableItem.Deactivate();
 
         FmodCallbacks.Instance.StartMusic();
