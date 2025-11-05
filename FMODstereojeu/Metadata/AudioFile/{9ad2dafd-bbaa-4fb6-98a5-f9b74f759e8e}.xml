@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <objects serializationModel="Studio.02.02.00">
-	<object class="AudioFile" id="{8deb412b-a2a2-4be7-bcb5-d027f32e6474}">
+	<object class="AudioFile" id="{9ad2dafd-bbaa-4fb6-98a5-f9b74f759e8e}">
 		<property name="assetPath">
-			<value>Music/StereoJeu Rock_part.ogg</value>
-		</property>
-		<property name="isStreaming">
-			<value>true</value>
+			<value>Sfx/TV.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
@@ -14,7 +11,7 @@
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>19.636371882086166</value>
+			<value>2.3075963718820862</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{f52cc40d-41ba-4508-89fb-995ba6fbfeff}</destination>
