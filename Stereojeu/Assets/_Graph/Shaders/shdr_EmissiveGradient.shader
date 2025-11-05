@@ -4,6 +4,7 @@ Shader "Unlit/shdr_EmissiveGradient"
     {
         _color("Color", Color) = (1,1,1,1)
         _exposure("Exposure", Float) = 1
+        _alpha("Alpha", Float) = 1
     }
     SubShader
     {
@@ -23,6 +24,7 @@ Shader "Unlit/shdr_EmissiveGradient"
             
             float4 _color;
             float _exposure;
+            float _alpha;
             
             struct appdata
             {
@@ -46,7 +48,7 @@ Shader "Unlit/shdr_EmissiveGradient"
 
             fixed4 frag (v2f i) : SV_Target
             {
-                return _color * float4(_exposure,_exposure,_exposure,1.0-i.uv.x);
+                return _color * float4(_exposure,_exposure,_exposure,(1.0-i.uv.x) * _alpha);
             }
             ENDCG
         }
