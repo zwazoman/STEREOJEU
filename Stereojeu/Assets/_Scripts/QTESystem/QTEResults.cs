@@ -19,26 +19,30 @@ public class QTEResults : MonoBehaviour
         mesh.sharedMaterial = _nextMaterial;
     }
 
-    public async UniTask FailQTE(MeshRenderer mesh)
+    public async UniTask FailQTE()
     {
-        mesh.material = _failMaterialQTE;
+        //_animatorQTE.SetTrigger("Fail");
+        print("fail");
+       // mesh.material = _failMaterialQTE;
         _difficulty.DecreaseQTERow();
 
         _managerQTE.FailQTE = true;
 
         await UniTask.Delay(1000);
 
-        ResetMaterial(mesh);
+        //ResetMaterial(mesh);
     }
 
-    public async UniTask SuccesQTE(MeshRenderer mesh)
+    public async UniTask SuccesQTE()
     {
-        mesh.material = _succesMaterialQTE;
+        //_animatorQTE.SetTrigger("Succes");
+        print("succes");
+        //mesh.material = _succesMaterialQTE;
         _difficulty.IncreaseQTERow();
 
         await UniTask.Delay(1000);
 
-        ResetMaterial(mesh);
+        //ResetMaterial(mesh);
     }
 
     private void ResetMaterial(MeshRenderer mesh) { mesh.material = _baseMaterial; }

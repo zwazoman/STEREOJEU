@@ -35,7 +35,7 @@ public class QTEManager : MonoBehaviour
             else if (item is SpinInteraction rotate)
                 await UniTask.WaitUntil(() => rotate.SuccesRotation || FailQTE);
 
-            _interactableItemList.RemoveAt(i);
+            //_interactableItemList.RemoveAt(i);
 
             FailQTE = false;
             item.Deactivate();
@@ -58,8 +58,8 @@ public class QTEManager : MonoBehaviour
 
     private async UniTaskVoid HandleQTE(float anticipationTime, string type)
     {
-        print($"QTE {type} (anticipation M)");
-
+        //print($"QTE {type} (anticipation M)");
+        
         await UniTask.Delay(TimeSpan.FromSeconds(2 - anticipationTime));
 
         Interactable item = PopNextItem();
@@ -70,7 +70,7 @@ public class QTEManager : MonoBehaviour
         }
 
         item.Activate();
-        _results.PreventNextStep(item.gameObject);
+        //_results.PreventNextStep(item.gameObject);
 
         await _qTECreator.CreateQTE(anticipationTime, item);
     }

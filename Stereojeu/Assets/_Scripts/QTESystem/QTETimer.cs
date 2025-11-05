@@ -20,7 +20,7 @@ public class QTETimer
             {
                 await UniTask.Yield();
 
-                Debug.Log("j'attends");
+                //Debug.Log("j'attends");
 
                 if (_interactable is ButtonInteraction pressInteraction && pressInteraction.WasPress
                     | (_interactable is SwipeInteraction swipeInteraction && swipeInteraction.SuccesSwipe)
