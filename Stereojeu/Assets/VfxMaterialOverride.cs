@@ -12,7 +12,7 @@ public class VfxMaterialOverride : MonoBehaviour
     public float exposure = 1.8f;
     void Awake()
     {
-        
+        alpha = 0;
         _propertyBlock = new MaterialPropertyBlock();
         _meshRenderer.SetPropertyBlock(_propertyBlock);
     }
