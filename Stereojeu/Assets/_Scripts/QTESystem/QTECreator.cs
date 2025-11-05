@@ -17,10 +17,10 @@ public class QTECreator : MonoBehaviour
         switch (result)
         {
             case QTEResult.Success:
-                await _results.SuccesQTE(mesh);
+                await _results.SuccesQTE();
                 break;
             case QTEResult.Fail:
-                await _results.FailQTE(mesh);
+                await _results.FailQTE();
                 break;
         }
     }
