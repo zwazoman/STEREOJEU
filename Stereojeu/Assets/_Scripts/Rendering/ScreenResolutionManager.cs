@@ -10,10 +10,9 @@ public class ScreenResolutionManager : MonoBehaviour
     private Camera _cam;
     [SerializeField]
     private RawImage _rawImage;
-    
+
     [Header("Parameters")]
-    [SerializeField]
-    [Min(32)] private int _textureHeight=256;
+    [Min(32)] public int TextureHeight { get; private set; } = 256;
 
     
     
@@ -23,8 +22,8 @@ public class ScreenResolutionManager : MonoBehaviour
     void Awake()
     {
         _renderTexture = new RenderTexture(Screen.width,Screen.height,0);
-        _renderTexture.width = Mathf.RoundToInt((float)_textureHeight * ((float)Screen.width/(float)Screen.height));
-        _renderTexture.height = _textureHeight;
+        _renderTexture.width = Mathf.RoundToInt((float)TextureHeight * ((float)Screen.width/(float)Screen.height));
+        _renderTexture.height = TextureHeight;
         _renderTexture.antiAliasing = 1;
         _renderTexture.filterMode = FilterMode.Point;
         _renderTexture.Create();

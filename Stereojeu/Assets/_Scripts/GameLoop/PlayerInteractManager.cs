@@ -1,4 +1,5 @@
 using Cysharp.Threading.Tasks;
+using FMODUnity;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -13,6 +14,13 @@ public class PlayerInteractMananger : MonoBehaviour
 
     #region NewInputSytem
     private InteractionInput _controls;
+
+    private int _cameraHeight;
+
+    private void Start()
+    {
+        _cameraHeight = targetCamera.gameObject.GetComponent<ScreenResolutionManager>().TextureHeight;
+    }
 
     private void Awake()
     {
@@ -41,6 +49,7 @@ public class PlayerInteractMananger : MonoBehaviour
 
     private void DetectObject(Vector2 screenPosition)
     {
+        screenPosition = screenPosition * _cameraHeight / Screen.height;
         Ray ray = targetCamera.ScreenPointToRay(screenPosition);
         print("ray");
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, detectableLayers))
