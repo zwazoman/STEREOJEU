@@ -10853,7 +10853,7 @@ SkinnedMeshRenderer:
   m_Mesh: {fileID: -3953583973372056180, guid: fe3345ba336672249984491d2b52942c, type: 3}
   m_Bones: []
   m_BlendShapeWeights:
-  - 100
+  - 0
   m_RootBone: {fileID: 0}
   m_AABB:
     m_Center: {x: 0.000010250602, y: -0.0006745164, z: -0.0015164334}
