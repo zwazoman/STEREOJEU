@@ -280,8 +280,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31bd924b48dfefc48873786d7b1c89ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _meshRenderer: {fileID: 0}
-  alpha: 1
+  _meshRenderer: {fileID: 3787339721911545542}
+  alpha: 0
 --- !u!1001 &8883750873220700506
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 7820775596706776542}
-  alpha: 1
+  alpha: 0
 --- !u!4 &8990263634472976049 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 97d6e5743ab06d64fa8f2daa01493299, type: 3}

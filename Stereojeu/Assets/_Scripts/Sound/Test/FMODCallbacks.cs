@@ -142,7 +142,7 @@ class FmodCallbacks : MonoBehaviour
 
     void ActivateEventWithMarker(string markerName)
     {
-        print(markerName);
+        //print(markerName);
 
         switch (markerName)
         {
