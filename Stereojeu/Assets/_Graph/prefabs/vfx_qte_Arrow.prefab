@@ -42,6 +42,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1348603756635752538}
   - component: {fileID: 8313080516390083287}
+  - component: {fileID: -5834308467442540025}
   m_Layer: 0
   m_Name: vfx_qte_Arrow
   m_TagString: Untagged
@@ -89,6 +90,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-5834308467442540025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4021940561882588852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faaa45dc475c1c9428c1431b7d783b51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 8313080516390083287}
 --- !u!1 &5528168541785470406
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +250,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 6362685687643442979}
   alpha: 1
+  exposure: 1.8
 --- !u!4 &5190363595173327948 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9a161859bcd0d9249b58d30dbc6a7a2a, type: 3}
@@ -334,6 +349,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 5471422476169119197}
   alpha: 1
+  exposure: 1.8
 --- !u!4 &6603764815233679026 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a1ff4b48bf31aaf4695903ef8944ba52, type: 3}
@@ -436,3 +452,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _meshRenderer: {fileID: 7178535929757319363}
   alpha: 1
+  exposure: 1.8

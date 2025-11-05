@@ -18,19 +18,18 @@ public class FirstQTE : MonoBehaviour
 
     private async UniTask StartGame()
     {
-        await UniTask.Delay(1);
+        await UniTask.NextFrame();
+
         _playableDirector.Pause();
 
         _interactableItem.Activate();
-        _creatorQTE.CreateQTE(0, _interactableItem, true).Forget();
+        _creatorQTE.CreateQTE(0, _interactableItem, "Swipe", true).Forget();
 
         await UniTask.WaitUntil(() => _interactableItem.SuccesSwipe);
+
         _interactableItem.Deactivate();
 
         FmodCallbacks.Instance.StartMusic();
-
-        //_managerQTE.StartQTESystem();
-
         _playableDirector.Play();
     }
 }

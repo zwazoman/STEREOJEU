@@ -58,8 +58,6 @@ public class QTEManager : MonoBehaviour
 
     private async UniTaskVoid HandleQTE(float anticipationTime, string type)
     {
-        //print($"QTE {type} (anticipation M)");
-        
         await UniTask.Delay(TimeSpan.FromSeconds(2 - anticipationTime));
 
         Interactable item = PopNextItem();
@@ -70,8 +68,7 @@ public class QTEManager : MonoBehaviour
         }
 
         item.Activate();
-        //_results.PreventNextStep(item.gameObject);
 
-        await _qTECreator.CreateQTE(anticipationTime, item);
+        await _qTECreator.CreateQTE(anticipationTime, item, type);
     }
 }
