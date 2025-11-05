@@ -4,11 +4,13 @@ using Cysharp.Threading.Tasks;
 
 public class SpinInteraction : Interactable
 {
-    [SerializeField] private Transform center;
-    [SerializeField] private float requiredRotation = 360f;
-    [SerializeField] private float tolerance = 30f;
-    [SerializeField] private int frameInterval = 2; // toutes les 2 frames
-    [SerializeField] private Camera cam;
+    [SerializeField] private Transform _center;
+    [SerializeField] private float _requiredRotation = 360f;
+    [SerializeField] private float _tolerance = 30f;
+    [SerializeField] private int _frameInterval = 2; // toutes les 2 frames
+    [SerializeField] private Camera _cam;
+    [SerializeField] private GameObject _spinInteraction;
+    [SerializeField] private float _speed;
 
     private bool isDragging;
     private float totalRotation;
@@ -16,20 +18,26 @@ public class SpinInteraction : Interactable
 
     public bool SuccesRotation { get; private set; }
 
+    private void Start()
+    {
+        RotateVisualQTE().Forget();
+    }
     public override void InteractionStart()
     {
         if (!IsActive) return;
 
+        print("ok");
         isDragging = true;
         SuccesRotation = false;
         totalRotation = 0f;
 
         Vector2 pos = GetPointerPosition();
-        Vector2 centerScreen = cam.WorldToScreenPoint(center.position);
+        Vector2 centerScreen = _cam.WorldToScreenPoint(_center.position);
         Vector2 dir = pos - centerScreen;
 
         previousAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
+        RotateVisualQTE().Forget();
         RotationLoop().Forget();
     }
 
@@ -38,7 +46,7 @@ public class SpinInteraction : Interactable
         if (!isDragging) return;
         isDragging = false;
 
-        SuccesRotation = Mathf.Abs(totalRotation) >= (requiredRotation - tolerance);
+        SuccesRotation = Mathf.Abs(totalRotation) >= (_requiredRotation - _tolerance);
         Debug.Log($"Rotation totale: {totalRotation:F1} Succès: {SuccesRotation}");
     }
 
@@ -52,11 +60,11 @@ public class SpinInteraction : Interactable
             await UniTask.Yield();
 
             frameCount++;
-            if (frameCount % frameInterval != 0)
+            if (frameCount % _frameInterval != 0)
                 continue;
 
             Vector2 pos = GetPointerPosition();
-            Vector2 centerScreen = cam.WorldToScreenPoint(center.position);
+            Vector2 centerScreen = _cam.WorldToScreenPoint(_center.position);
             Vector2 dir = pos - centerScreen;
 
             float currentAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
@@ -79,5 +87,21 @@ public class SpinInteraction : Interactable
             return Touchscreen.current.primaryTouch.position.ReadValue();
 
         return Mouse.current.position.ReadValue();
+    }
+
+    private async UniTaskVoid RotateVisualQTE()
+    {
+        while (true)
+        {
+            //if (!IsActive)
+            //{
+            //    _spinInteraction.SetActive(false);
+            //    return;
+            //}
+
+            _spinInteraction.transform.Rotate(0f, 0f, _speed * Time.deltaTime);
+
+            await UniTask.Yield();
+        }
     }
 }

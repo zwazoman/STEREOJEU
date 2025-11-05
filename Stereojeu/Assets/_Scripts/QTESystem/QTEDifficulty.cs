@@ -24,12 +24,12 @@ public class QTEDifficulty : MonoBehaviour
     {
         if (_succesQTERow > 4)
         {
-            print("Le joueur est fort j'augmente la difficulté");
+            //print("Le joueur est fort j'augmente la difficulté");
             //Stonks difficulty
         }
         else if (_succesQTERow < -3)
         {
-            print("Le joueur fait de son mieux... Je diminue la difficulté");
+            //print("Le joueur fait de son mieux... Je diminue la difficulté");
             //DecreaseDifficulty
         }
     }

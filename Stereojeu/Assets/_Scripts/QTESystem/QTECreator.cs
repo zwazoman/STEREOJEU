@@ -19,29 +19,27 @@ public class QTECreator : MonoBehaviour
             case "Button":
                 prefab = _qteVisualButton;
                 break;
-            case "Swipe":
-                prefab = _qteVisualSwipe;
-                break;
             case "Spin":
                 prefab = _qteVisualSpin;
                 break;
             default:
-                return;
+                return; // ignore tout autre type
         }
 
-        if (prefab == null)
+        GameObject visualGO = null;
+        QTEVisualController visual = null;
+
+        if (prefab != null)
         {
-            Debug.LogError($"Aucun prefab défini pour le type de QTE : {type}");
-            return;
+            visualGO = Instantiate(prefab, item.gameObject.transform);
+            visual = visualGO.GetComponent<QTEVisualController>();
         }
-
-        GameObject visualGO = Instantiate(prefab, item.gameObject.transform);
-        QTEVisualController visual = visualGO.GetComponent<QTEVisualController>();
 
         QTETimer timer = new QTETimer(duration, item);
         QTEResult result = await timer.StartTimerAsync(isInfinite);
 
-        visual.SetResult(result == QTEResult.Success);
+        if (visual != null)
+            visual.SetResult(result == QTEResult.Success);
 
         switch (result)
         {
@@ -53,7 +51,11 @@ public class QTECreator : MonoBehaviour
                 break;
         }
 
-        await UniTask.Delay(TimeSpan.FromSeconds(1));
-        Destroy(visualGO);
+        if (visualGO != null)
+        {
+            await UniTask.Delay(TimeSpan.FromSeconds(1));
+            Destroy(visualGO);
+        }
     }
+
 }
