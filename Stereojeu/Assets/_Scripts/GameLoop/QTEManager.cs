@@ -46,7 +46,7 @@ public class QTEManager : MonoBehaviour
     {
         if (_interactableItemList.Count == 0)
             return null;
-        print("Remove");
+        //print("Remove");
         Interactable item = _interactableItemList[0];
         _interactableItemList.RemoveAt(0);
         return item;
