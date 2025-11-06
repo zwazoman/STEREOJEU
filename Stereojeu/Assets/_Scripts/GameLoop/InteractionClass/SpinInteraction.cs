@@ -18,10 +18,11 @@ public class SpinInteraction : Interactable
 
     public bool SuccesRotation { get; private set; }
 
-    private void Start()
-    {
-        RotateVisualQTE().Forget();
-    }
+    //private void Start()
+    //{
+    //    RotateVisualQTE().Forget();
+    //}
+
     public override void InteractionStart()
     {
         if (!IsActive) return;
@@ -68,13 +69,13 @@ public class SpinInteraction : Interactable
             Vector2 dir = pos - centerScreen;
 
             float currentAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            float delta = Mathf.DeltaAngle(previousAngle, currentAngle);
+            //float delta = Mathf.DeltaAngle(previousAngle, currentAngle);
 
-            totalRotation += delta;
+            //totalRotation += delta;
             previousAngle = currentAngle;
 
             transform.position = basePos; // verrouille la position
-            transform.localRotation = Quaternion.Euler(0f, 0f, transform.localEulerAngles.z - delta);
+            //transform.localRotation = Quaternion.Euler(0f, 0f, transform.localEulerAngles.z - delta);
 
         }
 
@@ -93,11 +94,11 @@ public class SpinInteraction : Interactable
     {
         while (true)
         {
-            //if (!IsActive)
-            //{
-            //    _spinInteraction.SetActive(false);
-            //    return;
-            //}
+            if (!IsActive)
+            {
+                _spinInteraction.SetActive(false);
+                return;
+            }
 
             _spinInteraction.transform.Rotate(0f, 0f, _speed * Time.deltaTime);
 

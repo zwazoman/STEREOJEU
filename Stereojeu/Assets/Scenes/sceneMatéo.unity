@@ -437,7 +437,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: -0.03601781
+  Offset: 0
   ApplyAfter: 1
 --- !u!114 &87008354
 MonoBehaviour:
@@ -6067,7 +6067,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: -0.03601781
+  Offset: 0
   ApplyAfter: 1
 --- !u!114 &416825951
 MonoBehaviour:
@@ -6233,7 +6233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: -0.07203561
+  Offset: 0
   ApplyAfter: 1
 --- !u!114 &438451453
 MonoBehaviour:
@@ -6648,7 +6648,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 668934059}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 50, y: 50, z: 50}
   m_ConstrainProportionsScale: 0
@@ -6656,7 +6656,7 @@ Transform:
   - {fileID: 1544208156}
   - {fileID: 543450653534650796}
   m_Father: {fileID: 1623494644}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!114 &668934061
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6670,7 +6670,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _tolerance: 30
-  CorrectDirection: 0
+  CorrectDirection: 2
 --- !u!65 &668934062
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6690,8 +6690,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.049999993, y: 0.058880907, z: 0.05}
-  m_Center: {x: 0, y: 0.004440472, z: -2.7544036e-17}
+  m_Size: {x: 0.049999993, y: 0.012392188, z: 0.03871406}
+  m_Center: {x: 0, y: 0.027684962, z: -0.005643001}
 --- !u!1 &678193547
 GameObject:
   m_ObjectHideFlags: 0
@@ -6857,7 +6857,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 32.46398
+  field of view: 32.5
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -7305,7 +7305,8 @@ GameObject:
   - component: {fileID: 1544208158}
   - component: {fileID: 1544208157}
   - component: {fileID: 1544208159}
-  m_Layer: 0
+  - component: {fileID: 1544208160}
+  m_Layer: 6
   m_Name: msh_BarAnanas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8301,7 +8302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: -0.03601781
+  Offset: 0
   ApplyAfter: 1
 --- !u!114 &1165082572
 MonoBehaviour:
@@ -8550,7 +8551,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: -0.03601781
+  Offset: 0
   ApplyAfter: 1
 --- !u!114 &1325538319
 MonoBehaviour:
@@ -8724,7 +8725,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842debc154e5d954cb96c6d0454c939c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _succesfullQTEInARow: 0
+  Succesful10Feedback: {fileID: 3516398204895806099, guid: b362458b18216dd488f02916e90a5225, type: 3}
+  Successful50Feedback: {fileID: 230582591941666260, guid: 34085c484a0d57244a7c6a8338a37752, type: 3}
+  FailFeedback: {fileID: 445051317798125143, guid: dcc6919092fb92141b94b793c3717304, type: 3}
 --- !u!114 &1391969871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8739,10 +8742,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OnSuccesfulQTE:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1391969870}
+        m_TargetAssemblyTypeName: QTEScoring, Assembly-CSharp
+        m_MethodName: SuccesfulQTE
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnFailedQTE:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1391969870}
+        m_TargetAssemblyTypeName: QTEScoring, Assembly-CSharp
+        m_MethodName: FailedQTE
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   _difficulty: {fileID: 1391969870}
   _managerQTE: {fileID: 1391969873}
 --- !u!114 &1391969872
@@ -8961,7 +8988,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: -0.03601781
+  Offset: 0
   ApplyAfter: 1
 --- !u!114 &1392706952
 MonoBehaviour:
@@ -9494,7 +9521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: -0.07203561
+  Offset: 0
   ApplyAfter: 1
 --- !u!114 &1462042132
 MonoBehaviour:
@@ -9859,7 +9886,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903438477}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
@@ -9869,7 +9896,7 @@ Transform:
   - {fileID: 1741823732}
   - {fileID: 4571469422570321659}
   m_Father: {fileID: 668934060}
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 556.931}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1544208157
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9942,6 +9969,27 @@ MonoBehaviour:
   _cam: {fileID: 682269123}
   _spinInteraction: {fileID: 919132149327813398}
   _speed: 200
+--- !u!65 &1544208160
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903438477}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.058189638, y: 0.058189653, z: 0.009266494}
+  m_Center: {x: 0, y: -1.0432373e-16, z: 0.01620335}
 --- !u!1 &1550245732
 GameObject:
   m_ObjectHideFlags: 0
@@ -10294,7 +10342,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: -0.03601781
+  Offset: 0
   ApplyAfter: 1
 --- !u!114 &1575502406
 MonoBehaviour:
@@ -10479,7 +10527,7 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
-    FieldOfView: 60.58895
+    FieldOfView: 30
     OrthographicSize: 5
     NearClipPlane: 0.3
     FarClipPlane: 1000
@@ -10527,7 +10575,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: -0.07203561
+  Offset: 0
   ApplyAfter: 1
 --- !u!114 &1650042317
 MonoBehaviour:
@@ -11009,7 +11057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 041de2baa36371047a81ba0df3b7fab8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Offset: -0.03601781
+  Offset: 0
   ApplyAfter: 1
 --- !u!114 &1929372829
 MonoBehaviour:
@@ -11044,7 +11092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1991196130
 Transform:
   m_ObjectHideFlags: 0

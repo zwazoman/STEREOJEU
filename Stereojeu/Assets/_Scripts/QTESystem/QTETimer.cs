@@ -23,8 +23,8 @@ public class QTETimer
                 //Debug.Log("j'attends");
 
                 if (_interactable is ButtonInteraction pressInteraction && pressInteraction.WasPress
-                    | (_interactable is SwipeInteraction swipeInteraction && swipeInteraction.SuccesSwipe)
-                    | (_interactable is SpinInteraction rotateInteraction && rotateInteraction.SuccesRotation))
+                    || (_interactable is SwipeInteraction swipeInteraction && swipeInteraction.SuccesSwipe)
+                    || (_interactable is SpinInteraction rotateInteraction && rotateInteraction.SuccesRotation))
                     return QTEResult.Success;
             }
         }
@@ -36,8 +36,8 @@ public class QTETimer
                 _timeRemaining -= Time.deltaTime;
 
                 if (_interactable is ButtonInteraction pressInteraction && pressInteraction.WasPress
-                    | (_interactable is SwipeInteraction swipeInteraction && swipeInteraction.SuccesSwipe)
-                    | (_interactable is SpinInteraction rotateInteraction && rotateInteraction.SuccesRotation))
+                    || (_interactable is SwipeInteraction swipeInteraction && swipeInteraction.SuccesSwipe)
+                    || (_interactable is SpinInteraction rotateInteraction && rotateInteraction.SuccesRotation))
                     return QTEResult.Success;
             }
 

@@ -33,22 +33,5 @@ public class QTEScoring : MonoBehaviour
         _succesfullQTEInARow = 0;
 
         Instantiate(FailFeedback, QTEVisual.transform.position, QTEVisual.transform.rotation);
-
-    }
-
-
-
-    public void SetupDifficulty()
-    {
-        if (_succesfullQTEInARow > 4)
-        {
-            //print("Le joueur est fort j'augmente la difficulté");
-            //Stonks difficulty
-        }
-        else if (_succesfullQTEInARow < -3)
-        {
-            //print("Le joueur fait de son mieux... Je diminue la difficulté");
-            //DecreaseDifficulty
-        }
     }
 }
