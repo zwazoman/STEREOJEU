@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using static QTETimer;
 
@@ -9,6 +10,7 @@ public class QTECreator : MonoBehaviour
     [SerializeField] private GameObject _qteVisualButton;
     [SerializeField] private GameObject _qteVisualSwipe;
     [SerializeField] private GameObject _qteVisualSpin;
+    [SerializeField] private List<GameObject> _qteSwipePositionList;
 
     public async UniTask CreateQTE(float duration, Interactable item, string type = "Button", bool isInfinite = false)
     {
@@ -19,8 +21,8 @@ public class QTECreator : MonoBehaviour
             case "Button":
                 prefab = _qteVisualButton;
                 break;
-            case "Spin":
-                prefab = _qteVisualSpin;
+            case "Swipe":
+                prefab = _qteVisualSwipe;
                 break;
             default:
                 return; // ignore tout autre type
@@ -31,7 +33,17 @@ public class QTECreator : MonoBehaviour
 
         if (prefab != null)
         {
-            visualGO = Instantiate(prefab, item.gameObject.transform);
+            if(type == "Swipe")
+            {
+                visualGO = Instantiate(prefab, _qteSwipePositionList[0].transform);
+                visualGO.transform.position = _qteSwipePositionList[0].transform.position;
+                visualGO.transform.rotation = _qteSwipePositionList[0].transform.rotation;
+            }
+            else
+            {
+                visualGO = Instantiate(prefab, item.gameObject.transform);
+            }
+
             visual = visualGO.GetComponent<QTEVisualController>();
         }
 
@@ -44,10 +56,10 @@ public class QTECreator : MonoBehaviour
         switch (result)
         {
             case QTEResult.Success:
-                await _results.SuccesQTE();
+                await _results.SuccesQTE(prefab);
                 break;
             case QTEResult.Fail:
-                await _results.FailQTE();
+                await _results.FailQTE(prefab);
                 break;
         }
 

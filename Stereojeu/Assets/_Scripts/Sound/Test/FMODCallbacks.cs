@@ -142,18 +142,19 @@ class FmodCallbacks : MonoBehaviour
 
     void ActivateEventWithMarker(string markerName)
     {
-        print(markerName);
-
         switch (markerName)
         {
             case "Touch anticipation":
                 OnTouchMarker?.Invoke();
+                print("Touch Nestor");
                 break;
             case "Swipe anticipation":
                 OnSwipeMarker?.Invoke();
+                print("Swipe Nestor");
                 break;
             case "Spin anticipation":
                 OnSpinMarker?.Invoke();
+                print("Spin Nestor");
                 break;
             case "Loop End":
                 OnLoopEnd?.Invoke();
