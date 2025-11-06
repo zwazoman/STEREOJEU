@@ -5,45 +5,35 @@ public class QTEScoring : MonoBehaviour
 {
     public int Score {get; private set;}
 
-    [SerializeField] private int _succesQTEInARow;
+    [SerializeField] private int _succesfullQTEInARow;
+
+    int _scoreToAdd = 10;
 
     public void SuccesfulQTE()
     {
-        Score += 10;
-        IncreaseQTEInARow();
+        Score += _scoreToAdd;
+        _succesfullQTEInARow++;
+
+        if (_succesfullQTEInARow > 4)
+            _scoreToAdd = 50;
     }
 
     public void FailedQTE()
     {
-
+        _succesfullQTEInARow = 0;
+        _scoreToAdd = 10;
     }
 
-    void IncreaseQTEInARow() 
-    { 
-        _succesQTEInARow++;
-        //SetupDifficulty();
-    }
 
-    void DecreaseQTEInARow()
-    {
-        //if (_succesQTEInARow > 0)
-        //    _succesQTEInARow = 0;
-        //else
-        //    _succesQTEInARow--;
-
-        _succesQTEInARow = 0;
-
-        //SetupDifficulty();
-    }
 
     public void SetupDifficulty()
     {
-        if (_succesQTEInARow > 4)
+        if (_succesfullQTEInARow > 4)
         {
             //print("Le joueur est fort j'augmente la difficulté");
             //Stonks difficulty
         }
-        else if (_succesQTEInARow < -3)
+        else if (_succesfullQTEInARow < -3)
         {
             //print("Le joueur fait de son mieux... Je diminue la difficulté");
             //DecreaseDifficulty
