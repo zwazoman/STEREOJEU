@@ -3,25 +3,37 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class QTEScoring : MonoBehaviour
 {
-    public int Score {get; private set;}
+    [Header("Prefabs")]
+    [SerializeField] GameObject Succesful10Feedback;
+    [SerializeField] GameObject Successful50Feedback;
+    [SerializeField] GameObject FailFeedback;
 
-    [SerializeField] private int _succesfullQTEInARow;
+    public int Score { get; private set; }
 
-    int _scoreToAdd = 10;
+    int _succesfullQTEInARow;
 
-    public void SuccesfulQTE()
+    public void SuccesfulQTE(GameObject QTEVisual)
     {
-        Score += _scoreToAdd;
         _succesfullQTEInARow++;
 
-        if (_succesfullQTEInARow > 4)
-            _scoreToAdd = 50;
+        if (_succesfullQTEInARow < 4)
+        {
+            Score += 10;
+            Instantiate(Succesful10Feedback, QTEVisual.transform.position, Quaternion.identity);
+        }
+        else
+        {
+            Score += 50;
+            Instantiate(Successful50Feedback, QTEVisual.transform.position, Quaternion.identity);
+        }
     }
 
-    public void FailedQTE()
+    public void FailedQTE(GameObject QTEVisual)
     {
         _succesfullQTEInARow = 0;
-        _scoreToAdd = 10;
+
+        Instantiate(FailFeedback, QTEVisual.transform.position, Quaternion.identity);
+
     }
 
 

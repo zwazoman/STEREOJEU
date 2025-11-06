@@ -6,8 +6,8 @@ public class QTEResults : MonoBehaviour
 {
     #region Events
 
-    [SerializeField] public UnityEvent OnSuccesfulQTE;
-    [SerializeField] public UnityEvent OnFailedQTE;
+    [SerializeField] public UnityEvent<GameObject> OnSuccesfulQTE;
+    [SerializeField] public UnityEvent<GameObject> OnFailedQTE;
 
     #endregion
 
@@ -18,7 +18,7 @@ public class QTEResults : MonoBehaviour
     {
         print("fail");
 
-        OnFailedQTE?.Invoke();
+        OnFailedQTE?.Invoke(QTEVisual);
 
         _managerQTE.FailQTE = true;
 
@@ -29,7 +29,7 @@ public class QTEResults : MonoBehaviour
     {
         print("succes");
         
-        OnSuccesfulQTE?.Invoke();
+        OnSuccesfulQTE?.Invoke(QTEVisual);
 
         await UniTask.Delay(1000);
 
