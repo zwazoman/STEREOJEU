@@ -44,10 +44,10 @@ public class QTECreator : MonoBehaviour
         switch (result)
         {
             case QTEResult.Success:
-                await _results.SuccesQTE();
+                await _results.SuccesQTE(prefab);
                 break;
             case QTEResult.Fail:
-                await _results.FailQTE();
+                await _results.FailQTE(prefab);
                 break;
         }
 
