@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{15352088-abc6-42d5-997c-d339ac07a99f}">
+		<property name="assetPath">
+			<value>Sfx/tv-shut-down-185446.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.04</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f52cc40d-41ba-4508-89fb-995ba6fbfeff}</destination>
+		</relationship>
+	</object>
+</objects>
