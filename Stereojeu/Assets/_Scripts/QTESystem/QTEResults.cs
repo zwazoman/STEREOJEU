@@ -1,16 +1,24 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class QTEResults : MonoBehaviour
 {
-    [SerializeField] private QTEDifficulty _difficulty;
+    #region Events
+
+    [SerializeField] public UnityEvent OnSuccesfulQTE;
+    [SerializeField] public UnityEvent OnFailedQTE;
+
+    #endregion
+
+    [SerializeField] private QTEScoring _difficulty;
     [SerializeField] private QTEManager _managerQTE;
 
     public async UniTask FailQTE()
     {
         print("fail");
 
-        _difficulty.DecreaseQTERow();
+        OnFailedQTE?.Invoke();
 
         _managerQTE.FailQTE = true;
 
@@ -20,7 +28,8 @@ public class QTEResults : MonoBehaviour
     public async UniTask SuccesQTE()
     {
         print("succes");
-        _difficulty.IncreaseQTERow();
+        
+        OnSuccesfulQTE?.Invoke();
 
         await UniTask.Delay(1000);
 
