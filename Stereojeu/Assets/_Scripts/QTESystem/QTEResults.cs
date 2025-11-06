@@ -6,44 +6,23 @@ public class QTEResults : MonoBehaviour
     [SerializeField] private QTEDifficulty _difficulty;
     [SerializeField] private QTEManager _managerQTE;
 
-    [SerializeField] private Material _nextMaterial;
-    [SerializeField] private Material _succesMaterialQTE;
-    [SerializeField] private Material _failMaterialQTE;
-
-    private Material _baseMaterial;
-
-    public void PreventNextStep(GameObject go)
-    {
-        MeshRenderer mesh = go.GetComponent<MeshRenderer>();
-        _baseMaterial = mesh.sharedMaterial;
-        mesh.sharedMaterial = _nextMaterial;
-    }
-
     public async UniTask FailQTE()
     {
-        //_animatorQTE.SetTrigger("Fail");
         print("fail");
-       // mesh.material = _failMaterialQTE;
+
         _difficulty.DecreaseQTERow();
 
         _managerQTE.FailQTE = true;
 
         await UniTask.Delay(1000);
-
-        //ResetMaterial(mesh);
     }
 
     public async UniTask SuccesQTE()
     {
-        //_animatorQTE.SetTrigger("Succes");
         print("succes");
-        //mesh.material = _succesMaterialQTE;
         _difficulty.IncreaseQTERow();
 
         await UniTask.Delay(1000);
 
-        //ResetMaterial(mesh);
     }
-
-    private void ResetMaterial(MeshRenderer mesh) { mesh.material = _baseMaterial; }
 }
