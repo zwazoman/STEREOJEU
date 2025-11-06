@@ -23,7 +23,7 @@ public class QTEManager : MonoBehaviour
     private async UniTaskVoid UnstackInteraction()
     {
         int i = 0;
-
+        print("GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
         while (i < _interactableItemList.Count)
         {
             var item = _interactableItemList[i];

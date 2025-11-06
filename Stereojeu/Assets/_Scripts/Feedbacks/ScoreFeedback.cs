@@ -1,20 +1,25 @@
 using UnityEngine;
+using DG.Tweening;
+using Cysharp.Threading.Tasks;
 
 public class ScoreFeedback : MonoBehaviour
 {
-    [SerializeField] float _lifeTime = 3;
+    [SerializeField] float _lifeTime = 1f;
 
-    float _timer;
+    private SpriteRenderer _spriteRenderer;
 
     private void Start()
     {
-        print(transform.position);
+        _spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        HandleLifetimeAsync().Forget();
     }
 
-    private void Update()
+    private async UniTaskVoid HandleLifetimeAsync()
     {
-        _timer += Time.deltaTime;
-        if (_timer >= _lifeTime)
-            Destroy(gameObject);
+        await UniTask.WaitForSeconds(_lifeTime);
+
+        await _spriteRenderer.DOFade(0, 0.3f).AsyncWaitForCompletion();
+
+        Destroy(gameObject);
     }
 }

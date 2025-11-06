@@ -150,7 +150,7 @@ class FmodCallbacks : MonoBehaviour
                 break;
             case "Swipe anticipation":
                 OnSwipeMarker?.Invoke();
-                //print("Swipe Nestor");
+                print("Swipe Nestor");
                 break;
             case "Spin anticipation":
                 OnSpinMarker?.Invoke();

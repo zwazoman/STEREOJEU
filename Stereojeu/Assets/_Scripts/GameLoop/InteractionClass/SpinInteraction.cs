@@ -69,9 +69,9 @@ public class SpinInteraction : Interactable
             Vector2 dir = pos - centerScreen;
 
             float currentAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            //float delta = Mathf.DeltaAngle(previousAngle, currentAngle);
+            float delta = Mathf.DeltaAngle(previousAngle, currentAngle);
 
-            //totalRotation += delta;
+            totalRotation += delta;
             previousAngle = currentAngle;
 
             transform.position = basePos; // verrouille la position

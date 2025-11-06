@@ -38,6 +38,8 @@ public class QTECreator : MonoBehaviour
                 visualGO = Instantiate(prefab, _qteSwipePositionList[0].transform);
                 visualGO.transform.position = _qteSwipePositionList[0].transform.position;
                 visualGO.transform.rotation = _qteSwipePositionList[0].transform.rotation;
+                visualGO.transform.localScale = new Vector3(1, 1, 1);
+                _qteSwipePositionList.RemoveAt(0);
             }
             else
             {
@@ -56,18 +58,21 @@ public class QTECreator : MonoBehaviour
         switch (result)
         {
             case QTEResult.Success:
-                await _results.SuccesQTE(prefab);
+                await _results.SuccesQTE(visualGO, type);
                 break;
             case QTEResult.Fail:
-                await _results.FailQTE(prefab);
+                await _results.FailQTE(visualGO, type);
                 break;
         }
+
 
         if (visualGO != null)
         {
             await UniTask.Delay(TimeSpan.FromSeconds(1));
             Destroy(visualGO);
         }
+
+        item.Deactivate();
     }
 
 }
