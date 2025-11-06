@@ -14,7 +14,7 @@ public class QTEResults : MonoBehaviour
     [SerializeField] private QTEScoring _difficulty;
     [SerializeField] private QTEManager _managerQTE;
 
-    public async UniTask FailQTE()
+    public async UniTask FailQTE(GameObject QTEVisual)
     {
         print("fail");
 
@@ -25,7 +25,7 @@ public class QTEResults : MonoBehaviour
         await UniTask.Delay(1000);
     }
 
-    public async UniTask SuccesQTE()
+    public async UniTask SuccesQTE(GameObject QTEVisual)
     {
         print("succes");
         
