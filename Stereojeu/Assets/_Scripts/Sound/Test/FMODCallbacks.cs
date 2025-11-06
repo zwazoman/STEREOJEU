@@ -142,8 +142,6 @@ class FmodCallbacks : MonoBehaviour
 
     void ActivateEventWithMarker(string markerName)
     {
-        print(markerName);
-
         switch (markerName)
         {
             case "Touch anticipation":
