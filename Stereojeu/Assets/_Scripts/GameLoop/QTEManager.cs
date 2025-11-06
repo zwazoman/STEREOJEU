@@ -36,7 +36,7 @@ public class QTEManager : MonoBehaviour
                 await UniTask.WaitUntil(() => rotate.SuccesRotation || FailQTE);
 
             //_interactableItemList.RemoveAt(i);
-
+            print(item.name);
             FailQTE = false;
             item.Deactivate();
         }
