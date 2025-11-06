@@ -19,12 +19,12 @@ public class QTEScoring : MonoBehaviour
         if (_succesfullQTEInARow < 4)
         {
             Score += 10;
-            Instantiate(Succesful10Feedback, QTEVisual.transform.position, Quaternion.identity);
+            Instantiate(Succesful10Feedback, QTEVisual.transform.position, QTEVisual.transform.rotation);
         }
         else
         {
             Score += 50;
-            Instantiate(Successful50Feedback, QTEVisual.transform.position, Quaternion.identity);
+            Instantiate(Successful50Feedback, QTEVisual.transform.position, QTEVisual.transform.rotation);
         }
     }
 
@@ -32,7 +32,7 @@ public class QTEScoring : MonoBehaviour
     {
         _succesfullQTEInARow = 0;
 
-        Instantiate(FailFeedback, QTEVisual.transform.position, Quaternion.identity);
+        Instantiate(FailFeedback, QTEVisual.transform.position, QTEVisual.transform.rotation);
 
     }
 
