@@ -19,8 +19,8 @@ public class QTECreator : MonoBehaviour
             case "Button":
                 prefab = _qteVisualButton;
                 break;
-            case "Spin":
-                prefab = _qteVisualSpin;
+            case "Swipe":
+                prefab = _qteVisualSwipe;
                 break;
             default:
                 return; // ignore tout autre type
