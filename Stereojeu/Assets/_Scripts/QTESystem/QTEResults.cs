@@ -16,7 +16,7 @@ public class QTEResults : MonoBehaviour
 
     public async UniTask FailQTE(GameObject QTEVisual, string InteractionType)
     {
-        print("fail");
+        //print("fail");
 
         OnFailedQTE?.Invoke(QTEVisual, InteractionType);
 
@@ -27,7 +27,7 @@ public class QTEResults : MonoBehaviour
 
     public async UniTask SuccesQTE(GameObject QTEVisual, string InteractionType)
     {
-        print("succes");
+       // print("succes");
         
         OnSuccesfulQTE?.Invoke(QTEVisual, InteractionType);
 

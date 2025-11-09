@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Scene_Mateo.unity
-    guid: 9cb41085f4c3c00438c8ef75a69e064f
+    path: "Assets/Scenes/sceneMat\xE9o.unity"
+    guid: 5868b460e36dcd14aa91405f3100b8da
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 44ee286e224d44b4eb315cbe3d3fa9c5, type: 3}
   m_UseUCBPForAssetBundles: 0
