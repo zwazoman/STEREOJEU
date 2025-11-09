@@ -53,7 +53,7 @@ public class PlayerInteractMananger : MonoBehaviour
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, detectableLayers))
         {
             _interactable = hit.collider.GetComponent<Interactable>();
-            print(hit.collider.name);
+            //print(hit.collider.name);
             if (_interactable != null)
             {
                 _isHolding = true;

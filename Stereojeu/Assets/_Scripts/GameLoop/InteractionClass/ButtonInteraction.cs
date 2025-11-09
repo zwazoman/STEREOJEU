@@ -1,3 +1,5 @@
+using Cysharp.Threading.Tasks;
+
 public class ButtonInteraction : Interactable
 {
     public bool WasPress { get; private set; }

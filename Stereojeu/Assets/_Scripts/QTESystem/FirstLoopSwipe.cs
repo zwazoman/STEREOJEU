@@ -1,37 +1,37 @@
 using Cysharp.Threading.Tasks;
-using UnityEditor.ShaderKeywordFilter;
+using DG.Tweening;
 using UnityEngine;
 
 public class FirstLoopSwipe : MonoBehaviour
 {
-    [SerializeField] private Animator _animator;
+    [SerializeField] private GameObject _exampleSwipe;
     [SerializeField] private SwipeInteraction _interaction;
     private bool _isRunning = true;
 
     private void Start()
     {
-        Loop().Forget();
+        SwipeDetection().Forget();
+        ShowExampleSwipe().Forget();
     }
 
-    private async UniTaskVoid Loop()
+    private async UniTaskVoid SwipeDetection()
+    {
+        await UniTask.WaitUntil(() => _interaction.SuccesSwipe);
+        _isRunning = false;
+        _exampleSwipe.SetActive(false);
+    }
+
+    private async UniTaskVoid ShowExampleSwipe()
     {
         while (_isRunning)
         {
-            _animator.Play("anim_QTE_Anticipation_Placeholder");
+            await UniTask.Delay(1000);
 
-            await UniTask.WaitForSeconds(1);
+            await _exampleSwipe.transform.DOLocalMove(new Vector3(1.58f, 0.02f, 0.7f), 1).AsyncWaitForCompletion();
+            await _exampleSwipe.transform.DOScale(Vector3.zero, 0.3f).AsyncWaitForCompletion();
 
-            if (_interaction.SuccesSwipe)
-            {
-                _animator.SetTrigger("Success");
-                _isRunning = false;
-                gameObject.SetActive(false);
-            }
-            else
-            {
-                _animator.SetTrigger("Fail");
-                await UniTask.Delay(500); // courte pause avant de relancer la boucle
-            }
+            _exampleSwipe.transform.localPosition = new Vector3(1.58f, 0.02f, -0.67f);
+            _exampleSwipe.transform.localScale = new Vector3(99, 99, 99);
         }
     }
 }

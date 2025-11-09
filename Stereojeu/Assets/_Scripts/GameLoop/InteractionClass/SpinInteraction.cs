@@ -18,16 +18,15 @@ public class SpinInteraction : Interactable
 
     public bool SuccesRotation { get; private set; }
 
-    //private void Start()
-    //{
-    //    RotateVisualQTE().Forget();
-    //}
+    private void Start()
+    {
+        RotateVisualQTE().Forget();
+    }
 
     public override void InteractionStart()
     {
         if (!IsActive) return;
 
-        print("ok");
         isDragging = true;
         SuccesRotation = false;
         totalRotation = 0f;
@@ -38,7 +37,6 @@ public class SpinInteraction : Interactable
 
         previousAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
-        RotateVisualQTE().Forget();
         RotationLoop().Forget();
     }
 
@@ -48,7 +46,7 @@ public class SpinInteraction : Interactable
         isDragging = false;
 
         SuccesRotation = Mathf.Abs(totalRotation) >= (_requiredRotation - _tolerance);
-        Debug.Log($"Rotation totale: {totalRotation:F1} Succès: {SuccesRotation}");
+        //Debug.Log($"Rotation totale: {totalRotation:F1} Succès: {SuccesRotation}");
     }
 
     private async UniTaskVoid RotationLoop()
@@ -94,14 +92,7 @@ public class SpinInteraction : Interactable
     {
         while (true)
         {
-            if (!IsActive)
-            {
-                _spinInteraction.SetActive(false);
-                return;
-            }
-
             _spinInteraction.transform.Rotate(0f, 0f, _speed * Time.deltaTime);
-
             await UniTask.Yield();
         }
     }
