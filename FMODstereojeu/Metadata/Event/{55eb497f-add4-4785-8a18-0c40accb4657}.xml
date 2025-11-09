@@ -28,6 +28,7 @@
 		</relationship>
 		<relationship name="groupTracks">
 			<destination>{c3c2d4f4-7e02-4105-912d-04b412d097e9}</destination>
+			<destination>{8bd201cc-c773-43c6-a30b-54ea62a9120f}</destination>
 		</relationship>
 		<relationship name="timeline">
 			<destination>{95795e31-10ab-46ef-a53f-1aad07ca6b21}</destination>
@@ -72,10 +73,17 @@
 		<relationship name="modules">
 			<destination>{cd8e1f11-0bb4-4251-a116-ed7d81a0c032}</destination>
 			<destination>{cce160ee-122e-4dce-bec3-92dcfd9c2ffe}</destination>
-			<destination>{2aa12bf9-8f20-410e-8a0f-1a26b7ea6a02}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{20920987-f58c-477a-a90e-dc1b92685a5d}</destination>
+		</relationship>
+	</object>
+	<object class="GroupTrack" id="{8bd201cc-c773-43c6-a30b-54ea62a9120f}">
+		<relationship name="modules">
+			<destination>{2aa12bf9-8f20-410e-8a0f-1a26b7ea6a02}</destination>
+		</relationship>
+		<relationship name="mixerGroup">
+			<destination>{5aefba4c-6d43-416c-9415-71f5ac518543}</destination>
 		</relationship>
 	</object>
 	<object class="Timeline" id="{95795e31-10ab-46ef-a53f-1aad07ca6b21}">
@@ -262,23 +270,6 @@
 			<destination>{15352088-abc6-42d5-997c-d339ac07a99f}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{2aa12bf9-8f20-410e-8a0f-1a26b7ea6a02}">
-		<property name="start">
-			<value>46.400000000000006</value>
-		</property>
-		<property name="length">
-			<value>1.77</value>
-		</property>
-		<property name="volume">
-			<value>10</value>
-		</property>
-		<property name="pitch">
-			<value>0.800000012</value>
-		</property>
-		<relationship name="audioFile">
-			<destination>{af246aea-b4aa-43b8-bce6-9a5c5b5e53cf}</destination>
-		</relationship>
-	</object>
 	<object class="EventMixerGroup" id="{20920987-f58c-477a-a90e-dc1b92685a5d}">
 		<property name="name">
 			<value>Audio 1</value>
@@ -288,6 +279,34 @@
 		</relationship>
 		<relationship name="panner">
 			<destination>{3a75b683-3079-44e2-8e2e-6bea054725e5}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{75c2409b-3b1d-4a1e-b0ac-bc062a6ad158}</destination>
+		</relationship>
+	</object>
+	<object class="SingleSound" id="{2aa12bf9-8f20-410e-8a0f-1a26b7ea6a02}">
+		<property name="start">
+			<value>46.400000000000006</value>
+		</property>
+		<property name="length">
+			<value>1.77</value>
+		</property>
+		<property name="pitch">
+			<value>3.60000014</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{af246aea-b4aa-43b8-bce6-9a5c5b5e53cf}</destination>
+		</relationship>
+	</object>
+	<object class="EventMixerGroup" id="{5aefba4c-6d43-416c-9415-71f5ac518543}">
+		<property name="name">
+			<value>Audio 2</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{32d8115a-31a7-4bb5-9826-f805c0b004a2}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{82cf39a0-8a0a-4958-b9fe-8a670ea64abe}</destination>
 		</relationship>
 		<relationship name="output">
 			<destination>{75c2409b-3b1d-4a1e-b0ac-bc062a6ad158}</destination>
@@ -908,6 +927,22 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{3a75b683-3079-44e2-8e2e-6bea054725e5}" />
+	<object class="MixerBusEffectChain" id="{32d8115a-31a7-4bb5-9826-f805c0b004a2}">
+		<relationship name="effects">
+			<destination>{74792db9-0269-46eb-8bb2-dd175a8b1308}</destination>
+			<destination>{a9573c1c-915a-4e65-a30d-f79d1a729c64}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{82cf39a0-8a0a-4958-b9fe-8a670ea64abe}" />
 	<object class="MixerBusFader" id="{e80fb703-5d97-4d4e-b429-bedd34d530c7}" />
 	<object class="MixerBusFader" id="{0d485a10-7efc-4cdc-9288-cbd97bfdea63}" />
+	<object class="MixerBusFader" id="{74792db9-0269-46eb-8bb2-dd175a8b1308}" />
+	<object class="SFXReverbEffect" id="{a9573c1c-915a-4e65-a30d-f79d1a729c64}">
+		<property name="decayTime">
+			<value>1900</value>
+		</property>
+		<property name="lowShelfGain">
+			<value>-12</value>
+		</property>
+	</object>
 </objects>
