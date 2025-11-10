@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: AC_VFX_Fret
+  m_Controller: {fileID: 9100000, guid: 443f82e1fb69d8e49955890a1d29c798, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: fc4513520566cf140a8aa8de102d87c6, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: edb58ba785ef1db469daad19d4d5d4fb, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b80e4d147ab38d34f9ea94d56307166b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: f1e8f8783cc3d9d4faa0d62ea37eb73a, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 8c1fcc5e763603d4c94dd36445c400aa, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 130ec27a088c55243a6ca456936564ce, type: 2}
