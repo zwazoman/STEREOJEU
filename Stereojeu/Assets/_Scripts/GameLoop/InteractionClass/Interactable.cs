@@ -2,6 +2,10 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour
 {
+    public GameObject QTEVisualEffect;
+    public Transform SpawnAnticipationVFX;
+    public Transform SpawnResultQTEVFX;
+
     public bool IsActive { get; private set; } = false;
 
     public void Activate() => IsActive = true;

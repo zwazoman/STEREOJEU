@@ -6,15 +6,15 @@ public class QTEResults : MonoBehaviour
 {
     #region Events
 
-    [SerializeField] public UnityEvent<GameObject, string> OnSuccesfulQTE;
-    [SerializeField] public UnityEvent<GameObject, string> OnFailedQTE;
+    [SerializeField] public UnityEvent<GameObject, Interactable> OnSuccesfulQTE;
+    [SerializeField] public UnityEvent<GameObject, Interactable> OnFailedQTE;
 
     #endregion
 
     [SerializeField] private QTEScoring _difficulty;
     [SerializeField] private QTEManager _managerQTE;
 
-    public async UniTask FailQTE(GameObject QTEVisual, string InteractionType)
+    public async UniTask FailQTE(GameObject QTEVisual, Interactable InteractionType)
     {
         //print("fail");
 
@@ -25,7 +25,7 @@ public class QTEResults : MonoBehaviour
         await UniTask.Delay(1000);
     }
 
-    public async UniTask SuccesQTE(GameObject QTEVisual, string InteractionType)
+    public async UniTask SuccesQTE(GameObject QTEVisual, Interactable InteractionType)
     {
        // print("succes");
         
