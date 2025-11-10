@@ -11,9 +11,9 @@ public class QTEManager : MonoBehaviour
 
     [SerializeField] private QTECreator _qTECreator;
 
-    [SerializeField] private float _qTEButtonTiming;
-    [SerializeField] private float _qTESwipeTiming;
-    [SerializeField] private float _qTESpinTiming;
+    //[SerializeField] private float _qTEButtonTiming;
+    //[SerializeField] private float _qTESwipeTiming;
+    //[SerializeField] private float _qTESpinTiming;
 
 
     public bool FailQTE;
@@ -52,15 +52,16 @@ public class QTEManager : MonoBehaviour
         return item;
     }
 
-    public void ButtonQTE() => HandleQTE(_qTEButtonTiming, "Button").Forget();
-    public void SwipeQTE() => HandleQTE(_qTESwipeTiming, "Swipe").Forget();
-    public void SpinQTE() => HandleQTE(_qTESpinTiming, "Spin").Forget();
+    public void ButtonQTE() => HandleQTE("Button").Forget();
+    public void SwipeQTE() => HandleQTE("Swipe").Forget();
+    public void SpinQTE() => HandleQTE("Spin").Forget();
 
-    private async UniTaskVoid HandleQTE(float anticipationTime, string type)
+    private async UniTaskVoid HandleQTE(string type)
     {
-        await UniTask.Delay(TimeSpan.FromSeconds(2 - anticipationTime));
-
         Interactable item = PopNextItem();
+
+        await UniTask.Delay(TimeSpan.FromSeconds(2 - item.Duration));
+
         if (item == null)
         {
             Debug.LogWarning($"Aucun interactable disponible pour QTE {type}");
@@ -69,6 +70,6 @@ public class QTEManager : MonoBehaviour
 
         item.Activate();
 
-        await _qTECreator.CreateQTE(anticipationTime, item, type);
+        await _qTECreator.CreateQTE(item.Duration, item, type);
     }
 }

@@ -316,6 +316,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 1
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 5762763353479929024}
   SpawnResultQTEVFX: {fileID: 984229349}
@@ -698,6 +699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 1
   QTEVisualEffect: {fileID: 3581321111877952150, guid: 14b7e14b73659dc4ba1a994039ccdd88, type: 3}
   SpawnAnticipationVFX: {fileID: 2144206576}
   SpawnResultQTEVFX: {fileID: 1059620081}
@@ -7840,6 +7842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 1
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 634746083}
   SpawnResultQTEVFX: {fileID: 1677053150}
@@ -7977,6 +7980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a801a5f9669217547b2d3e52c35a6463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 1.15
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 1348603756780625339}
   SpawnResultQTEVFX: {fileID: 1348603756780625339}
@@ -8318,6 +8322,12 @@ PlayableDirector:
     value: {fileID: 2009587327}
   - key: {fileID: -4337120762875763425, guid: aea40f1c42e38b84892d0b37018cac79, type: 2}
     value: {fileID: 1588424270}
+  - key: {fileID: -5582460444744359620, guid: aea40f1c42e38b84892d0b37018cac79, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 4310699323708181369, guid: aea40f1c42e38b84892d0b37018cac79, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 9139280470712728361, guid: aea40f1c42e38b84892d0b37018cac79, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - e710dc88bd0fea5499701a5c21e895bf: {fileID: 1325538316}
@@ -8835,6 +8845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a801a5f9669217547b2d3e52c35a6463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 1.15
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 1063652393}
   SpawnResultQTEVFX: {fileID: 331619844}
@@ -8886,6 +8897,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 1
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 1581962125663085462}
   SpawnResultQTEVFX: {fileID: 1713695388}
@@ -9072,7 +9084,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 20
+  field of view: 17.7
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -9098,8 +9110,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900563409}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.31761447, y: 2.731298, z: -8.105637}
+  m_LocalRotation: {x: 0.00019748686, y: 0.70710677, z: 0.00019748686, w: 0.70710677}
+  m_LocalPosition: {x: -0.31761447, y: 2.731298, z: -1.5056362}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9250,6 +9262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a801a5f9669217547b2d3e52c35a6463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 1.15
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 129884420}
   SpawnResultQTEVFX: {fileID: 1979570586}
@@ -9837,6 +9850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a801a5f9669217547b2d3e52c35a6463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 1.15
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 595834670}
   SpawnResultQTEVFX: {fileID: 331619844}
@@ -9896,6 +9910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 1
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 5863722356754878418}
   SpawnResultQTEVFX: {fileID: 1184249807}
@@ -9911,6 +9926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 1
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 5089424833392988900}
   SpawnResultQTEVFX: {fileID: 354597646}
@@ -10145,6 +10161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 0
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 1022872946366624757}
   SpawnResultQTEVFX: {fileID: 77512722}
@@ -10854,9 +10871,6 @@ MonoBehaviour:
   - {fileID: 1588424272}
   _results: {fileID: 1391969871}
   _qTECreator: {fileID: 1391969872}
-  _qTEButtonTiming: 1
-  _qTESwipeTiming: 1.15
-  _qTESpinTiming: 2
   FailQTE: 0
 --- !u!114 &1391969874
 MonoBehaviour:
@@ -11435,6 +11449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 1
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 264768167363237526}
   SpawnResultQTEVFX: {fileID: 1298984889}
@@ -11471,6 +11486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 1
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 4482838182833417735}
   SpawnResultQTEVFX: {fileID: 269556775}
@@ -11684,6 +11700,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989aa557e31e6524cbfa0c2ae73f4105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 2
   QTEVisualEffect: {fileID: 919132149327813398}
   SpawnAnticipationVFX: {fileID: 4571469422570321659}
   SpawnResultQTEVFX: {fileID: 22509978}
@@ -11803,6 +11820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 1
   QTEVisualEffect: {fileID: 3581321111877952150, guid: 14b7e14b73659dc4ba1a994039ccdd88, type: 3}
   SpawnAnticipationVFX: {fileID: 936473198}
   SpawnResultQTEVFX: {fileID: 1059620081}
@@ -12193,6 +12211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a801a5f9669217547b2d3e52c35a6463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 1.15
   QTEVisualEffect: {fileID: 0}
   SpawnAnticipationVFX: {fileID: 0}
   SpawnResultQTEVFX: {fileID: 0}
@@ -12264,6 +12283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 1
   QTEVisualEffect: {fileID: 3581321111877952150, guid: 14b7e14b73659dc4ba1a994039ccdd88, type: 3}
   SpawnAnticipationVFX: {fileID: 168415519}
   SpawnResultQTEVFX: {fileID: 1059620081}
@@ -12655,6 +12675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 1
   QTEVisualEffect: {fileID: 3581321111877952150, guid: 14b7e14b73659dc4ba1a994039ccdd88, type: 3}
   SpawnAnticipationVFX: {fileID: 331440772}
   SpawnResultQTEVFX: {fileID: 1059620081}
@@ -13394,6 +13415,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a801a5f9669217547b2d3e52c35a6463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 1.15
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 75100967}
   SpawnResultQTEVFX: {fileID: 1979570586}
@@ -13853,6 +13875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a801a5f9669217547b2d3e52c35a6463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 0
   QTEVisualEffect: {fileID: 0}
   SpawnAnticipationVFX: {fileID: 0}
   SpawnResultQTEVFX: {fileID: 0}
@@ -13991,6 +14014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 1
   QTEVisualEffect: {fileID: 3942096764238518136, guid: d3403e12b08ef884c89fda0e34f3aad4, type: 3}
   SpawnAnticipationVFX: {fileID: 461232533}
   SpawnResultQTEVFX: {fileID: 1059620081}
@@ -14201,6 +14225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a801a5f9669217547b2d3e52c35a6463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 1.15
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 1661673225}
   SpawnResultQTEVFX: {fileID: 225976346}
@@ -14797,6 +14822,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a801a5f9669217547b2d3e52c35a6463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Duration: 1.15
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 165500639}
   SpawnResultQTEVFX: {fileID: 331619844}
