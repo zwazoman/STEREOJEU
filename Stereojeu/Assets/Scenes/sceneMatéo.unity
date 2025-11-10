@@ -8975,7 +8975,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 17.7
+  field of view: 29.033413
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -9001,8 +9001,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900563409}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00019748686, y: 0.70710677, z: 0.00019748686, w: 0.70710677}
-  m_LocalPosition: {x: -0.31761447, y: 2.731298, z: -1.5056362}
+  m_LocalRotation: {x: -0.00017414575, y: 0, z: 0, w: -1}
+  m_LocalPosition: {x: -0.31761447, y: 2.7327156, z: -5.575636}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10690,6 +10690,20 @@ MonoBehaviour:
   Succesful10Feedback: {fileID: 3516398204895806099, guid: b362458b18216dd488f02916e90a5225, type: 3}
   Successful50Feedback: {fileID: 230582591941666260, guid: 34085c484a0d57244a7c6a8338a37752, type: 3}
   FailFeedback: {fileID: 445051317798125143, guid: dcc6919092fb92141b94b793c3717304, type: 3}
+  _failedQTESound:
+    Guid:
+      Data1: 776812611
+      Data2: 1167845959
+      Data3: 2025242776
+      Data4: -1040479252
+    Path: event:/Failed QTE
+  _successfulQTESound:
+    Guid:
+      Data1: 1262785580
+      Data2: 1222193762
+      Data3: -2114057824
+      Data4: 74560495
+    Path: event:/Successful QTE
 --- !u!114 &1391969871
 MonoBehaviour:
   m_ObjectHideFlags: 0

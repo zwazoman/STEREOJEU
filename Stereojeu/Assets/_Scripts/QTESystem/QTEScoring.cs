@@ -1,6 +1,6 @@
 using UnityEngine;
 using DG.Tweening;
-
+using FMODUnity;
 
 public class QTEScoring : MonoBehaviour
 {
@@ -9,6 +9,10 @@ public class QTEScoring : MonoBehaviour
     [SerializeField] private GameObject Successful50Feedback;
     [SerializeField] private GameObject FailFeedback;
 
+    [Header("References")]
+    [SerializeField] EventReference _failedQTESound;
+    [SerializeField] EventReference _successfulQTESound;
+
     public int Score { get; private set; }
 
     private int _succesfullQTEInARow;
@@ -16,6 +20,8 @@ public class QTEScoring : MonoBehaviour
     public void SuccesfulQTE(GameObject QTEVisual, string type)
     {
         _succesfullQTEInARow++;
+
+        RuntimeManager.PlayOneShot(_successfulQTESound);
 
         if (_succesfullQTEInARow < 4)
         {
@@ -34,6 +40,8 @@ public class QTEScoring : MonoBehaviour
     public void FailedQTE(GameObject QTEVisual, string type)
     {
         _succesfullQTEInARow = 0;
+
+        RuntimeManager.PlayOneShot(_failedQTESound);
 
         GameObject obj = Instantiate(FailFeedback, QTEVisual.transform);
         SetupSize(obj, QTEVisual, FailFeedback, type);
