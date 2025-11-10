@@ -60,7 +60,8 @@ public class QTEManager : MonoBehaviour
     {
         Interactable item = PopNextItem();
 
-        await UniTask.Delay(TimeSpan.FromSeconds(2 - item.Duration));
+        if (item.Duration < 2)
+            await UniTask.Delay(TimeSpan.FromSeconds(2 - item.Duration));
 
         if (item == null)
         {

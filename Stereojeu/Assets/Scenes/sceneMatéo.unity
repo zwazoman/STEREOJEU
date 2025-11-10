@@ -699,7 +699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 1
+  Duration: 1.2
   QTEVisualEffect: {fileID: 3581321111877952150, guid: 14b7e14b73659dc4ba1a994039ccdd88, type: 3}
   SpawnAnticipationVFX: {fileID: 2144206576}
   SpawnResultQTEVFX: {fileID: 1059620081}
@@ -9084,7 +9084,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 17.7
+  field of view: 69.1
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -9110,8 +9110,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900563409}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00019748686, y: 0.70710677, z: 0.00019748686, w: 0.70710677}
-  m_LocalPosition: {x: -0.31761447, y: 2.731298, z: -1.5056362}
+  m_LocalRotation: {x: 0.112067744, y: 0.69816965, z: -0.11168144, w: 0.6982315}
+  m_LocalPosition: {x: 8.232386, y: -3.658702, z: -1.5056362}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10860,11 +10860,11 @@ MonoBehaviour:
   - {fileID: 2079025907}
   - {fileID: 799002421}
   - {fileID: 634746085}
+  - {fileID: 1929125575}
   - {fileID: 1598969851}
   - {fileID: 98919941}
   - {fileID: 1711712208}
   - {fileID: 1546234601}
-  - {fileID: 1929125575}
   - {fileID: 1947453215}
   - {fileID: 926339685}
   - {fileID: 1867459109}
@@ -11820,7 +11820,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 1
+  Duration: 1.2
   QTEVisualEffect: {fileID: 3581321111877952150, guid: 14b7e14b73659dc4ba1a994039ccdd88, type: 3}
   SpawnAnticipationVFX: {fileID: 936473198}
   SpawnResultQTEVFX: {fileID: 1059620081}
@@ -12283,7 +12283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 1
+  Duration: 1.2
   QTEVisualEffect: {fileID: 3581321111877952150, guid: 14b7e14b73659dc4ba1a994039ccdd88, type: 3}
   SpawnAnticipationVFX: {fileID: 168415519}
   SpawnResultQTEVFX: {fileID: 1059620081}
@@ -12675,7 +12675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 1
+  Duration: 1.2
   QTEVisualEffect: {fileID: 3581321111877952150, guid: 14b7e14b73659dc4ba1a994039ccdd88, type: 3}
   SpawnAnticipationVFX: {fileID: 331440772}
   SpawnResultQTEVFX: {fileID: 1059620081}
@@ -13975,7 +13975,7 @@ Transform:
   m_GameObject: {fileID: 1929125572}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -8.164481e-15, z: 8.16448e-15, w: 1}
-  m_LocalPosition: {x: 0.1028, y: 0.4482, z: -0}
+  m_LocalPosition: {x: 0.103, y: 0.448, z: 0.156}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14014,9 +14014,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 1
+  Duration: 5
   QTEVisualEffect: {fileID: 3942096764238518136, guid: d3403e12b08ef884c89fda0e34f3aad4, type: 3}
-  SpawnAnticipationVFX: {fileID: 461232533}
+  SpawnAnticipationVFX: {fileID: 1929125573}
   SpawnResultQTEVFX: {fileID: 1059620081}
 --- !u!1 &1946912479
 GameObject:
