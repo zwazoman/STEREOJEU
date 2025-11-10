@@ -14,40 +14,26 @@ public class QTECreator : MonoBehaviour
 
     public async UniTask CreateQTE(float duration, Interactable item, string type = "Button", bool isInfinite = false)
     {
-        GameObject prefab = null;
-
-        switch (type)
-        {
-            case "Button":
-                prefab = _qteVisualButton;
-                break;
-            case "Swipe":
-                prefab = _qteVisualSwipe;
-                break;
-            default:
-                return; // ignore tout autre type
-        }
+        GameObject prefab = item.QTEVisualEffect;
 
         GameObject visualGO = null;
         QTEVisualController visual = null;
 
-        if (prefab != null)
+        if (type == "Swipe")
         {
-            if(type == "Swipe")
-            {
-                visualGO = Instantiate(prefab, _qteSwipePositionList[0].transform);
-                visualGO.transform.position = _qteSwipePositionList[0].transform.position;
-                visualGO.transform.rotation = _qteSwipePositionList[0].transform.rotation;
-                visualGO.transform.localScale = new Vector3(1, 1, 1);
-                _qteSwipePositionList.RemoveAt(0);
-            }
-            else
-            {
-                visualGO = Instantiate(prefab, item.gameObject.transform);
-            }
-
-            visual = visualGO.GetComponent<QTEVisualController>();
+            visualGO = Instantiate(prefab, item.SpawnAnticipationVFX);
+            visualGO.transform.position = item.SpawnAnticipationVFX.position;
+            visualGO.transform.rotation = item.SpawnAnticipationVFX.rotation;
+            visualGO.transform.localScale = new Vector3(1, 1, 1);
         }
+        else if (type == "Button")
+        {
+            visualGO = Instantiate(prefab, item.SpawnAnticipationVFX);
+        }
+
+        if(visualGO != null)
+            visual = visualGO.GetComponent<QTEVisualController>();
+
 
         QTETimer timer = new QTETimer(duration, item);
         QTEResult result = await timer.StartTimerAsync(isInfinite);
@@ -58,10 +44,10 @@ public class QTECreator : MonoBehaviour
         switch (result)
         {
             case QTEResult.Success:
-                await _results.SuccesQTE(visualGO, type);
+                await _results.SuccesQTE(visualGO, item);
                 break;
             case QTEResult.Fail:
-                await _results.FailQTE(visualGO, type);
+                await _results.FailQTE(visualGO, item);
                 break;
         }
 
