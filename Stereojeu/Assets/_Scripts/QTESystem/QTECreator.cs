@@ -29,6 +29,7 @@ public class QTECreator : MonoBehaviour
         else if (type == "Button")
         {
             visualGO = Instantiate(prefab, item.SpawnAnticipationVFX);
+            visualGO.transform.position = item.SpawnAnticipationVFX.position;
         }
 
         if(visualGO != null)
