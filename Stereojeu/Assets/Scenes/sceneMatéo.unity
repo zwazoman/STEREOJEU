@@ -1248,7 +1248,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0016422343, y: 0.0016422338, z: 0.0007084571}
   m_Center: {x: -0.0002681553, y: -0.0044465577, z: 0.00055115874}
---- !u!114 &168415514
+--- !u!114 &168415518
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1257,11 +1257,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 168415509}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a801a5f9669217547b2d3e52c35a6463, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tolerance: 30
-  CorrectDirection: 0
 --- !u!1 &191632885
 GameObject:
   m_ObjectHideFlags: 0
@@ -1517,7 +1515,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0016422354, y: 0.0016422352, z: 0.00070845714}
   m_Center: {x: 0.0007954592, y: -0.0030512512, z: 0.0004680807}
---- !u!114 &331440767
+--- !u!114 &331440771
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1526,11 +1524,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 331440762}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a801a5f9669217547b2d3e52c35a6463, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tolerance: 30
-  CorrectDirection: 0
 --- !u!1 &358691482
 GameObject:
   m_ObjectHideFlags: 0
@@ -7001,7 +6997,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.002566123, y: 0.0025661243, z: 0.0010117483}
   m_Center: {x: 0.00092986063, y: 0.004535366, z: 0.00039234274}
---- !u!114 &461232528
+--- !u!114 &461232532
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7010,11 +7006,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 461232523}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a801a5f9669217547b2d3e52c35a6463, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tolerance: 30
-  CorrectDirection: 0
 --- !u!1 &511316899
 GameObject:
   m_ObjectHideFlags: 0
@@ -8975,7 +8969,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 17.7
+  field of view: 29.033413
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -9001,8 +8995,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900563409}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00019748686, y: 0.70710677, z: 0.00019748686, w: 0.70710677}
-  m_LocalPosition: {x: -0.31761447, y: 2.731298, z: -1.5056362}
+  m_LocalRotation: {x: -0.00017414575, y: 0, z: 0, w: -1}
+  m_LocalPosition: {x: -0.31761447, y: 2.7327156, z: -5.575636}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9181,7 +9175,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0016422366, y: 0.0016422338, z: 0.0007084571}
   m_Center: {x: 0.0019119368, y: -0.004454761, z: 0.00040386594}
---- !u!114 &936473193
+--- !u!114 &936473197
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9190,11 +9184,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 936473188}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a801a5f9669217547b2d3e52c35a6463, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tolerance: 30
-  CorrectDirection: 0
 --- !u!1 &993846161
 GameObject:
   m_ObjectHideFlags: 0
@@ -10690,6 +10682,20 @@ MonoBehaviour:
   Succesful10Feedback: {fileID: 3516398204895806099, guid: b362458b18216dd488f02916e90a5225, type: 3}
   Successful50Feedback: {fileID: 230582591941666260, guid: 34085c484a0d57244a7c6a8338a37752, type: 3}
   FailFeedback: {fileID: 445051317798125143, guid: dcc6919092fb92141b94b793c3717304, type: 3}
+  _failedQTESound:
+    Guid:
+      Data1: 776812611
+      Data2: 1167845959
+      Data3: 2025242776
+      Data4: -1040479252
+    Path: event:/Failed QTE
+  _successfulQTESound:
+    Guid:
+      Data1: 1262785580
+      Data2: 1222193762
+      Data3: -2114057824
+      Data4: 74560495
+    Path: event:/Successful QTE
 --- !u!114 &1391969871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10789,17 +10795,16 @@ MonoBehaviour:
   - {fileID: 668934061}
   - {fileID: 668934061}
   - {fileID: 668934061}
-  - {fileID: 668934061}
   - {fileID: 1544208159}
   - {fileID: 1138953069}
   - {fileID: 8391537969487924461}
   - {fileID: 8561711171287249037}
   - {fileID: 634746085}
-  - {fileID: 168415514}
-  - {fileID: 936473193}
-  - {fileID: 331440767}
-  - {fileID: 2144206571}
-  - {fileID: 461232528}
+  - {fileID: 168415518}
+  - {fileID: 331440771}
+  - {fileID: 2144206575}
+  - {fileID: 936473197}
+  - {fileID: 461232532}
   - {fileID: 1947453215}
   - {fileID: 926339685}
   - {fileID: 1867459109}
@@ -13399,34 +13404,34 @@ PrefabInstance:
       addedObject: {fileID: 1870763143}
     - targetCorrespondingSourceObject: {fileID: 3947921469537589581, guid: 9692e438a745624459d2d1a76b96f334, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 168415514}
+      addedObject: {fileID: 168415513}
     - targetCorrespondingSourceObject: {fileID: 3947921469537589581, guid: 9692e438a745624459d2d1a76b96f334, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 168415513}
-    - targetCorrespondingSourceObject: {fileID: 8399698844239209284, guid: 9692e438a745624459d2d1a76b96f334, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2144206571}
+      addedObject: {fileID: 168415518}
     - targetCorrespondingSourceObject: {fileID: 8399698844239209284, guid: 9692e438a745624459d2d1a76b96f334, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2144206570}
-    - targetCorrespondingSourceObject: {fileID: -8171042505132146617, guid: 9692e438a745624459d2d1a76b96f334, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 8399698844239209284, guid: 9692e438a745624459d2d1a76b96f334, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 331440767}
+      addedObject: {fileID: 2144206575}
     - targetCorrespondingSourceObject: {fileID: -8171042505132146617, guid: 9692e438a745624459d2d1a76b96f334, type: 3}
       insertIndex: -1
       addedObject: {fileID: 331440766}
-    - targetCorrespondingSourceObject: {fileID: 2929770980734731101, guid: 9692e438a745624459d2d1a76b96f334, type: 3}
+    - targetCorrespondingSourceObject: {fileID: -8171042505132146617, guid: 9692e438a745624459d2d1a76b96f334, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 936473193}
+      addedObject: {fileID: 331440771}
     - targetCorrespondingSourceObject: {fileID: 2929770980734731101, guid: 9692e438a745624459d2d1a76b96f334, type: 3}
       insertIndex: -1
       addedObject: {fileID: 936473192}
-    - targetCorrespondingSourceObject: {fileID: -1344928049988116898, guid: 9692e438a745624459d2d1a76b96f334, type: 3}
+    - targetCorrespondingSourceObject: {fileID: 2929770980734731101, guid: 9692e438a745624459d2d1a76b96f334, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 461232528}
+      addedObject: {fileID: 936473197}
     - targetCorrespondingSourceObject: {fileID: -1344928049988116898, guid: 9692e438a745624459d2d1a76b96f334, type: 3}
       insertIndex: -1
       addedObject: {fileID: 461232527}
+    - targetCorrespondingSourceObject: {fileID: -1344928049988116898, guid: 9692e438a745624459d2d1a76b96f334, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 461232532}
   m_SourcePrefab: {fileID: 100100000, guid: 9692e438a745624459d2d1a76b96f334, type: 3}
 --- !u!4 &1870763141 stripped
 Transform:
@@ -14464,7 +14469,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0016422356, y: 0.0016422352, z: 0.00070845714}
   m_Center: {x: 0.00078873825, y: -0.0058452357, z: 0.0004603297}
---- !u!114 &2144206571
+--- !u!114 &2144206575
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14473,11 +14478,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2144206566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a801a5f9669217547b2d3e52c35a6463, type: 3}
+  m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tolerance: 30
-  CorrectDirection: 0
 --- !u!23 &33207711218360608
 MeshRenderer:
   m_ObjectHideFlags: 0
