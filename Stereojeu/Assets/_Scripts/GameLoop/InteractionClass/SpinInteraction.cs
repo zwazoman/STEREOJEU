@@ -12,9 +12,9 @@ public class SpinInteraction : Interactable
     [SerializeField] private GameObject _spinInteraction;
     [SerializeField] private float _speed;
 
-    private bool isDragging;
-    private float totalRotation;
-    private float previousAngle;
+    private bool _isDragging;
+    private float _totalRotation;
+    private float _previousAngle;
 
     public bool SuccesRotation { get; private set; }
 
@@ -27,25 +27,25 @@ public class SpinInteraction : Interactable
     {
         if (!IsActive) return;
 
-        isDragging = true;
+        _isDragging = true;
         SuccesRotation = false;
-        totalRotation = 0f;
+        _totalRotation = 0f;
 
         Vector2 pos = GetPointerPosition();
         Vector2 centerScreen = _cam.WorldToScreenPoint(_center.position);
         Vector2 dir = pos - centerScreen;
 
-        previousAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        _previousAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
         RotationLoop().Forget();
     }
 
     public override void InteractionStop()
     {
-        if (!isDragging) return;
-        isDragging = false;
+        if (!_isDragging) return;
+        _isDragging = false;
 
-        SuccesRotation = Mathf.Abs(totalRotation) >= (_requiredRotation - _tolerance);
+        SuccesRotation = Mathf.Abs(_totalRotation) >= (_requiredRotation - _tolerance);
         //Debug.Log($"Rotation totale: {totalRotation:F1} Succès: {SuccesRotation}");
     }
 
@@ -54,7 +54,7 @@ public class SpinInteraction : Interactable
         int frameCount = 0;
         Vector3 basePos = transform.position;
 
-        while (isDragging)
+        while (_isDragging)
         {
             await UniTask.Yield();
 
@@ -67,10 +67,10 @@ public class SpinInteraction : Interactable
             Vector2 dir = pos - centerScreen;
 
             float currentAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-            float delta = Mathf.DeltaAngle(previousAngle, currentAngle);
+            float delta = Mathf.DeltaAngle(_previousAngle, currentAngle);
 
-            totalRotation += delta;
-            previousAngle = currentAngle;
+            _totalRotation += delta;
+            _previousAngle = currentAngle;
 
             transform.position = basePos; // verrouille la position
             //transform.localRotation = Quaternion.Euler(0f, 0f, transform.localEulerAngles.z - delta);

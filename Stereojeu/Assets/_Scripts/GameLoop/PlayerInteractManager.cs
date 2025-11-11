@@ -50,17 +50,22 @@ public class PlayerInteractMananger : MonoBehaviour
     {
         screenPosition = screenPosition * _cameraHeight / Screen.height;
         Ray ray = targetCamera.ScreenPointToRay(screenPosition);
+
         if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, detectableLayers))
         {
             _interactable = hit.collider.GetComponent<Interactable>();
-            print(hit.collider.name);
+
+            //print(hit.collider.name);
+
             if (_interactable != null)
             {
                 _isHolding = true;
+
                 if (_interactable is not ButtonInteraction)
                 {
                     HoldInput().Forget();
                 }
+
                 _interactable.InteractionStart();
             }
         }

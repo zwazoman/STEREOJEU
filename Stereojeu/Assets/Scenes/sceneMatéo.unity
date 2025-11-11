@@ -7985,7 +7985,7 @@ MonoBehaviour:
   SpawnAnticipationVFX: {fileID: 1348603756780625339}
   SpawnResultQTEVFX: {fileID: 1348603756780625339}
   _tolerance: 30
-  CorrectDirection: 2
+  _correctDirection: 0
 --- !u!65 &668934062
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8850,7 +8850,7 @@ MonoBehaviour:
   SpawnAnticipationVFX: {fileID: 1063652393}
   SpawnResultQTEVFX: {fileID: 331619844}
   _tolerance: 30
-  CorrectDirection: 3
+  _correctDirection: 0
 --- !u!1 &860366825
 GameObject:
   m_ObjectHideFlags: 0
@@ -9084,7 +9084,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 69.1
+  field of view: 17.7
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -9110,8 +9110,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900563409}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.112067744, y: 0.69816965, z: -0.11168144, w: 0.6982315}
-  m_LocalPosition: {x: 8.232386, y: -3.658702, z: -1.5056362}
+  m_LocalRotation: {x: 0.00019748686, y: 0.70710677, z: 0.00019748686, w: 0.70710677}
+  m_LocalPosition: {x: -0.31761447, y: 2.731298, z: -1.5056362}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9267,7 +9267,7 @@ MonoBehaviour:
   SpawnAnticipationVFX: {fileID: 129884420}
   SpawnResultQTEVFX: {fileID: 1979570586}
   _tolerance: 30
-  CorrectDirection: 3
+  _correctDirection: 0
 --- !u!4 &936473198 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -823550381272578379, guid: 9692e438a745624459d2d1a76b96f334, type: 3}
@@ -9855,7 +9855,7 @@ MonoBehaviour:
   SpawnAnticipationVFX: {fileID: 595834670}
   SpawnResultQTEVFX: {fileID: 331619844}
   _tolerance: 30
-  CorrectDirection: 2
+  _correctDirection: 0
 --- !u!65 &1138953070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10744,23 +10744,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 842debc154e5d954cb96c6d0454c939c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Succesful10Feedback: {fileID: 3516398204895806099, guid: b362458b18216dd488f02916e90a5225, type: 3}
-  Successful50Feedback: {fileID: 230582591941666260, guid: 34085c484a0d57244a7c6a8338a37752, type: 3}
-  FailFeedback: {fileID: 445051317798125143, guid: dcc6919092fb92141b94b793c3717304, type: 3}
+  _succesful10Feedback: {fileID: 3516398204895806099, guid: b362458b18216dd488f02916e90a5225, type: 3}
+  _successful50Feedback: {fileID: 230582591941666260, guid: 34085c484a0d57244a7c6a8338a37752, type: 3}
+  _failFeedback: {fileID: 445051317798125143, guid: dcc6919092fb92141b94b793c3717304, type: 3}
   _failedQTESound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 776812611
+      Data2: 1167845959
+      Data3: 2025242776
+      Data4: -1040479252
+    Path: event:/Failed QTE
   _successfulQTESound:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: 1262785580
+      Data2: 1222193762
+      Data3: -2114057824
+      Data4: 74560495
+    Path: event:/Successful QTE
 --- !u!114 &1391969871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12121,6 +12121,63 @@ MonoBehaviour:
   AmplitudeGain: 0.35
   FrequencyGain: 1.4
   m_NoiseOffsets: {x: -524.29675, y: -197.80698, z: -532.57275}
+--- !u!1001 &1577742832
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.932
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.038
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.000069845555
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 179.992
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_Name
+      value: vfx_qte_Arrow
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
 --- !u!1 &1588424268
 GameObject:
   m_ObjectHideFlags: 0
@@ -12216,7 +12273,7 @@ MonoBehaviour:
   SpawnAnticipationVFX: {fileID: 0}
   SpawnResultQTEVFX: {fileID: 0}
   _tolerance: 30
-  CorrectDirection: 2
+  _correctDirection: 0
 --- !u!1 &1598969848
 GameObject:
   m_ObjectHideFlags: 0
@@ -13420,7 +13477,7 @@ MonoBehaviour:
   SpawnAnticipationVFX: {fileID: 75100967}
   SpawnResultQTEVFX: {fileID: 1979570586}
   _tolerance: 30
-  CorrectDirection: 3
+  _correctDirection: 0
 --- !u!1001 &1870763140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13880,7 +13937,7 @@ MonoBehaviour:
   SpawnAnticipationVFX: {fileID: 0}
   SpawnResultQTEVFX: {fileID: 0}
   _tolerance: 30
-  CorrectDirection: 0
+  _correctDirection: 0
 --- !u!65 &1915978909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14230,7 +14287,7 @@ MonoBehaviour:
   SpawnAnticipationVFX: {fileID: 1661673225}
   SpawnResultQTEVFX: {fileID: 225976346}
   _tolerance: 30
-  CorrectDirection: 3
+  _correctDirection: 0
 --- !u!1 &1950339600
 GameObject:
   m_ObjectHideFlags: 0
@@ -14827,7 +14884,7 @@ MonoBehaviour:
   SpawnAnticipationVFX: {fileID: 165500639}
   SpawnResultQTEVFX: {fileID: 331619844}
   _tolerance: 30
-  CorrectDirection: 3
+  _correctDirection: 0
 --- !u!1 &2095216426
 GameObject:
   m_ObjectHideFlags: 0
@@ -16870,3 +16927,4 @@ SceneRoots:
   - {fileID: 1030402977}
   - {fileID: 1363407454}
   - {fileID: 720401919}
+  - {fileID: 1577742832}

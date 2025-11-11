@@ -1,5 +1,4 @@
 using Cysharp.Threading.Tasks;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,30 +12,6 @@ public class QTEManager : MonoBehaviour
 
     public bool FailQTE;
 
-    //public void StartQTESystem() => UnstackInteraction().Forget();
-
-    //private async UniTaskVoid UnstackInteraction()
-    //{
-    //    int i = 0;
-    //    print("GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
-    //    while (i < _interactableItemList.Count)
-    //    {
-    //        var item = _interactableItemList[i];
-
-    //        if (item is ButtonInteraction press)
-    //            await UniTask.WaitUntil(() => press.WasPress || FailQTE);
-    //        else if (item is SwipeInteraction swipe)
-    //            await UniTask.WaitUntil(() => swipe.SuccesSwipe || FailQTE);
-    //        else if (item is SpinInteraction rotate)
-    //            await UniTask.WaitUntil(() => rotate.SuccesRotation || FailQTE);
-
-    //        //_interactableItemList.RemoveAt(i);
-    //        print(item.name);
-    //        FailQTE = false;
-    //        item.Deactivate();
-    //    }
-    //}
-
     private Interactable PopNextItem()
     {
         if (_interactableItemList.Count == 0)
@@ -47,7 +22,7 @@ public class QTEManager : MonoBehaviour
         return item;
     }
 
-    public void ButtonQTE() => HandleQTE("Button").Forget();
+    public void ButtonQTE() => HandleQTE("Button").Forget(); //EventUnity
     public void SwipeQTE() => HandleQTE("Swipe").Forget();
     public void SpinQTE() => HandleQTE("Spin").Forget();
 

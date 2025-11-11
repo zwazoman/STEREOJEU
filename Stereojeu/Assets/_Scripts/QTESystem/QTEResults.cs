@@ -36,8 +36,5 @@ public class QTEResults : MonoBehaviour
         await UniTask.Delay(1000);
     }
 
-    private void RemoveCollider(GameObject QTEObject)
-    {
-        QTEObject.GetComponent<BoxCollider>().enabled = false;
-    }
+    private void RemoveCollider(GameObject QTEObject) => QTEObject.GetComponent<BoxCollider>().enabled = false;
 }

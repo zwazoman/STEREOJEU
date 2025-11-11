@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering;
 using UnityEngine.UI;
 
 public class ScreenResolutionManager : MonoBehaviour
@@ -13,12 +11,9 @@ public class ScreenResolutionManager : MonoBehaviour
 
     [Header("Parameters")]
     [Min(32)] public int TextureHeight { get; private set; } = 256;
-
-    
-    
     
     private RenderTexture _renderTexture;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Awake()
     {
         _renderTexture = new RenderTexture(Screen.width,Screen.height,0);
@@ -37,11 +32,5 @@ public class ScreenResolutionManager : MonoBehaviour
     private void OnDestroy()
     {
         _renderTexture?.Release();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

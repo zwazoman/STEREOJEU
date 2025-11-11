@@ -11,25 +11,25 @@ public class SwipeInteraction : Interactable
 
     [SerializeField] private float _tolerance = 30f;
 
-    [SerializeField] private DirectionSwipe CorrectDirection; //Pour simplifier dans Unity
+    [SerializeField] private DirectionSwipe _correctDirection; //Pour simplifier dans Unity
 
-    private Vector2 VectorDirection;
+    private Vector2 _vectorDirection;
 
     public bool SuccesSwipe { get; private set; }
 
     private void Start()
     {
-        if(CorrectDirection is DirectionSwipe.Up)//Convertion
-            VectorDirection = Vector2.up;
+        if(_correctDirection is DirectionSwipe.Up)//Convertion
+            _vectorDirection = Vector2.up;
 
-        else if(CorrectDirection is DirectionSwipe.Down)
-            VectorDirection = Vector2.down;
+        else if(_correctDirection is DirectionSwipe.Down)
+            _vectorDirection = Vector2.down;
 
-        else if(CorrectDirection is DirectionSwipe.Left)
-            VectorDirection = Vector2.left;
+        else if(_correctDirection is DirectionSwipe.Left)
+            _vectorDirection = Vector2.left;
 
         else
-            VectorDirection = Vector2.right;
+            _vectorDirection = Vector2.right;
     }
 
     public override void InteractionStart()
@@ -50,7 +50,7 @@ public class SwipeInteraction : Interactable
 
         Vector2 swipeDirection = (_endPos - _startPos).normalized;
 
-        SuccesSwipe = IsDirection(swipeDirection, VectorDirection);
+        SuccesSwipe = IsDirection(swipeDirection, _vectorDirection);
     }
 
 

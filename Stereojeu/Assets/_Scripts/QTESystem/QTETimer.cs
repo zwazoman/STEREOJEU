@@ -20,8 +20,6 @@ public class QTETimer
             {
                 await UniTask.Yield();
 
-                //Debug.Log("j'attends");
-
                 if (_interactable is ButtonInteraction pressInteraction && pressInteraction.WasPress
                     || (_interactable is SwipeInteraction swipeInteraction && swipeInteraction.SuccesSwipe)
                     || (_interactable is SpinInteraction rotateInteraction && rotateInteraction.SuccesRotation))
@@ -45,10 +43,7 @@ public class QTETimer
         }
     }
 
-    public float GetTimeRemaining()
-    {
-        return _timeRemaining;
-    }
+    public float GetTimeRemaining() => _timeRemaining;
 
     public enum QTEResult
     {

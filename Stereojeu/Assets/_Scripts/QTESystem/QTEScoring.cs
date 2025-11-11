@@ -5,9 +5,9 @@ using FMODUnity;
 public class QTEScoring : MonoBehaviour
 {
     [Header("Prefabs")]
-    [SerializeField] private GameObject Succesful10Feedback;
-    [SerializeField] private GameObject Successful50Feedback;
-    [SerializeField] private GameObject FailFeedback;
+    [SerializeField] private GameObject _succesful10Feedback;
+    [SerializeField] private GameObject _successful50Feedback;
+    [SerializeField] private GameObject _failFeedback;
 
     [Header("References")]
     [SerializeField] EventReference _failedQTESound;
@@ -26,14 +26,14 @@ public class QTEScoring : MonoBehaviour
         if (_succesfullQTEInARow < 4)
         {
             Score += 10;
-            GameObject obj = Instantiate(Succesful10Feedback, type.SpawnResultQTEVFX);
-            SetupSize(obj, QTEVisual, Succesful10Feedback, type);
+            GameObject obj = Instantiate(_succesful10Feedback, type.SpawnResultQTEVFX);
+            SetupSize(obj, QTEVisual, type);
         }
         else
         {
             Score += 50;
-            GameObject obj = Instantiate(Successful50Feedback, type.SpawnResultQTEVFX);
-            SetupSize(obj, QTEVisual, Successful50Feedback, type);
+            GameObject obj = Instantiate(_successful50Feedback, type.SpawnResultQTEVFX);
+            SetupSize(obj, QTEVisual, type);
         }
     }
 
@@ -43,16 +43,14 @@ public class QTEScoring : MonoBehaviour
 
         RuntimeManager.PlayOneShot(_failedQTESound);
 
-        GameObject obj = Instantiate(FailFeedback, type.SpawnResultQTEVFX);
-        SetupSize(obj, QTEVisual, FailFeedback, type);
+        GameObject obj = Instantiate(_failFeedback, type.SpawnResultQTEVFX);
+        SetupSize(obj, QTEVisual, type);
     }
 
-    private void SetupSize(GameObject obj, GameObject QTEVisual, GameObject Feedback, Interactable type)
+    private void SetupSize(GameObject obj, GameObject QTEVisual, Interactable type)
     {
         obj.transform.localScale = Vector3.zero;
-        Vector3 targetScale = new Vector3(0.5f,0.5f,0.5f);
-
-        //targetScale = new(Feedback.transform.localScale.x / QTEVisual.transform.parent.localScale.x, Feedback.transform.localScale.y / QTEVisual.transform.parent.localScale.y, Feedback.transform.localScale.z / QTEVisual.transform.parent.localScale.z);
+        Vector3 targetScale = new Vector3(0.5f, 0.5f, 0.5f);
 
         if (type is SwipeInteraction)
         {
