@@ -7,7 +7,7 @@ public class SwipeInteraction : Interactable
     private Vector2 _startPos;
     private Vector2 _endPos;
 
-    private bool _isDragging;
+    public bool IsDragging {  get; private set; }
 
     [SerializeField] private float _tolerance = 30f;
 
@@ -34,7 +34,7 @@ public class SwipeInteraction : Interactable
     public override void InteractionStart()
     {
         if (!IsActive) return;
-        _isDragging = true;
+        IsDragging = true;
         _startPos = GetPointerPosition();
         InteractionWainting().Forget();
     }
@@ -43,7 +43,7 @@ public class SwipeInteraction : Interactable
     public override void InteractionStop()
     {
         if (!IsActive) return;
-        _isDragging = false;
+        IsDragging = false;
         _endPos = GetPointerPosition();
 
         Vector2 swipeDirection = (_endPos - _startPos).normalized;
@@ -60,7 +60,7 @@ public class SwipeInteraction : Interactable
 
     private async UniTaskVoid InteractionWainting()
     {
-        while (_isDragging)
+        while (IsDragging)
         {
             await UniTask.Yield();
         }

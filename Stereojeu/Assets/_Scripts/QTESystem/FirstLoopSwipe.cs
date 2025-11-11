@@ -12,6 +12,7 @@ public class FirstLoopSwipe : MonoBehaviour
     {
         SwipeDetection().Forget();
         ShowExampleSwipe().Forget();
+        TweenHandle().Forget();
     }
 
     private async UniTaskVoid SwipeDetection()
@@ -32,6 +33,19 @@ public class FirstLoopSwipe : MonoBehaviour
 
             _exampleSwipe.transform.localPosition = new Vector3(1.58f, 0.02f, -0.67f);
             _exampleSwipe.transform.localScale = new Vector3(99, 99, 99);
+        }
+    }
+
+    private async UniTaskVoid TweenHandle()
+    {
+        while (_isRunning)
+        {
+            if (!_interaction.IsDragging)
+            {
+                _interaction.gameObject.transform.DOPunchScale(new Vector3(15, 15, 15), 0.6f).SetEase(Ease.OutQuad);
+            }
+
+            await UniTask.Delay(750);
         }
     }
 }
