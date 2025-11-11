@@ -41,6 +41,6 @@ public class QTEManager : MonoBehaviour
 
         item.Activate();
 
-        await _qTECreator.CreateQTE(item.Duration, item, type);
+        await _qTECreator.CreateQTE(item.Duration, item);
     }
 }

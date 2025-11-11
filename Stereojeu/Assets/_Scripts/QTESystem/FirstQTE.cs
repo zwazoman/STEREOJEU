@@ -23,7 +23,7 @@ public class FirstQTE : MonoBehaviour
         _playableDirector.Pause();
 
         _interactableItem.Activate();
-        _creatorQTE.CreateQTE(0, _interactableItem, "Other", true).Forget();
+        _creatorQTE.CreateQTE(0, _interactableItem, true).Forget();
 
         await UniTask.WaitUntil(() => _interactableItem.SuccesSwipe);
 

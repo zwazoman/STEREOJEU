@@ -7,59 +7,51 @@ using static QTETimer;
 public class QTECreator : MonoBehaviour
 {
     [SerializeField] private QTEResults _results;
-    [SerializeField] private GameObject _qteVisualButton;
-    [SerializeField] private GameObject _qteVisualSwipe;
-    [SerializeField] private GameObject _qteVisualSpin;
-    [SerializeField] private List<GameObject> _qteSwipePositionList;
 
-    public async UniTask CreateQTE(float duration, Interactable item, string type = "Button", bool isInfinite = false)
+    public async UniTask CreateQTE(float duration, Interactable item, bool isInfinite = false)
     {
+        if (item == null || item.SpawnAnticipationVFX == null)
+            return;
+
+
         GameObject prefab = item.QTEVisualEffect;
 
-        GameObject visualGO = null;
-        QTEVisualController visual = null;
-
-        if (type == "Swipe")
+        if (prefab != null)
         {
-            visualGO = Instantiate(prefab, item.SpawnAnticipationVFX);
-            visualGO.transform.position = item.SpawnAnticipationVFX.position;
-            visualGO.transform.rotation = item.SpawnAnticipationVFX.rotation;
-            visualGO.transform.localScale = new Vector3(1, 1, 1);
+            // --- Spawn du visuel ---
+            GameObject visualGO = Instantiate(prefab, item.SpawnAnticipationVFX);
+            visualGO.transform.SetPositionAndRotation(item.SpawnAnticipationVFX.position, item.SpawnAnticipationVFX.rotation);
+            visualGO.transform.localScale = Vector3.one;
+
+            QTEVisualController visual = visualGO.GetComponent<QTEVisualController>();
+
+            visual.Animator.speed = 1f / item.Duration;
+
+            // --- Lancer le timer ---
+            QTETimer timer = new QTETimer(duration, item);
+            QTEResult result = await timer.StartTimerAsync(isInfinite);
+
+            if (visual != null)
+                visual.SetResult(result == QTEResult.Success);
+
+
+            // --- Résultat ---
+            switch (result)
+            {
+                case QTEResult.Success:
+                    await _results.SuccesQTE(visualGO, item);
+                    break;
+                case QTEResult.Fail:
+                    await _results.FailQTE(visualGO, item);
+                    break;
+            }
+            if (visualGO != null) //clean
+            {
+                await UniTask.WaitForSeconds(1);
+                if (visualGO != null) Destroy(visualGO);
+            }
+
+            item.Deactivate();
         }
-        else if (type == "Button")
-        {
-            visualGO = Instantiate(prefab, item.SpawnAnticipationVFX);
-            visualGO.transform.position = item.SpawnAnticipationVFX.position;
-        }
-
-        if(visualGO != null)
-            visual = visualGO.GetComponent<QTEVisualController>();
-
-
-        QTETimer timer = new QTETimer(duration, item);
-        QTEResult result = await timer.StartTimerAsync(isInfinite);
-
-        if (visual != null)
-            visual.SetResult(result == QTEResult.Success);
-
-        switch (result)
-        {
-            case QTEResult.Success:
-                await _results.SuccesQTE(visualGO, item);
-                break;
-            case QTEResult.Fail:
-                await _results.FailQTE(visualGO, item);
-                break;
-        }
-
-
-        if (visualGO != null)
-        {
-            await UniTask.Delay(TimeSpan.FromSeconds(1));
-            Destroy(visualGO);
-        }
-
-        item.Deactivate();
     }
-
 }
