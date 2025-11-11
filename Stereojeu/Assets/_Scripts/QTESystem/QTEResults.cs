@@ -22,6 +22,7 @@ public class QTEResults : MonoBehaviour
 
         _managerQTE.FailQTE = true;
 
+        RemoveCollider(InteractionType.gameObject);
         await UniTask.Delay(1000);
     }
 
@@ -31,7 +32,12 @@ public class QTEResults : MonoBehaviour
         
         OnSuccesfulQTE?.Invoke(QTEVisual, InteractionType);
 
+        RemoveCollider(InteractionType.gameObject);
         await UniTask.Delay(1000);
+    }
 
+    private void RemoveCollider(GameObject QTEObject)
+    {
+        QTEObject.GetComponent<BoxCollider>().enabled = false;
     }
 }

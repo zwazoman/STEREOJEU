@@ -14,6 +14,7 @@ public class SwipeInteraction : Interactable
     [SerializeField] private DirectionSwipe CorrectDirection; //Pour simplifier dans Unity
 
     private Vector2 VectorDirection;
+
     public bool SuccesSwipe { get; private set; }
 
     private void Start()
@@ -34,6 +35,7 @@ public class SwipeInteraction : Interactable
     public override void InteractionStart()
     {
         if (!IsActive) return;
+
         IsDragging = true;
         _startPos = GetPointerPosition();
         InteractionWainting().Forget();

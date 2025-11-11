@@ -11,42 +11,37 @@ public class QTEManager : MonoBehaviour
 
     [SerializeField] private QTECreator _qTECreator;
 
-    //[SerializeField] private float _qTEButtonTiming;
-    //[SerializeField] private float _qTESwipeTiming;
-    //[SerializeField] private float _qTESpinTiming;
-
-
     public bool FailQTE;
 
-    public void StartQTESystem() => UnstackInteraction().Forget();
+    //public void StartQTESystem() => UnstackInteraction().Forget();
 
-    private async UniTaskVoid UnstackInteraction()
-    {
-        int i = 0;
-        print("GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
-        while (i < _interactableItemList.Count)
-        {
-            var item = _interactableItemList[i];
+    //private async UniTaskVoid UnstackInteraction()
+    //{
+    //    int i = 0;
+    //    print("GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
+    //    while (i < _interactableItemList.Count)
+    //    {
+    //        var item = _interactableItemList[i];
 
-            if (item is ButtonInteraction press)
-                await UniTask.WaitUntil(() => press.WasPress || FailQTE);
-            else if (item is SwipeInteraction swipe)
-                await UniTask.WaitUntil(() => swipe.SuccesSwipe || FailQTE);
-            else if (item is SpinInteraction rotate)
-                await UniTask.WaitUntil(() => rotate.SuccesRotation || FailQTE);
+    //        if (item is ButtonInteraction press)
+    //            await UniTask.WaitUntil(() => press.WasPress || FailQTE);
+    //        else if (item is SwipeInteraction swipe)
+    //            await UniTask.WaitUntil(() => swipe.SuccesSwipe || FailQTE);
+    //        else if (item is SpinInteraction rotate)
+    //            await UniTask.WaitUntil(() => rotate.SuccesRotation || FailQTE);
 
-            //_interactableItemList.RemoveAt(i);
-            print(item.name);
-            FailQTE = false;
-            item.Deactivate();
-        }
-    }
+    //        //_interactableItemList.RemoveAt(i);
+    //        print(item.name);
+    //        FailQTE = false;
+    //        item.Deactivate();
+    //    }
+    //}
 
     private Interactable PopNextItem()
     {
         if (_interactableItemList.Count == 0)
             return null;
-        //print("Remove");
+
         Interactable item = _interactableItemList[0];
         _interactableItemList.RemoveAt(0);
         return item;
@@ -61,7 +56,7 @@ public class QTEManager : MonoBehaviour
         Interactable item = PopNextItem();
 
         if (item.Duration < 2)
-            await UniTask.Delay(TimeSpan.FromSeconds(2 - item.Duration));
+            await UniTask.WaitForSeconds(2 - item.Duration);
 
         if (item == null)
         {
