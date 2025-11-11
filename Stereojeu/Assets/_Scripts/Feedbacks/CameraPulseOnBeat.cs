@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Unity.Cinemachine;
 using UnityEngine;
 using DG.Tweening;
@@ -37,8 +38,11 @@ public class CameraPulseOnBeat : MonoBehaviour
          _cameraFOV = FindObjectsByType<CinemachineCameraFOVOffset>(FindObjectsInactive.Exclude,FindObjectsSortMode.None)[0];
    }
 
-   void Pulse()
+   IEnumerator Pulse_WellTimed()
    {
+      float beatDuration = 1f / 120f;
+      yield return new WaitForSeconds(beatDuration - _pulseDuration*_pulseTiming);
+      
       Sequence s = DOTween.Sequence();
 
       s.Append(DOTween.To(
@@ -54,6 +58,10 @@ public class CameraPulseOnBeat : MonoBehaviour
             0,
             _pulseDuration*(1f-_pulseTiming))
          .SetEase(Ease.InOutSine));
-      
+   }
+   void Pulse()
+   {
+      StartCoroutine(Pulse_WellTimed());
+
    }
 }
