@@ -7985,7 +7985,7 @@ MonoBehaviour:
   SpawnAnticipationVFX: {fileID: 1348603756780625339}
   SpawnResultQTEVFX: {fileID: 1348603756780625339}
   _tolerance: 30
-  _correctDirection: 0
+  _correctDirection: 2
 --- !u!65 &668934062
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8850,7 +8850,7 @@ MonoBehaviour:
   SpawnAnticipationVFX: {fileID: 1063652393}
   SpawnResultQTEVFX: {fileID: 331619844}
   _tolerance: 30
-  _correctDirection: 0
+  _correctDirection: 3
 --- !u!1 &860366825
 GameObject:
   m_ObjectHideFlags: 0
@@ -9267,7 +9267,7 @@ MonoBehaviour:
   SpawnAnticipationVFX: {fileID: 129884420}
   SpawnResultQTEVFX: {fileID: 1979570586}
   _tolerance: 30
-  _correctDirection: 0
+  _correctDirection: 3
 --- !u!4 &936473198 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -823550381272578379, guid: 9692e438a745624459d2d1a76b96f334, type: 3}
@@ -9855,7 +9855,7 @@ MonoBehaviour:
   SpawnAnticipationVFX: {fileID: 595834670}
   SpawnResultQTEVFX: {fileID: 331619844}
   _tolerance: 30
-  _correctDirection: 0
+  _correctDirection: 2
 --- !u!65 &1138953070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12173,6 +12173,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: vfx_qte_Arrow
       objectReference: {fileID: 0}
+    - target: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13477,7 +13481,7 @@ MonoBehaviour:
   SpawnAnticipationVFX: {fileID: 75100967}
   SpawnResultQTEVFX: {fileID: 1979570586}
   _tolerance: 30
-  _correctDirection: 0
+  _correctDirection: 3
 --- !u!1001 &1870763140
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14287,7 +14291,7 @@ MonoBehaviour:
   SpawnAnticipationVFX: {fileID: 1661673225}
   SpawnResultQTEVFX: {fileID: 225976346}
   _tolerance: 30
-  _correctDirection: 0
+  _correctDirection: 3
 --- !u!1 &1950339600
 GameObject:
   m_ObjectHideFlags: 0
@@ -14884,7 +14888,7 @@ MonoBehaviour:
   SpawnAnticipationVFX: {fileID: 165500639}
   SpawnResultQTEVFX: {fileID: 331619844}
   _tolerance: 30
-  _correctDirection: 0
+  _correctDirection: 3
 --- !u!1 &2095216426
 GameObject:
   m_ObjectHideFlags: 0
