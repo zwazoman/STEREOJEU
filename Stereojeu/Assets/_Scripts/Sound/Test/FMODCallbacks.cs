@@ -61,10 +61,10 @@ class FmodCallbacks : MonoBehaviour
 
     private void Start()
     {
-        if (FMODUnity.RuntimeManager.HasBankLoaded("Master"))
-        {
-            Debug.Log("Master Bank Loaded");
-        }
+        //if (FMODUnity.RuntimeManager.HasBankLoaded("Master"))
+        //{
+        //    Debug.Log("Master Bank Loaded");
+        //}
     }
 
     public void StartMusic()
