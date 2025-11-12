@@ -61,7 +61,7 @@ class FmodCallbacks : MonoBehaviour
 
     private void Start()
     {
-        if (FMODUnity.RuntimeManager.HasBankLoaded("Master Bank"))
+        if (FMODUnity.RuntimeManager.HasBankLoaded("Master"))
         {
             Debug.Log("Master Bank Loaded");
         }
