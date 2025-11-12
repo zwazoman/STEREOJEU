@@ -9783,7 +9783,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: aea40f1c42e38b84892d0b37018cac79, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
@@ -12947,8 +12947,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Priority:
-    Enabled: 0
-    m_Value: 0
+    Enabled: 1
+    m_Value: 1
   OutputChannel: 1
   StandbyUpdate: 2
   m_StreamingVersion: 20241001
@@ -15360,6 +15360,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: vfx_feedBack_Loop (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6546692581782448260, guid: 4f2356442f7b79145bc67c98aa5ed062, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15726,6 +15730,10 @@ PrefabInstance:
     - target: {fileID: 3018702832553495532, guid: 75b80847b77c0694d80de6a805302638, type: 3}
       propertyPath: m_Name
       value: vfx_feedBack_Once
+      objectReference: {fileID: 0}
+    - target: {fileID: 3018702832553495532, guid: 75b80847b77c0694d80de6a805302638, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
