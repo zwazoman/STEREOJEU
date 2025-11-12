@@ -1,6 +1,4 @@
 using Cysharp.Threading.Tasks;
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 using static QTETimer;
 
@@ -25,7 +23,8 @@ public class QTECreator : MonoBehaviour
 
             QTEVisualController visual = visualGO.GetComponent<QTEVisualController>();
 
-            visual.Animator.speed = 1f / item.Duration;
+            if (item is ButtonInteraction || item is SwipeInteraction)
+                visual.Animator.speed = 1f / item.Duration;
 
             // --- Lancer le timer ---
             QTETimer timer = new QTETimer(duration, item);
