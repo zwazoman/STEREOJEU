@@ -3,6 +3,7 @@ using System;
 using System.Runtime.InteropServices;
 using UnityEngine.Events;
 using UnityEngine.SceneManagement;
+using FMODUnity;
 
 class FmodCallbacks : MonoBehaviour
 {
@@ -61,14 +62,19 @@ class FmodCallbacks : MonoBehaviour
 
     private void Start()
     {
-        if (FMODUnity.RuntimeManager.HasBankLoaded("Master"))
-        {
-            Debug.Log("Master Bank Loaded");
-        }
+        //if (FMODUnity.RuntimeManager.HasBankLoaded("Master"))
+        //{
+        //    Debug.Log("Master Bank Loaded");
+        //}
     }
 
     public void StartMusic()
     {
+        //RuntimeManager.PlayOneShot(EventName);
+
+        //return;
+
+
         timelineInfo = new TimelineInfo();
 
         // Explicitly create the delegate object and assign it to a member so it doesn't get freed
