@@ -8,7 +8,7 @@ public class QTECreator : MonoBehaviour
 
     public async UniTask CreateQTE(float duration, Interactable item, bool isInfinite = false)
     {
-        await UniTask.WaitForSeconds(1);
+        await UniTask.WaitForSeconds(0.4f);
         if (item == null || item.SpawnAnticipationVFX == null)
             return;
 
@@ -24,8 +24,8 @@ public class QTECreator : MonoBehaviour
 
             QTEVisualController visual = visualGO.GetComponent<QTEVisualController>();
 
-            //if (item is ButtonInteraction || item is SwipeInteraction)
-                //visual.Animator.speed = 1f / item.Duration;
+            if (item is ButtonInteraction || item is SwipeInteraction)
+                visual.Animator.speed = 1f / item.Duration;
 
             // --- Lancer le timer ---
             QTETimer timer = new QTETimer(duration, item);
