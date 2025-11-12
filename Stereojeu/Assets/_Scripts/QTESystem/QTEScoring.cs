@@ -14,16 +14,12 @@ public class QTEScoring : MonoBehaviour
     [SerializeField] EventReference _failedQTESound;
     [SerializeField] EventReference _successfulQTESound;
 
-    [SerializeField] TMP_Text ScoreText;
+    [SerializeField] TMP_Text _scoreText;
+    [SerializeField] TMP_Text _bestScoreText;
 
     public int Score { get; private set; }
 
     private int _succesfullQTEInARow;
-
-    private void Awake()
-    {
-        ScoreText = GameObject.Find("Score Text").GetComponent<TMP_Text>();
-    }
 
     public void SuccesfulQTE(GameObject QTEVisual, Interactable type)
     {
@@ -49,7 +45,24 @@ public class QTEScoring : MonoBehaviour
     void SetScore(int scoreAddition)
     {
         Score += scoreAddition;
-        ScoreText.text = "Score : " + Score;
+        _scoreText.text = "Score : " + Score;
+    }
+
+    void SaveScore()
+    {
+        if (PlayerPrefs.HasKey("score"))
+        {
+            if(Score > PlayerPrefs.GetInt("score"))
+            {
+                PlayerPrefs.SetInt("score", Score);
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetInt("score", Score);
+        }
+
+        _bestScoreText.text = "Best Score : " + PlayerPrefs.GetInt("score");
     }
 
     public void FailedQTE(GameObject QTEVisual, Interactable type)
