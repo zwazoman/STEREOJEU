@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4859367164112101637}
   - component: {fileID: 8327259610671025379}
-  - component: {fileID: -3670801774051317335}
   m_Layer: 0
   m_Name: vfx_qte_fret
   m_TagString: Untagged
@@ -46,29 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faaa45dc475c1c9428c1431b7d783b51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Animator: {fileID: -3670801774051317335}
---- !u!95 &-3670801774051317335
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8991229891232164902}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 22100000, guid: 525efb31ec4ac624bb7084e730ce8a8c, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
+  Animator: {fileID: 3306999976219031991}
 --- !u!1001 &9162684360224018311
 PrefabInstance:
   m_ObjectHideFlags: 0
