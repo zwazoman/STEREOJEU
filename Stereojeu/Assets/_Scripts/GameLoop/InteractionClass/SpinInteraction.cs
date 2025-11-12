@@ -95,7 +95,7 @@ public class SpinInteraction : Interactable
     {
         while (_isDragging)
         {
-            _vfxSystem.emissionRate = _isDragging ? 1:0;
+            //_vfxSystem.emission = _isDragging ? 1:0;
             await UniTask.Yield();
         }
     }
