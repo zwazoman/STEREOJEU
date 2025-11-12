@@ -3,6 +3,7 @@ using UnityEngine;
 public abstract class Interactable : MonoBehaviour
 {
     public float Duration;
+    public float DelayBeforeSuccess = 0f;
     public GameObject QTEVisualEffect;
     public Transform SpawnAnticipationVFX;
     public Transform SpawnResultQTEVFX;

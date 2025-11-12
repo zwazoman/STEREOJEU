@@ -453,6 +453,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 1.2
+  DelayBeforeSuccess: 0.65
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 5762763353479929024}
   SpawnResultQTEVFX: {fileID: 984229349}
@@ -952,6 +953,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 1.2
+  DelayBeforeSuccess: 0.7
   QTEVisualEffect: {fileID: 3581321111877952150, guid: 14b7e14b73659dc4ba1a994039ccdd88, type: 3}
   SpawnAnticipationVFX: {fileID: 98919939}
   SpawnResultQTEVFX: {fileID: 1059620081}
@@ -1910,6 +1912,84 @@ Transform:
   - {fileID: 1677053150}
   m_Father: {fileID: 1774864071}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!1001 &338172747
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 735461311}
+    m_Modifications:
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+      propertyPath: m_Name
+      value: vfx_qte_Arrow
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+--- !u!4 &338172748 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1348603756635752538, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+  m_PrefabInstance: {fileID: 338172747}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &354597645
 GameObject:
   m_ObjectHideFlags: 0
@@ -2181,7 +2261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &372711481
 Transform:
   m_ObjectHideFlags: 0
@@ -2210,6 +2290,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 1.15
+  DelayBeforeSuccess: 0
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 372711481}
   SpawnResultQTEVFX: {fileID: 110260295}
@@ -7554,7 +7635,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &490274736
 Transform:
   m_ObjectHideFlags: 0
@@ -7583,6 +7664,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 1.15
+  DelayBeforeSuccess: 0
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 490274736}
   SpawnResultQTEVFX: {fileID: 110260295}
@@ -7770,6 +7852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 1.15
+  DelayBeforeSuccess: 0
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 536123970}
   SpawnResultQTEVFX: {fileID: 110260295}
@@ -7794,8 +7877,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.67, y: 0.5288877, z: 0.30538929}
-  m_Center: {x: 0.33005792, y: -0.005722928, z: -0.012676849}
+  m_Size: {x: 1.67, y: 0.5288877, z: 0.4435892}
+  m_Center: {x: 0.33005792, y: -0.0057229446, z: 0.05642316}
 --- !u!1 &548764400
 GameObject:
   m_ObjectHideFlags: 0
@@ -8740,6 +8823,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 1
+  DelayBeforeSuccess: 0.5
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 634746083}
   SpawnResultQTEVFX: {fileID: 1677053150}
@@ -8876,6 +8960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 1
+  DelayBeforeSuccess: 0.7
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 1348603756780625339}
   SpawnResultQTEVFX: {fileID: 1348603756780625339}
@@ -9360,7 +9445,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &701344459
 Transform:
   m_ObjectHideFlags: 0
@@ -9389,6 +9474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 1.15
+  DelayBeforeSuccess: 0
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 701344459}
   SpawnResultQTEVFX: {fileID: 110260295}
@@ -9547,6 +9633,38 @@ Transform:
   - {fileID: 22940465}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &735461310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 735461311}
+  m_Layer: 0
+  m_Name: QTEVisual
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &735461311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735461310}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.32650557, y: 0.6272114, z: -0.6272114, w: 0.32650557}
+  m_LocalPosition: {x: 30, y: 9, z: 6.5}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 338172748}
+  m_Father: {fileID: 1328082968}
+  m_LocalEulerAnglesHint: {x: 90, y: 180, z: 55}
 --- !u!1 &737145259
 GameObject:
   m_ObjectHideFlags: 0
@@ -9723,6 +9841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 2
+  DelayBeforeSuccess: 1.4
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 1063652393}
   SpawnResultQTEVFX: {fileID: 331619844}
@@ -9948,7 +10067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &832213835
 Transform:
   m_ObjectHideFlags: 0
@@ -9977,6 +10096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 1.15
+  DelayBeforeSuccess: 0
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 832213835}
   SpawnResultQTEVFX: {fileID: 110260295}
@@ -10001,8 +10121,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.67, y: 0.5288877, z: 0.30538929}
-  m_Center: {x: 0.33005792, y: -0.005722928, z: -0.012676849}
+  m_Size: {x: 1.67, y: 0.5288877, z: 0.46810246}
+  m_Center: {x: 0.33005792, y: -0.0057229474, z: 0.06867978}
 --- !u!1 &857930871
 GameObject:
   m_ObjectHideFlags: 0
@@ -10272,6 +10392,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 1.2
+  DelayBeforeSuccess: 0.65
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 1581962125663085462}
   SpawnResultQTEVFX: {fileID: 1713695388}
@@ -10468,7 +10589,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 32.5
+  field of view: 69.1
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -10494,8 +10615,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900563409}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.66206706, y: 0.24832858, z: 0.24832882, w: -0.66206723}
-  m_LocalPosition: {x: 22.98606, y: 8.231679, z: -6.4879084}
+  m_LocalRotation: {x: 0.112067744, y: 0.69816965, z: -0.11168144, w: 0.6982315}
+  m_LocalPosition: {x: 8.232386, y: -3.658702, z: -1.5056362}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -10577,8 +10698,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.67, y: 0.5288877, z: 0.30538929}
-  m_Center: {x: 0.33005792, y: -0.005722928, z: -0.012676849}
+  m_Size: {x: 1.67, y: 0.5288877, z: 0.3835051}
+  m_Center: {x: 0.33005792, y: -0.005722937, z: 0.026381085}
 --- !u!114 &926339685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10592,6 +10713,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 1.15
+  DelayBeforeSuccess: 0
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 926339681}
   SpawnResultQTEVFX: {fileID: 110260295}
@@ -10891,6 +11013,38 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1036193644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1036193645}
+  m_Layer: 0
+  m_Name: FeedBack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1036193645
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036193644}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.5882494, y: -0.39238095, z: 0.39238086, w: 0.58824915}
+  m_LocalPosition: {x: 24.57, y: 10.38, z: 4.07}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 1182640285}
+  m_Father: {fileID: 1328082968}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 67.409}
 --- !u!1 &1054406878
 GameObject:
   m_ObjectHideFlags: 0
@@ -11342,6 +11496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 1.15
+  DelayBeforeSuccess: 0.6
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 595834670}
   SpawnResultQTEVFX: {fileID: 331619844}
@@ -11402,6 +11557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 1.2
+  DelayBeforeSuccess: 0.65
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 5863722356754878418}
   SpawnResultQTEVFX: {fileID: 1184249807}
@@ -11418,6 +11574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 1.2
+  DelayBeforeSuccess: 0.65
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 5089424833392988900}
   SpawnResultQTEVFX: {fileID: 354597646}
@@ -11480,6 +11637,76 @@ Transform:
   - {fileID: 110260295}
   m_Father: {fileID: 2021993233}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1182640284
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1036193645}
+    m_Modifications:
+    - target: {fileID: 230582591941666260, guid: 34085c484a0d57244a7c6a8338a37752, type: 3}
+      propertyPath: m_Name
+      value: +50Feedback
+      objectReference: {fileID: 0}
+    - target: {fileID: 284205057037196177, guid: 34085c484a0d57244a7c6a8338a37752, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 284205057037196177, guid: 34085c484a0d57244a7c6a8338a37752, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198761163691722344, guid: 34085c484a0d57244a7c6a8338a37752, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198761163691722344, guid: 34085c484a0d57244a7c6a8338a37752, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198761163691722344, guid: 34085c484a0d57244a7c6a8338a37752, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198761163691722344, guid: 34085c484a0d57244a7c6a8338a37752, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198761163691722344, guid: 34085c484a0d57244a7c6a8338a37752, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198761163691722344, guid: 34085c484a0d57244a7c6a8338a37752, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198761163691722344, guid: 34085c484a0d57244a7c6a8338a37752, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198761163691722344, guid: 34085c484a0d57244a7c6a8338a37752, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198761163691722344, guid: 34085c484a0d57244a7c6a8338a37752, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6198761163691722344, guid: 34085c484a0d57244a7c6a8338a37752, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 34085c484a0d57244a7c6a8338a37752, type: 3}
+--- !u!4 &1182640285 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6198761163691722344, guid: 34085c484a0d57244a7c6a8338a37752, type: 3}
+  m_PrefabInstance: {fileID: 1182640284}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1183163072
 GameObject:
   m_ObjectHideFlags: 0
@@ -11777,6 +12004,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 1.2
+  DelayBeforeSuccess: 0
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 1022872946366624757}
   SpawnResultQTEVFX: {fileID: 77512722}
@@ -12066,7 +12294,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1286107351
 Transform:
   m_ObjectHideFlags: 0
@@ -12095,6 +12323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 1.15
+  DelayBeforeSuccess: 0
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 1286107351}
   SpawnResultQTEVFX: {fileID: 110260295}
@@ -12119,8 +12348,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.67, y: 0.5288877, z: 0.30538929}
-  m_Center: {x: 0.33005792, y: -0.005722928, z: -0.012676849}
+  m_Size: {x: 1.67, y: 0.5288877, z: 0.49530047}
+  m_Center: {x: 0.33005792, y: -0.0057229507, z: 0.082278796}
 --- !u!1 &1294490458
 GameObject:
   m_ObjectHideFlags: 0
@@ -12612,6 +12841,8 @@ Transform:
   m_Children:
   - {fileID: 1621346836}
   - {fileID: 571699221}
+  - {fileID: 1036193645}
+  - {fileID: 735461311}
   - {fileID: 1588424269}
   m_Father: {fileID: 1030402977}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -12807,12 +13038,12 @@ MonoBehaviour:
   - {fileID: 1947453215}
   - {fileID: 926339685}
   - {fileID: 536123971}
-  - {fileID: 701344460}
-  - {fileID: 1768091301}
-  - {fileID: 1286107352}
-  - {fileID: 832213836}
-  - {fileID: 372711482}
-  - {fileID: 490274737}
+  - {fileID: 926339685}
+  - {fileID: 536123971}
+  - {fileID: 926339685}
+  - {fileID: 536123971}
+  - {fileID: 926339685}
+  - {fileID: 536123971}
   - {fileID: 1588424272}
   _results: {fileID: 1391969871}
   _qTECreator: {fileID: 1391969872}
@@ -13625,7 +13856,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 1
+  Duration: 1.2
+  DelayBeforeSuccess: 0.65
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 264768167363237526}
   SpawnResultQTEVFX: {fileID: 1298984889}
@@ -13663,6 +13895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 1.2
+  DelayBeforeSuccess: 0.65
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 4482838182833417735}
   SpawnResultQTEVFX: {fileID: 269556775}
@@ -13952,7 +14185,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 989aa557e31e6524cbfa0c2ae73f4105, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 2
+  Duration: 4
+  DelayBeforeSuccess: 0
   QTEVisualEffect: {fileID: 2205893252838092283, guid: 4f3c5a579e0810141aa5b617e0f61db8, type: 3}
   SpawnAnticipationVFX: {fileID: 4571469422570321659}
   SpawnResultQTEVFX: {fileID: 22509978}
@@ -14072,7 +14306,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 1.2
+  Duration: 1.5
+  DelayBeforeSuccess: 1
   QTEVisualEffect: {fileID: 3581321111877952150, guid: 14b7e14b73659dc4ba1a994039ccdd88, type: 3}
   SpawnAnticipationVFX: {fileID: 1546234599}
   SpawnResultQTEVFX: {fileID: 1059620081}
@@ -14805,11 +15040,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 1.15
-  QTEVisualEffect: {fileID: 0}
-  SpawnAnticipationVFX: {fileID: 0}
-  SpawnResultQTEVFX: {fileID: 0}
+  DelayBeforeSuccess: 0
+  QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
+  SpawnAnticipationVFX: {fileID: 735461311}
+  SpawnResultQTEVFX: {fileID: 1036193645}
   _tolerance: 30
-  _correctDirection: 0
+  _correctDirection: 2
 --- !u!1 &1598969848
 GameObject:
   m_ObjectHideFlags: 0
@@ -14877,6 +15113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 1.2
+  DelayBeforeSuccess: 0.7
   QTEVisualEffect: {fileID: 3581321111877952150, guid: 14b7e14b73659dc4ba1a994039ccdd88, type: 3}
   SpawnAnticipationVFX: {fileID: 1598969849}
   SpawnResultQTEVFX: {fileID: 1059620081}
@@ -15374,7 +15611,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 1.2
+  Duration: 1.5
+  DelayBeforeSuccess: 1
   QTEVisualEffect: {fileID: 3581321111877952150, guid: 14b7e14b73659dc4ba1a994039ccdd88, type: 3}
   SpawnAnticipationVFX: {fileID: 1711712206}
   SpawnResultQTEVFX: {fileID: 1059620081}
@@ -15925,7 +16163,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1768091300
 Transform:
   m_ObjectHideFlags: 0
@@ -15954,6 +16192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 1.15
+  DelayBeforeSuccess: 0
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 1768091300}
   SpawnResultQTEVFX: {fileID: 110260295}
@@ -16715,6 +16954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 0
+  DelayBeforeSuccess: 0
   QTEVisualEffect: {fileID: 0}
   SpawnAnticipationVFX: {fileID: 0}
   SpawnResultQTEVFX: {fileID: 0}
@@ -16853,7 +17093,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 5
+  Duration: 6
+  DelayBeforeSuccess: 4
   QTEVisualEffect: {fileID: 3942096764238518136, guid: d3403e12b08ef884c89fda0e34f3aad4, type: 3}
   SpawnAnticipationVFX: {fileID: 1929125573}
   SpawnResultQTEVFX: {fileID: 1059620081}
@@ -17131,7 +17372,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a801a5f9669217547b2d3e52c35a6463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 1.15
+  Duration: 1.2
+  DelayBeforeSuccess: 0.7
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 1661673225}
   SpawnResultQTEVFX: {fileID: 225976346}
@@ -17978,6 +18220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Duration: 2
+  DelayBeforeSuccess: 1.4
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 165500639}
   SpawnResultQTEVFX: {fileID: 331619844}

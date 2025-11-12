@@ -37,13 +37,13 @@ public class SpinInteraction : Interactable
 
         Vector2 pos = GetPointerPosition();
         Vector2 centerScreen = _cam.WorldToScreenPoint(_center.position * _cameraHeight / Screen.height);
-        Debug.LogWarning(centerScreen);
+
         Vector2 dir = pos - centerScreen;
 
         _previousAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
     
         RotationLoop().Forget();
-        RotateVisualQTE().Forget();
+        //RotateVisualQTE().Forget();
     }
     
     public override void InteractionStop()
@@ -75,7 +75,6 @@ public class SpinInteraction : Interactable
             float currentAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
             float delta = Mathf.DeltaAngle(_previousAngle, currentAngle);
 
-            Debug.LogWarning(delta);
             _totalRotation += delta;
             _previousAngle = currentAngle;
 
@@ -95,14 +94,14 @@ public class SpinInteraction : Interactable
         return Mouse.current.position.ReadValue();
     }
 
-    private async UniTaskVoid RotateVisualQTE()
-    {
+    //private async UniTaskVoid RotateVisualQTE()
+    //{
         
-        /*while (_isDragging)
-        {
+    //    /*while (_isDragging)
+    //    {
             
-            //_vfxSystem.emission = emissionModule;
-            await UniTask.Yield();
-        }*/
-    }
+    //        //_vfxSystem.emission = emissionModule;
+    //        await UniTask.Yield();
+    //    }*/
+    //}
 }
