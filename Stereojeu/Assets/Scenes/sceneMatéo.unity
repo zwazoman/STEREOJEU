@@ -2496,7 +2496,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &372711481
 Transform:
   m_ObjectHideFlags: 0
@@ -2531,6 +2531,7 @@ MonoBehaviour:
   SpawnResultQTEVFX: {fileID: 110260295}
   _tolerance: 30
   _correctDirection: 3
+  IsDestroyableAfterInteraction: 1
 --- !u!65 &372711483
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7995,79 +7996,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -4862286110779324773, guid: 9692e438a745624459d2d1a76b96f334, type: 3}
   m_PrefabInstance: {fileID: 1870763140}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &490274735
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 490274736}
-  - component: {fileID: 490274738}
-  - component: {fileID: 490274737}
-  m_Layer: 6
-  m_Name: QTE (7)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &490274736
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490274735}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.684, y: 0.488, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1294490459}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
---- !u!114 &490274737
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490274735}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a801a5f9669217547b2d3e52c35a6463, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Duration: 1.15
-  DelayBeforeSuccess: 0
-  QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
-  SpawnAnticipationVFX: {fileID: 490274736}
-  SpawnResultQTEVFX: {fileID: 110260295}
-  _tolerance: 30
-  _correctDirection: 3
---- !u!65 &490274738
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 490274735}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.67, y: 0.5288877, z: 0.30538929}
-  m_Center: {x: 0.33005792, y: -0.005722928, z: -0.012676849}
 --- !u!1 &505018304
 GameObject:
   m_ObjectHideFlags: 0
@@ -8242,7 +8170,7 @@ Transform:
   m_GameObject: {fileID: 536123969}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.684, y: 0.488, z: 0}
+  m_LocalPosition: {x: -0.684, y: 0.488, z: 0.637}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -8267,6 +8195,7 @@ MonoBehaviour:
   SpawnResultQTEVFX: {fileID: 110260295}
   _tolerance: 30
   _correctDirection: 3
+  IsDestroyableAfterInteraction: 1
 --- !u!65 &536123972
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9477,6 +9406,7 @@ MonoBehaviour:
   SpawnResultQTEVFX: {fileID: 1348603756780625339}
   _tolerance: 30
   _correctDirection: 2
+  IsDestroyableAfterInteraction: 0
 --- !u!65 &668934062
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9957,7 +9887,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &701344459
 Transform:
   m_ObjectHideFlags: 0
@@ -9967,7 +9897,7 @@ Transform:
   m_GameObject: {fileID: 701344458}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.853, y: 0.424, z: 0.053}
+  m_LocalPosition: {x: 0.853, y: 0.424, z: 0.376}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -9992,6 +9922,7 @@ MonoBehaviour:
   SpawnResultQTEVFX: {fileID: 110260295}
   _tolerance: 30
   _correctDirection: 3
+  IsDestroyableAfterInteraction: 1
 --- !u!65 &701344461
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10358,6 +10289,7 @@ MonoBehaviour:
   SpawnResultQTEVFX: {fileID: 1410942014}
   _tolerance: 30
   _correctDirection: 0
+  IsDestroyableAfterInteraction: 0
 --- !u!1 &799002418
 GameObject:
   m_ObjectHideFlags: 0
@@ -10431,6 +10363,7 @@ MonoBehaviour:
   SpawnResultQTEVFX: {fileID: 331619844}
   _tolerance: 30
   _correctDirection: 3
+  IsDestroyableAfterInteraction: 0
 --- !u!1 &811802946
 GameObject:
   m_ObjectHideFlags: 0
@@ -10651,7 +10584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &832213835
 Transform:
   m_ObjectHideFlags: 0
@@ -10661,7 +10594,7 @@ Transform:
   m_GameObject: {fileID: 832213834}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.684, y: 0.488, z: 0}
+  m_LocalPosition: {x: -0.684, y: 0.488, z: 0.105}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -10686,6 +10619,7 @@ MonoBehaviour:
   SpawnResultQTEVFX: {fileID: 110260295}
   _tolerance: 30
   _correctDirection: 3
+  IsDestroyableAfterInteraction: 1
 --- !u!65 &832213837
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11054,6 +10988,7 @@ MonoBehaviour:
   SpawnResultQTEVFX: {fileID: 0}
   _tolerance: 30
   _correctDirection: 0
+  IsDestroyableAfterInteraction: 0
 --- !u!4 &892193560 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1327643649225793370, guid: 4f2356442f7b79145bc67c98aa5ed062, type: 3}
@@ -11331,7 +11266,7 @@ Transform:
   m_GameObject: {fileID: 926339680}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.853, y: 0.424, z: 0.053}
+  m_LocalPosition: {x: 0.853, y: 0.424, z: 0.405}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -11377,6 +11312,7 @@ MonoBehaviour:
   SpawnResultQTEVFX: {fileID: 110260295}
   _tolerance: 30
   _correctDirection: 3
+  IsDestroyableAfterInteraction: 1
 --- !u!4 &936473198 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -823550381272578379, guid: 9692e438a745624459d2d1a76b96f334, type: 3}
@@ -11487,6 +11423,7 @@ MonoBehaviour:
   SpawnResultQTEVFX: {fileID: 1410942014}
   _tolerance: 30
   _correctDirection: 3
+  IsDestroyableAfterInteraction: 0
 --- !u!1 &984229348
 GameObject:
   m_ObjectHideFlags: 0
@@ -12476,6 +12413,7 @@ MonoBehaviour:
   SpawnResultQTEVFX: {fileID: 331619844}
   _tolerance: 30
   _correctDirection: 2
+  IsDestroyableAfterInteraction: 0
 --- !u!65 &1138953070
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13230,7 +13168,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1286107351
 Transform:
   m_ObjectHideFlags: 0
@@ -13240,7 +13178,7 @@ Transform:
   m_GameObject: {fileID: 1286107350}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.853, y: 0.424, z: 0.053}
+  m_LocalPosition: {x: 0.853, y: 0.424, z: 0.097}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -13265,6 +13203,7 @@ MonoBehaviour:
   SpawnResultQTEVFX: {fileID: 110260295}
   _tolerance: 30
   _correctDirection: 3
+  IsDestroyableAfterInteraction: 1
 --- !u!65 &1286107353
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13336,7 +13275,6 @@ Transform:
   - {fileID: 1286107351}
   - {fileID: 832213835}
   - {fileID: 372711481}
-  - {fileID: 490274736}
   m_Father: {fileID: 1162546795}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!95 &1294490460
@@ -14038,11 +13976,11 @@ MonoBehaviour:
   - {fileID: 1947453215}
   - {fileID: 926339685}
   - {fileID: 536123971}
-  - {fileID: 926339685}
-  - {fileID: 536123971}
-  - {fileID: 926339685}
-  - {fileID: 536123971}
-  - {fileID: 926339685}
+  - {fileID: 701344460}
+  - {fileID: 1768091301}
+  - {fileID: 1286107352}
+  - {fileID: 832213836}
+  - {fileID: 372711482}
   - {fileID: 1588424272}
   - {fileID: 1409313966}
   - {fileID: 27201466}
@@ -15431,8 +15369,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 1.5
-  DelayBeforeSuccess: 1
+  Duration: 1.2
+  DelayBeforeSuccess: 0.7
   QTEVisualEffect: {fileID: 3581321111877952150, guid: 14b7e14b73659dc4ba1a994039ccdd88, type: 3}
   SpawnAnticipationVFX: {fileID: 1546234599}
   SpawnResultQTEVFX: {fileID: 1059620081}
@@ -16171,6 +16109,7 @@ MonoBehaviour:
   SpawnResultQTEVFX: {fileID: 1036193645}
   _tolerance: 30
   _correctDirection: 1
+  IsDestroyableAfterInteraction: 0
 --- !u!1 &1594377530
 GameObject:
   m_ObjectHideFlags: 0
@@ -16678,6 +16617,7 @@ MonoBehaviour:
   SpawnResultQTEVFX: {fileID: 0}
   _tolerance: 30
   _correctDirection: 0
+  IsDestroyableAfterInteraction: 0
 --- !u!1 &1661393294
 GameObject:
   m_ObjectHideFlags: 0
@@ -17085,8 +17025,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 1.5
-  DelayBeforeSuccess: 1
+  Duration: 1.2
+  DelayBeforeSuccess: 0.7
   QTEVisualEffect: {fileID: 3581321111877952150, guid: 14b7e14b73659dc4ba1a994039ccdd88, type: 3}
   SpawnAnticipationVFX: {fileID: 1711712206}
   SpawnResultQTEVFX: {fileID: 1059620081}
@@ -17637,7 +17577,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1768091300
 Transform:
   m_ObjectHideFlags: 0
@@ -17647,7 +17587,7 @@ Transform:
   m_GameObject: {fileID: 1768091299}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.684, y: 0.488, z: 0}
+  m_LocalPosition: {x: -0.684, y: 0.488, z: 0.276}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -17672,6 +17612,7 @@ MonoBehaviour:
   SpawnResultQTEVFX: {fileID: 110260295}
   _tolerance: 30
   _correctDirection: 3
+  IsDestroyableAfterInteraction: 1
 --- !u!65 &1768091302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18132,6 +18073,7 @@ MonoBehaviour:
   SpawnResultQTEVFX: {fileID: 1410942014}
   _tolerance: 30
   _correctDirection: 0
+  IsDestroyableAfterInteraction: 0
 --- !u!65 &1856737511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18614,6 +18556,7 @@ MonoBehaviour:
   SpawnResultQTEVFX: {fileID: 0}
   _tolerance: 30
   _correctDirection: 0
+  IsDestroyableAfterInteraction: 0
 --- !u!65 &1915978909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19033,6 +18976,7 @@ MonoBehaviour:
   SpawnResultQTEVFX: {fileID: 225976346}
   _tolerance: 30
   _correctDirection: 3
+  IsDestroyableAfterInteraction: 0
 --- !u!1 &1954404930
 GameObject:
   m_ObjectHideFlags: 0
@@ -19880,6 +19824,7 @@ MonoBehaviour:
   SpawnResultQTEVFX: {fileID: 331619844}
   _tolerance: 30
   _correctDirection: 3
+  IsDestroyableAfterInteraction: 0
 --- !u!1 &2095216426
 GameObject:
   m_ObjectHideFlags: 0

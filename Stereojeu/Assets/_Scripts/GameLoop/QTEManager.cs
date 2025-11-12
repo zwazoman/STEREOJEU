@@ -39,6 +39,10 @@ public class QTEManager : MonoBehaviour
             return;
         }
 
+        var collider = item.GetComponent<Collider>();
+        if (collider != null)
+            collider.enabled = true;
+
         item.Activate();
 
         await _qTECreator.CreateQTE(item.Duration, item);

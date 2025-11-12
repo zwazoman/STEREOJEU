@@ -23,6 +23,14 @@ public class QTEResults : MonoBehaviour
         _managerQTE.FailQTE = true;
 
         RemoveCollider(InteractionType.gameObject);
+
+        if (InteractionType is SwipeInteraction swipe)
+            if (swipe.IsDestroyableAfterInteraction)
+            {
+                await UniTask.Delay(300);
+                Destroy(InteractionType.gameObject);
+            }
+
         await UniTask.Delay(1000);
     }
 
@@ -33,6 +41,14 @@ public class QTEResults : MonoBehaviour
         OnSuccesfulQTE?.Invoke(QTEVisual, InteractionType);
 
         RemoveCollider(InteractionType.gameObject);
+
+        if (InteractionType is SwipeInteraction swipe)
+            if (swipe.IsDestroyableAfterInteraction)
+            {
+                await UniTask.Delay(300);
+                Destroy(InteractionType.gameObject);
+            }
+
         await UniTask.Delay(1000);
     }
 

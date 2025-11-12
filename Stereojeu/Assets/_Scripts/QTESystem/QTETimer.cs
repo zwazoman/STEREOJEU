@@ -26,9 +26,6 @@ public class QTETimer
 
                 if (PlayerTriggered(_interactable))
                 {
-                    //if (elapsedTime < _interactable.DelayBeforeSuccess)
-                    //    return QTEResult.Fail; // trop tôt
-                    //else
                     return QTEResult.Success;
                 }
             }
