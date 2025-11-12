@@ -94,14 +94,5 @@ public class SpinInteraction : Interactable
         return Mouse.current.position.ReadValue();
     }
 
-    //private async UniTaskVoid RotateVisualQTE()
-    //{
-        
-    //    /*while (_isDragging)
-    //    {
-            
-    //        //_vfxSystem.emission = emissionModule;
-    //        await UniTask.Yield();
-    //    }*/
-    //}
+    public void ResetState() { SuccesRotation = false; }
 }

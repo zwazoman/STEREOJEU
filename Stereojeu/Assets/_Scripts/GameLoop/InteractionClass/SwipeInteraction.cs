@@ -78,6 +78,8 @@ public class SwipeInteraction : Interactable
         return Mouse.current.position.ReadValue();
     }
 
+    public void ResetState() { SuccesSwipe = false; }
+
     private enum DirectionSwipe
     {
         Up,
