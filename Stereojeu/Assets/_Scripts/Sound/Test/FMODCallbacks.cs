@@ -161,7 +161,7 @@ class FmodCallbacks : MonoBehaviour
         {
             case "Touch anticipation":
                 OnTouchMarker?.Invoke();
-                //print("Touch Nestor");
+                print("Touch Nestor");
                 break;
             case "Swipe anticipation":
                 OnSwipeMarker?.Invoke();
@@ -169,7 +169,7 @@ class FmodCallbacks : MonoBehaviour
                 break;
             case "Spin anticipation":
                 OnSpinMarker?.Invoke();
-                print("Spin Nestor");
+                //print("Spin Nestor");
                 break;
             case "Loop End":
                 OnLoopEnd?.Invoke();
