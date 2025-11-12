@@ -98,7 +98,7 @@ class FmodCallbacks : MonoBehaviour
     //}
 
     [AOT.MonoPInvokeCallback(typeof(FMOD.Studio.EVENT_CALLBACK))]
-    FMOD.RESULT BeatEventCallback(FMOD.Studio.EVENT_CALLBACK_TYPE type, IntPtr instancePtr, IntPtr parameterPtr)
+    static FMOD.RESULT BeatEventCallback(FMOD.Studio.EVENT_CALLBACK_TYPE type, IntPtr instancePtr, IntPtr parameterPtr)
     {
         FMOD.Studio.EventInstance instance = new FMOD.Studio.EventInstance(instancePtr);
 
@@ -120,12 +120,12 @@ class FmodCallbacks : MonoBehaviour
                 case FMOD.Studio.EVENT_CALLBACK_TYPE.TIMELINE_BEAT:
                     {
                         //print("BEAT");
-                        OnBeat.Invoke();
+                        FmodCallbacks.instance.OnBeat?.Invoke();
                         var parameter = (FMOD.Studio.TIMELINE_BEAT_PROPERTIES)Marshal.PtrToStructure(parameterPtr, typeof(FMOD.Studio.TIMELINE_BEAT_PROPERTIES));
                         if (parameter.bar > timelineInfo.CurrentMusicBar)
                         {
                             //print("BAR");
-                            OnBar.Invoke();
+                            FmodCallbacks.instance.OnBar?.Invoke();
                             timelineInfo.CurrentMusicBar = parameter.bar;
                         }
                         break;
@@ -134,8 +134,8 @@ class FmodCallbacks : MonoBehaviour
                     {
                         var parameter = (FMOD.Studio.TIMELINE_MARKER_PROPERTIES)Marshal.PtrToStructure(parameterPtr, typeof(FMOD.Studio.TIMELINE_MARKER_PROPERTIES));
                         timelineInfo.LastMarker = parameter.name;
-                        OnMarker.Invoke();
-                        ActivateEventWithMarker(timelineInfo.LastMarker);
+                        FmodCallbacks.instance.OnMarker?.Invoke();
+                        FmodCallbacks.instance.ActivateEventWithMarker(timelineInfo.LastMarker);
                         break;
                     }
                 case FMOD.Studio.EVENT_CALLBACK_TYPE.DESTROYED:
