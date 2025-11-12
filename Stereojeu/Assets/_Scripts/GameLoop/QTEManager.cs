@@ -22,11 +22,11 @@ public class QTEManager : MonoBehaviour
         return item;
     }
 
-    public void ButtonQTE() => HandleQTE("Button").Forget(); //EventUnity
-    public void SwipeQTE() => HandleQTE("Swipe").Forget();
-    public void SpinQTE() => HandleQTE("Spin").Forget();
+    public void ButtonQTE() => HandleQTE().Forget(); //EventUnity
+    public void SwipeQTE() => HandleQTE().Forget();
+    public void SpinQTE() => HandleQTE().Forget();
 
-    private async UniTaskVoid HandleQTE(string type)
+    private async UniTaskVoid HandleQTE()
     {
         Interactable item = PopNextItem();
 
@@ -35,7 +35,7 @@ public class QTEManager : MonoBehaviour
 
         if (item == null)
         {
-            Debug.LogWarning($"Aucun interactable disponible pour QTE {type}");
+            Debug.LogWarning($"Aucun interactable disponible pour QTE {item}");
             return;
         }
 
