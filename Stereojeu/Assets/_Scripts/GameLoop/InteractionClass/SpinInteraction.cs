@@ -9,18 +9,20 @@ public class SpinInteraction : Interactable
     [SerializeField] private float _tolerance = 30f;
     [SerializeField] private int _frameInterval = 2; // toutes les 2 frames
     [SerializeField] private Camera _cam;
-    [SerializeField] private GameObject _spinInteraction;
+    //[SerializeField] private GameObject _spinInteraction;
     [SerializeField] private float _speed;
+    [SerializeField] private ParticleSystem _vfxSystem;
 
     private bool _isDragging;
     private float _totalRotation;
     private float _previousAngle;
+    private int _cameraHeight;
 
     public bool SuccesRotation { get; private set; }
 
     private void Start()
     {
-        RotateVisualQTE().Forget();
+        _cameraHeight = _cam.gameObject.GetComponent<ScreenResolutionManager>().TextureHeight;
     }
 
     public override void InteractionStart()
@@ -32,12 +34,13 @@ public class SpinInteraction : Interactable
         _totalRotation = 0f;
 
         Vector2 pos = GetPointerPosition();
-        Vector2 centerScreen = _cam.WorldToScreenPoint(_center.position);
+        Vector2 centerScreen = _cam.WorldToScreenPoint(_center.position * _cameraHeight / Screen.height);
         Vector2 dir = pos - centerScreen;
 
         _previousAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
 
         RotationLoop().Forget();
+        RotateVisualQTE().Forget();
     }
 
     public override void InteractionStop()
@@ -46,7 +49,7 @@ public class SpinInteraction : Interactable
         _isDragging = false;
 
         SuccesRotation = Mathf.Abs(_totalRotation) >= (_requiredRotation - _tolerance);
-        //Debug.Log($"Rotation totale: {totalRotation:F1} Succès: {SuccesRotation}");
+        Debug.Log($"Rotation totale: {_totalRotation:F1} Succès: {SuccesRotation}");
     }
 
     private async UniTaskVoid RotationLoop()
@@ -90,9 +93,9 @@ public class SpinInteraction : Interactable
 
     private async UniTaskVoid RotateVisualQTE()
     {
-        while (true)
+        while (_isDragging)
         {
-            _spinInteraction.transform.Rotate(0f, 0f, _speed * Time.deltaTime);
+            _vfxSystem.emissionRate = _isDragging ? 1:0;
             await UniTask.Yield();
         }
     }
