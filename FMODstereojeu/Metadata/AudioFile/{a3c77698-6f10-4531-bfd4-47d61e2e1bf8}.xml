@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{a3c77698-6f10-4531-bfd4-47d61e2e1bf8}">
+		<property name="assetPath">
+			<value>Music/StereoJeu_New_Rock_part (1).ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>43.636371882086166</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f52cc40d-41ba-4508-89fb-995ba6fbfeff}</destination>
+		</relationship>
+	</object>
+</objects>
