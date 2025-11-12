@@ -2,6 +2,7 @@ using UnityEngine;
 using System;
 using System.Runtime.InteropServices;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 class FmodCallbacks : MonoBehaviour
 {
@@ -57,6 +58,14 @@ class FmodCallbacks : MonoBehaviour
 
     FMOD.Studio.EVENT_CALLBACK beatCallback;
     FMOD.Studio.EventInstance musicInstance;
+
+    private void Start()
+    {
+        if (FMODUnity.RuntimeManager.HasBankLoaded("Master"))
+        {
+            Debug.Log("Master Bank Loaded");
+        }
+    }
 
     public void StartMusic()
     {

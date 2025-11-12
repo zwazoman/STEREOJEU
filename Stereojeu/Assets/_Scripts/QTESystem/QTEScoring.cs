@@ -48,7 +48,7 @@ public class QTEScoring : MonoBehaviour
         _scoreText.text = "Score : " + Score;
     }
 
-    void SaveScore()
+    public void SaveScore()
     {
         if (PlayerPrefs.HasKey("score"))
         {
