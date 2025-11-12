@@ -12372,6 +12372,7 @@ MonoBehaviour:
       Data3: -2114057824
       Data4: 74560495
     Path: event:/Successful QTE
+  ScoreText: {fileID: 1569204293}
 --- !u!114 &1391969871
 MonoBehaviour:
   m_ObjectHideFlags: 0
