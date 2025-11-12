@@ -29,6 +29,8 @@ public class SpinInteraction : Interactable
     {
         if (!IsActive) return;
 
+        _vfxSystem.Play();
+        
         _isDragging = true;
         SuccesRotation = false;
         _totalRotation = 0f;
@@ -38,7 +40,7 @@ public class SpinInteraction : Interactable
         Vector2 dir = pos - centerScreen;
 
         _previousAngle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
-
+    
         RotationLoop().Forget();
         RotateVisualQTE().Forget();
     }
@@ -47,9 +49,9 @@ public class SpinInteraction : Interactable
     {
         if (!_isDragging) return;
         _isDragging = false;
-
+        _vfxSystem.Stop();
         SuccesRotation = Mathf.Abs(_totalRotation) >= (_requiredRotation - _tolerance);
-        Debug.Log($"Rotation totale: {_totalRotation:F1} Succès: {SuccesRotation}");
+        Debug.Log($"Rotation totale: {_totalRotation:F1} Succï¿½s: {SuccesRotation}");
     }
 
     private async UniTaskVoid RotationLoop()
@@ -57,6 +59,9 @@ public class SpinInteraction : Interactable
         int frameCount = 0;
         Vector3 basePos = transform.position;
 
+       
+        ;
+        
         while (_isDragging)
         {
             await UniTask.Yield();
@@ -93,10 +98,12 @@ public class SpinInteraction : Interactable
 
     private async UniTaskVoid RotateVisualQTE()
     {
-        while (_isDragging)
+        
+        /*while (_isDragging)
         {
-            //_vfxSystem.emission = _isDragging ? 1:0;
+            
+            //_vfxSystem.emission = emissionModule;
             await UniTask.Yield();
-        }
+        }*/
     }
 }
