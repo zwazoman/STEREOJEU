@@ -1,6 +1,7 @@
 using UnityEngine;
 using DG.Tweening;
 using FMODUnity;
+using TMPro;
 
 public class QTEScoring : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class QTEScoring : MonoBehaviour
     [Header("References")]
     [SerializeField] EventReference _failedQTESound;
     [SerializeField] EventReference _successfulQTESound;
+
+    [SerializeField] TMP_Text _scoreText;
+    [SerializeField] TMP_Text _bestScoreText;
 
     public int Score { get; private set; }
 
@@ -25,16 +29,40 @@ public class QTEScoring : MonoBehaviour
 
         if (_succesfullQTEInARow < 4)
         {
-            Score += 10;
+            SetScore(10);
+            
             GameObject obj = Instantiate(_succesful10Feedback, type.SpawnResultQTEVFX);
             SetupSize(obj, QTEVisual, type);
         }
         else
         {
-            Score += 50;
+            SetScore(50);
             GameObject obj = Instantiate(_successful50Feedback, type.SpawnResultQTEVFX);
             SetupSize(obj, QTEVisual, type);
         }
+    }
+
+    void SetScore(int scoreAddition)
+    {
+        Score += scoreAddition;
+        _scoreText.text = "Score : " + Score;
+    }
+
+    public void SaveScore()
+    {
+        if (PlayerPrefs.HasKey("score"))
+        {
+            if(Score > PlayerPrefs.GetInt("score"))
+            {
+                PlayerPrefs.SetInt("score", Score);
+            }
+        }
+        else
+        {
+            PlayerPrefs.SetInt("score", Score);
+        }
+
+        _bestScoreText.text = "Best Score : " + PlayerPrefs.GetInt("score");
     }
 
     public void FailedQTE(GameObject QTEVisual, Interactable type)

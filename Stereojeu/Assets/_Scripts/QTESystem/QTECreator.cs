@@ -8,6 +8,7 @@ public class QTECreator : MonoBehaviour
 
     public async UniTask CreateQTE(float duration, Interactable item, bool isInfinite = false)
     {
+        await UniTask.WaitForSeconds(0.4f);
         if (item == null || item.SpawnAnticipationVFX == null)
             return;
 
