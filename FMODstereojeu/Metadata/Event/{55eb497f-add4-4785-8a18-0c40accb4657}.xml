@@ -494,7 +494,7 @@
 	</object>
 	<object class="NamedMarker" id="{fd897d3d-a230-4071-a0bb-913521c766a9}">
 		<property name="position">
-			<value>19.636363636363633</value>
+			<value>18.545444238301378</value>
 		</property>
 		<property name="name">
 			<value>Swipe</value>
@@ -508,7 +508,7 @@
 	</object>
 	<object class="NamedMarker" id="{8c022f45-2214-406c-a4f9-2955bede3989}">
 		<property name="position">
-			<value>21.818181818181817</value>
+			<value>20.727262420119562</value>
 		</property>
 		<property name="name">
 			<value>Swipe</value>
@@ -522,7 +522,7 @@
 	</object>
 	<object class="NamedMarker" id="{ddc13858-2dca-4f3b-950d-a457372d0647}">
 		<property name="position">
-			<value>24</value>
+			<value>22.909080601937745</value>
 		</property>
 		<property name="name">
 			<value>Touch</value>
@@ -536,7 +536,7 @@
 	</object>
 	<object class="NamedMarker" id="{1dc8616d-79ff-4a51-8533-d6a3083ba3ef}">
 		<property name="position">
-			<value>18.545454545454543</value>
+			<value>17.454535147392289</value>
 		</property>
 		<property name="name">
 			<value>Swipe</value>
