@@ -7,9 +7,9 @@ public class particleStackPlayer : MonoBehaviour
 
     public void PopAndPlay()
     {
-        var system = _stack[_stack.Count - 1];
+        var system = _stack[0];
         system.Play();
-        _stack.RemoveAt(_stack.Count - 1);
+        _stack.RemoveAt(0);
     }
     
 }

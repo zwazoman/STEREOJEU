@@ -1,3 +1,4 @@
+using System;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -18,6 +19,7 @@ public class SwipeInteraction : Interactable
     public bool IsDestroyableAfterInteraction;
 
     public bool SuccesSwipe { get; private set; }
+    public event Action<bool> OnResult;
 
     private void Start()
     {
@@ -53,6 +55,8 @@ public class SwipeInteraction : Interactable
         Vector2 swipeDirection = (_endPos - _startPos).normalized;
 
         SuccesSwipe = IsDirection(swipeDirection, _vectorDirection);
+        
+        OnResult?.Invoke(SuccesSwipe);
     }
 
 
