@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{79a1c8ee-0e39-4601-a5b3-37dbe971d354}">
+		<property name="assetPath">
+			<value>Sfx/Swooshes, Whoosh, Airy, Short SND3623.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>18.914447916666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f52cc40d-41ba-4508-89fb-995ba6fbfeff}</destination>
+		</relationship>
+	</object>
+</objects>
