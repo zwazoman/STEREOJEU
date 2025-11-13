@@ -125,7 +125,7 @@ public partial class @InteractionInput: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""3ff3501d-277f-4184-92c1-4d076a570973"",
-                    ""path"": ""<Touchscreen>/primaryTouch/indirectTouch"",
+                    ""path"": ""<Touchscreen>/primaryTouch/tap"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
