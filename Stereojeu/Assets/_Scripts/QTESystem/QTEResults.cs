@@ -31,8 +31,8 @@ public class QTEResults : MonoBehaviour
 
     public async UniTask SuccesQTE(GameObject QTEVisual, Interactable InteractionType)
     {
-       // print("succes");
-        
+        // print("succes");
+
         OnSuccesfulQTE?.Invoke(QTEVisual, InteractionType);
 
         RemoveCollider(InteractionType.gameObject);
@@ -47,11 +47,10 @@ public class QTEResults : MonoBehaviour
 
     private async UniTask CleanQTEVFXVisual(Interactable InteractionType)
     {
-        if (InteractionType is SwipeInteraction swipe)
-            if (swipe.IsDestroyableAfterInteraction)
-            {
-                await UniTask.Delay(300);
-                Destroy(InteractionType.gameObject);
-            }
+        if (InteractionType.IsDestroyableAfterInteraction)
+        {
+            await UniTask.Delay(300);
+            Destroy(InteractionType.gameObject);
+        }
     }
 }

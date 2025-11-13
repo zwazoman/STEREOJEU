@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 27201466}
   - component: {fileID: 27201467}
   m_Layer: 6
-  m_Name: VisualQTE (1)
+  m_Name: QTE Touch 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -445,6 +445,7 @@ MonoBehaviour:
   QTEVisualEffect: {fileID: 8991229891232164902, guid: ce17515a0a0744f4e8b01ed56b771596, type: 3}
   SpawnAnticipationVFX: {fileID: 27201465}
   SpawnResultQTEVFX: {fileID: 1661393295}
+  IsDestroyableAfterInteraction: 1
 --- !u!65 &27201467
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -504,6 +505,7 @@ MonoBehaviour:
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 5762763353479929024}
   SpawnResultQTEVFX: {fileID: 984229349}
+  IsDestroyableAfterInteraction: 0
 --- !u!1001 &53458828
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1641,6 +1643,78 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1410169209}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &252659366
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 252659367}
+  - component: {fileID: 252659369}
+  - component: {fileID: 252659368}
+  m_Layer: 6
+  m_Name: QTE Touch 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &252659367
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252659366}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6532815, y: -0.27059805, z: 0.27059805, w: 0.6532815}
+  m_LocalPosition: {x: 24.473, y: 10.143, z: -3.541}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1771799980}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 45}
+--- !u!65 &252659368
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252659366}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.59, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &252659369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252659366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 2
+  DelayBeforeSuccess: 1
+  QTEVisualEffect: {fileID: 8991229891232164902, guid: ce17515a0a0744f4e8b01ed56b771596, type: 3}
+  SpawnAnticipationVFX: {fileID: 252659367}
+  SpawnResultQTEVFX: {fileID: 1661393295}
+  IsDestroyableAfterInteraction: 1
 --- !u!1 &259625503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1743,6 +1817,78 @@ Transform:
   - {fileID: 1656219101}
   m_Father: {fileID: 1030402977}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &314956495
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 314956496}
+  - component: {fileID: 314956498}
+  - component: {fileID: 314956497}
+  m_Layer: 6
+  m_Name: QTE Touch 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &314956496
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314956495}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6532815, y: -0.27059805, z: 0.27059805, w: 0.6532815}
+  m_LocalPosition: {x: 24.25, y: 10.233, z: -3.308}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1771799980}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 45}
+--- !u!65 &314956497
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314956495}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.59, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &314956498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 314956495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 2
+  DelayBeforeSuccess: 1
+  QTEVisualEffect: {fileID: 8991229891232164902, guid: ce17515a0a0744f4e8b01ed56b771596, type: 3}
+  SpawnAnticipationVFX: {fileID: 314956496}
+  SpawnResultQTEVFX: {fileID: 1661393295}
+  IsDestroyableAfterInteraction: 1
 --- !u!1 &349872472
 GameObject:
   m_ObjectHideFlags: 0
@@ -2115,6 +2261,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a801a5f9669217547b2d3e52c35a6463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &380573873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 380573874}
+  - component: {fileID: 380573876}
+  - component: {fileID: 380573875}
+  m_Layer: 6
+  m_Name: QTE Touch 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &380573874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380573873}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6532815, y: -0.27059805, z: 0.27059805, w: 0.6532815}
+  m_LocalPosition: {x: 24.25, y: 10.196, z: -3.308}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1771799980}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 45}
+--- !u!65 &380573875
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380573873}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.59, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &380573876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380573873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 2
+  DelayBeforeSuccess: 1
+  QTEVisualEffect: {fileID: 8991229891232164902, guid: ce17515a0a0744f4e8b01ed56b771596, type: 3}
+  SpawnAnticipationVFX: {fileID: 380573874}
+  SpawnResultQTEVFX: {fileID: 1661393295}
+  IsDestroyableAfterInteraction: 1
 --- !u!1 &387895134
 GameObject:
   m_ObjectHideFlags: 0
@@ -2127,7 +2345,7 @@ GameObject:
   - component: {fileID: 387895136}
   - component: {fileID: 387895137}
   m_Layer: 6
-  m_Name: VisualQTE (3)
+  m_Name: QTE Touch 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2165,6 +2383,7 @@ MonoBehaviour:
   QTEVisualEffect: {fileID: 8991229891232164902, guid: ce17515a0a0744f4e8b01ed56b771596, type: 3}
   SpawnAnticipationVFX: {fileID: 387895135}
   SpawnResultQTEVFX: {fileID: 1661393295}
+  IsDestroyableAfterInteraction: 1
 --- !u!65 &387895137
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7276,6 +7495,150 @@ Transform:
   m_Children: []
   m_Father: {fileID: 543450651862823791}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: -90}
+--- !u!1 &427941184
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 427941185}
+  - component: {fileID: 427941187}
+  - component: {fileID: 427941186}
+  m_Layer: 6
+  m_Name: QTE Touch 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &427941185
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427941184}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6532815, y: -0.27059805, z: 0.27059805, w: 0.6532815}
+  m_LocalPosition: {x: 24.473, y: 10.062, z: -3.541}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1771799980}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 45}
+--- !u!65 &427941186
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427941184}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.59, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &427941187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427941184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 2
+  DelayBeforeSuccess: 1
+  QTEVisualEffect: {fileID: 8991229891232164902, guid: ce17515a0a0744f4e8b01ed56b771596, type: 3}
+  SpawnAnticipationVFX: {fileID: 427941185}
+  SpawnResultQTEVFX: {fileID: 1661393295}
+  IsDestroyableAfterInteraction: 1
+--- !u!1 &429351061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 429351062}
+  - component: {fileID: 429351064}
+  - component: {fileID: 429351063}
+  m_Layer: 6
+  m_Name: QTE Touch 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &429351062
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429351061}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6532815, y: -0.27059805, z: 0.27059805, w: 0.6532815}
+  m_LocalPosition: {x: 24.696, y: 10.186, z: -3.766}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1771799980}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 45}
+--- !u!65 &429351063
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429351061}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.59, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &429351064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429351061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 2
+  DelayBeforeSuccess: 1
+  QTEVisualEffect: {fileID: 8991229891232164902, guid: ce17515a0a0744f4e8b01ed56b771596, type: 3}
+  SpawnAnticipationVFX: {fileID: 429351062}
+  SpawnResultQTEVFX: {fileID: 1661393295}
+  IsDestroyableAfterInteraction: 1
 --- !u!1 &457965930
 GameObject:
   m_ObjectHideFlags: 0
@@ -7369,6 +7732,78 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &503528447
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 503528448}
+  - component: {fileID: 503528450}
+  - component: {fileID: 503528449}
+  m_Layer: 6
+  m_Name: QTE Touch 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &503528448
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503528447}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6532815, y: -0.27059805, z: 0.27059805, w: 0.6532815}
+  m_LocalPosition: {x: 24.696, y: 10.037, z: -3.766}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1771799980}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 45}
+--- !u!65 &503528449
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503528447}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.59, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &503528450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 503528447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 2
+  DelayBeforeSuccess: 1
+  QTEVisualEffect: {fileID: 8991229891232164902, guid: ce17515a0a0744f4e8b01ed56b771596, type: 3}
+  SpawnAnticipationVFX: {fileID: 503528448}
+  SpawnResultQTEVFX: {fileID: 1661393295}
+  IsDestroyableAfterInteraction: 1
 --- !u!1 &505018304
 GameObject:
   m_ObjectHideFlags: 0
@@ -7401,6 +7836,78 @@ Transform:
   - {fileID: 1138582371}
   m_Father: {fileID: 1708779300}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &508329115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 508329116}
+  - component: {fileID: 508329118}
+  - component: {fileID: 508329117}
+  m_Layer: 6
+  m_Name: QTE Touch 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &508329116
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508329115}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6532815, y: -0.27059805, z: 0.27059805, w: 0.6532815}
+  m_LocalPosition: {x: 24.25, y: 10.164, z: -3.308}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1771799980}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 45}
+--- !u!65 &508329117
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508329115}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.59, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &508329118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 508329115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 2
+  DelayBeforeSuccess: 1
+  QTEVisualEffect: {fileID: 8991229891232164902, guid: ce17515a0a0744f4e8b01ed56b771596, type: 3}
+  SpawnAnticipationVFX: {fileID: 508329116}
+  SpawnResultQTEVFX: {fileID: 1661393295}
+  IsDestroyableAfterInteraction: 1
 --- !u!1 &522683706
 GameObject:
   m_ObjectHideFlags: 0
@@ -8306,9 +8813,9 @@ MonoBehaviour:
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 1348603756780625339}
   SpawnResultQTEVFX: {fileID: 1348603756780625339}
+  IsDestroyableAfterInteraction: 0
   _tolerance: 30
   _correctDirection: 2
-  IsDestroyableAfterInteraction: 0
 --- !u!65 &668934062
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8930,9 +9437,9 @@ MonoBehaviour:
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 790040583}
   SpawnResultQTEVFX: {fileID: 1410942014}
+  IsDestroyableAfterInteraction: 0
   _tolerance: 60
   _correctDirection: 0
-  IsDestroyableAfterInteraction: 0
 --- !u!114 &799002421 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1208384594324938751, guid: e013b0f89669a624896af9dc71092092, type: 3}
@@ -9383,6 +9890,7 @@ MonoBehaviour:
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 1581962125663085462}
   SpawnResultQTEVFX: {fileID: 1713695388}
+  IsDestroyableAfterInteraction: 0
 --- !u!1 &880827867
 GameObject:
   m_ObjectHideFlags: 0
@@ -9486,9 +9994,9 @@ MonoBehaviour:
   QTEVisualEffect: {fileID: 0}
   SpawnAnticipationVFX: {fileID: 0}
   SpawnResultQTEVFX: {fileID: 0}
+  IsDestroyableAfterInteraction: 0
   _tolerance: 30
   _correctDirection: 0
-  IsDestroyableAfterInteraction: 0
 --- !u!4 &892193560 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1327643649225793370, guid: 4f2356442f7b79145bc67c98aa5ed062, type: 3}
@@ -9682,7 +10190,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 16.7101
+  field of view: 59.599052
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -9708,8 +10216,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900563409}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.00019748686, y: 0.70710677, z: 0.00019748686, w: 0.70710677}
-  m_LocalPosition: {x: 8.692384, y: -3.888702, z: -1.5056362}
+  m_LocalRotation: {x: 0.00012341145, y: 0.7071071, z: -0.00012341146, w: 0.7071064}
+  m_LocalPosition: {x: -4.3876143, y: -4.1572814, z: -1.5056324}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9853,9 +10361,9 @@ MonoBehaviour:
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 982498909}
   SpawnResultQTEVFX: {fileID: 1410942014}
+  IsDestroyableAfterInteraction: 0
   _tolerance: 60
   _correctDirection: 3
-  IsDestroyableAfterInteraction: 0
 --- !u!1 &984229348
 GameObject:
   m_ObjectHideFlags: 0
@@ -10431,6 +10939,7 @@ MonoBehaviour:
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 5863722356754878418}
   SpawnResultQTEVFX: {fileID: 1184249807}
+  IsDestroyableAfterInteraction: 0
 --- !u!114 &1157005965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10448,6 +10957,7 @@ MonoBehaviour:
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 5089424833392988900}
   SpawnResultQTEVFX: {fileID: 354597646}
+  IsDestroyableAfterInteraction: 0
 --- !u!65 &1157005966
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10716,6 +11226,7 @@ MonoBehaviour:
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 1022872946366624757}
   SpawnResultQTEVFX: {fileID: 77512722}
+  IsDestroyableAfterInteraction: 0
 --- !u!1 &1252960237
 GameObject:
   m_ObjectHideFlags: 0
@@ -11439,6 +11950,150 @@ Transform:
   - {fileID: 361741832}
   m_Father: {fileID: 1677513162}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1348114069
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1348114070}
+  - component: {fileID: 1348114072}
+  - component: {fileID: 1348114071}
+  m_Layer: 6
+  m_Name: QTE Touch 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1348114070
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348114069}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6532815, y: -0.27059805, z: 0.27059805, w: 0.6532815}
+  m_LocalPosition: {x: 24.696, y: 10.138, z: -3.766}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1771799980}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 45}
+--- !u!65 &1348114071
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348114069}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.59, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1348114072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348114069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 2
+  DelayBeforeSuccess: 1
+  QTEVisualEffect: {fileID: 8991229891232164902, guid: ce17515a0a0744f4e8b01ed56b771596, type: 3}
+  SpawnAnticipationVFX: {fileID: 1348114070}
+  SpawnResultQTEVFX: {fileID: 1661393295}
+  IsDestroyableAfterInteraction: 1
+--- !u!1 &1348931941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1348931942}
+  - component: {fileID: 1348931944}
+  - component: {fileID: 1348931943}
+  m_Layer: 6
+  m_Name: QTE Touch 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1348931942
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348931941}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6532815, y: -0.27059805, z: 0.27059805, w: 0.6532815}
+  m_LocalPosition: {x: 24.473, y: 10.106, z: -3.541}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1771799980}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 45}
+--- !u!65 &1348931943
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348931941}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.59, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1348931944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1348931941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 2
+  DelayBeforeSuccess: 1
+  QTEVisualEffect: {fileID: 8991229891232164902, guid: ce17515a0a0744f4e8b01ed56b771596, type: 3}
+  SpawnAnticipationVFX: {fileID: 1348931942}
+  SpawnResultQTEVFX: {fileID: 1661393295}
+  IsDestroyableAfterInteraction: 1
 --- !u!1 &1363407453
 GameObject:
   m_ObjectHideFlags: 0
@@ -11695,20 +12350,20 @@ MonoBehaviour:
   - {fileID: 418943949}
   - {fileID: 2110708064}
   - {fileID: 1588424272}
-  - {fileID: 1409313966}
-  - {fileID: 27201466}
-  - {fileID: 387895136}
-  - {fileID: 1409313966}
-  - {fileID: 387895136}
-  - {fileID: 27201466}
-  - {fileID: 387895136}
-  - {fileID: 1409313966}
-  - {fileID: 387895136}
-  - {fileID: 27201466}
-  - {fileID: 387895136}
-  - {fileID: 1409313966}
-  - {fileID: 27201466}
-  - {fileID: 1409313966}
+  - {fileID: 1772536360}
+  - {fileID: 503528450}
+  - {fileID: 1592139652}
+  - {fileID: 508329118}
+  - {fileID: 427941187}
+  - {fileID: 1808561394}
+  - {fileID: 1348931944}
+  - {fileID: 380573876}
+  - {fileID: 252659369}
+  - {fileID: 1348114072}
+  - {fileID: 1643862740}
+  - {fileID: 314956498}
+  - {fileID: 429351064}
+  - {fileID: 314956498}
   - {fileID: 387895136}
   - {fileID: 27201466}
   - {fileID: 1409313966}
@@ -12036,7 +12691,7 @@ GameObject:
   - component: {fileID: 1409313966}
   - component: {fileID: 1409313967}
   m_Layer: 6
-  m_Name: VisualQTE
+  m_Name: QTE Touch 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12074,6 +12729,7 @@ MonoBehaviour:
   QTEVisualEffect: {fileID: 8991229891232164902, guid: ce17515a0a0744f4e8b01ed56b771596, type: 3}
   SpawnAnticipationVFX: {fileID: 1409313965}
   SpawnResultQTEVFX: {fileID: 1661393295}
+  IsDestroyableAfterInteraction: 1
 --- !u!65 &1409313967
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12327,6 +12983,7 @@ MonoBehaviour:
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 264768167363237526}
   SpawnResultQTEVFX: {fileID: 1298984889}
+  IsDestroyableAfterInteraction: 0
 --- !u!65 &1512354521
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12365,6 +13022,7 @@ MonoBehaviour:
   QTEVisualEffect: {fileID: 4697734892073660308, guid: eeeae7a419ae4994a831bf1872e7730a, type: 3}
   SpawnAnticipationVFX: {fileID: 4482838182833417735}
   SpawnResultQTEVFX: {fileID: 269556775}
+  IsDestroyableAfterInteraction: 0
 --- !u!65 &1512354523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12656,6 +13314,7 @@ MonoBehaviour:
   QTEVisualEffect: {fileID: 2205893252838092283, guid: 4f3c5a579e0810141aa5b617e0f61db8, type: 3}
   SpawnAnticipationVFX: {fileID: 4571469422570321659}
   SpawnResultQTEVFX: {fileID: 22509978}
+  IsDestroyableAfterInteraction: 0
   _center: {fileID: 1544208156}
   _requiredRotation: 540
   _tolerance: 30
@@ -13250,9 +13909,81 @@ MonoBehaviour:
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 735461311}
   SpawnResultQTEVFX: {fileID: 1036193645}
+  IsDestroyableAfterInteraction: 0
   _tolerance: 30
   _correctDirection: 1
-  IsDestroyableAfterInteraction: 0
+--- !u!1 &1592139649
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1592139650}
+  - component: {fileID: 1592139652}
+  - component: {fileID: 1592139651}
+  m_Layer: 6
+  m_Name: QTE Touch 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1592139650
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592139649}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6532815, y: -0.27059805, z: 0.27059805, w: 0.6532815}
+  m_LocalPosition: {x: 24.473, y: 10.033, z: -3.541}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1771799980}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 45}
+--- !u!65 &1592139651
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592139649}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.59, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1592139652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1592139649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 2
+  DelayBeforeSuccess: 1
+  QTEVisualEffect: {fileID: 8991229891232164902, guid: ce17515a0a0744f4e8b01ed56b771596, type: 3}
+  SpawnAnticipationVFX: {fileID: 1592139650}
+  SpawnResultQTEVFX: {fileID: 1661393295}
+  IsDestroyableAfterInteraction: 1
 --- !u!1 &1594377530
 GameObject:
   m_ObjectHideFlags: 0
@@ -13461,6 +14192,78 @@ Transform:
   - {fileID: 1991196130}
   m_Father: {fileID: 1030402977}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1643862737
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1643862738}
+  - component: {fileID: 1643862740}
+  - component: {fileID: 1643862739}
+  m_Layer: 6
+  m_Name: QTE Touch 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1643862738
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643862737}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6532815, y: -0.27059805, z: 0.27059805, w: 0.6532815}
+  m_LocalPosition: {x: 24.473, y: 10.183, z: -3.541}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1771799980}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 45}
+--- !u!65 &1643862739
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643862737}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.59, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1643862740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643862737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 2
+  DelayBeforeSuccess: 1
+  QTEVisualEffect: {fileID: 8991229891232164902, guid: ce17515a0a0744f4e8b01ed56b771596, type: 3}
+  SpawnAnticipationVFX: {fileID: 1643862738}
+  SpawnResultQTEVFX: {fileID: 1661393295}
+  IsDestroyableAfterInteraction: 1
 --- !u!114 &1650042314 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4078564284965682602, guid: e013b0f89669a624896af9dc71092092, type: 3}
@@ -13544,9 +14347,9 @@ MonoBehaviour:
   QTEVisualEffect: {fileID: 0}
   SpawnAnticipationVFX: {fileID: 0}
   SpawnResultQTEVFX: {fileID: 0}
+  IsDestroyableAfterInteraction: 0
   _tolerance: 30
   _correctDirection: 0
-  IsDestroyableAfterInteraction: 0
 --- !u!1 &1661393294
 GameObject:
   m_ObjectHideFlags: 0
@@ -13572,7 +14375,7 @@ Transform:
   m_GameObject: {fileID: 1661393294}
   serializedVersion: 2
   m_LocalRotation: {x: 0.6532815, y: -0.27059805, z: 0.27059805, w: 0.6532815}
-  m_LocalPosition: {x: 25.55, y: 10.247701, z: -4.44}
+  m_LocalPosition: {x: 25.484, y: 10.247701, z: -3.776}
   m_LocalScale: {x: 1.4, y: 1.4, z: 1.4}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -14354,11 +15157,97 @@ Transform:
   m_Children:
   - {fileID: 154191024}
   - {fileID: 1409313965}
+  - {fileID: 314956496}
+  - {fileID: 380573874}
+  - {fileID: 508329116}
   - {fileID: 27201465}
+  - {fileID: 429351062}
+  - {fileID: 1348114070}
+  - {fileID: 1808561392}
+  - {fileID: 503528448}
   - {fileID: 387895135}
+  - {fileID: 1988616308}
+  - {fileID: 1643862738}
+  - {fileID: 252659367}
+  - {fileID: 1348931942}
+  - {fileID: 427941185}
+  - {fileID: 1592139650}
+  - {fileID: 1772536358}
   - {fileID: 1661393295}
   m_Father: {fileID: 1030402977}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1772536357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1772536358}
+  - component: {fileID: 1772536360}
+  - component: {fileID: 1772536359}
+  m_Layer: 6
+  m_Name: QTE Touch 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1772536358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772536357}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6532815, y: -0.27059805, z: 0.27059805, w: 0.6532815}
+  m_LocalPosition: {x: 24.473, y: 9.963, z: -3.541}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1771799980}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 45}
+--- !u!65 &1772536359
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772536357}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.59, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1772536360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772536357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 2
+  DelayBeforeSuccess: 1
+  QTEVisualEffect: {fileID: 8991229891232164902, guid: ce17515a0a0744f4e8b01ed56b771596, type: 3}
+  SpawnAnticipationVFX: {fileID: 1772536358}
+  SpawnResultQTEVFX: {fileID: 1661393295}
+  IsDestroyableAfterInteraction: 1
 --- !u!4 &1774864071 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 265440839955573144, guid: e013b0f89669a624896af9dc71092092, type: 3}
@@ -14375,6 +15264,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1808561391
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1808561392}
+  - component: {fileID: 1808561394}
+  - component: {fileID: 1808561393}
+  m_Layer: 6
+  m_Name: QTE Touch 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1808561392
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808561391}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6532815, y: -0.27059805, z: 0.27059805, w: 0.6532815}
+  m_LocalPosition: {x: 24.696, y: 10.085, z: -3.766}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1771799980}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 45}
+--- !u!65 &1808561393
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808561391}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.59, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1808561394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1808561391}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 2
+  DelayBeforeSuccess: 1
+  QTEVisualEffect: {fileID: 8991229891232164902, guid: ce17515a0a0744f4e8b01ed56b771596, type: 3}
+  SpawnAnticipationVFX: {fileID: 1808561392}
+  SpawnResultQTEVFX: {fileID: 1661393295}
+  IsDestroyableAfterInteraction: 1
 --- !u!1 &1824738065
 GameObject:
   m_ObjectHideFlags: 0
@@ -14548,9 +15509,9 @@ MonoBehaviour:
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 1825724556}
   SpawnResultQTEVFX: {fileID: 1410942014}
+  IsDestroyableAfterInteraction: 0
   _tolerance: 60
   _correctDirection: 0
-  IsDestroyableAfterInteraction: 0
 --- !u!65 &1856737511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14702,9 +15663,9 @@ MonoBehaviour:
   QTEVisualEffect: {fileID: 0}
   SpawnAnticipationVFX: {fileID: 0}
   SpawnResultQTEVFX: {fileID: 0}
+  IsDestroyableAfterInteraction: 0
   _tolerance: 30
   _correctDirection: 0
-  IsDestroyableAfterInteraction: 0
 --- !u!65 &1915978909
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15001,9 +15962,9 @@ MonoBehaviour:
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 1661673225}
   SpawnResultQTEVFX: {fileID: 225976346}
+  IsDestroyableAfterInteraction: 0
   _tolerance: 30
   _correctDirection: 3
-  IsDestroyableAfterInteraction: 0
 --- !u!1 &1954404930
 GameObject:
   m_ObjectHideFlags: 0
@@ -15322,6 +16283,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1959291777}
   m_CullTransparentMesh: 1
+--- !u!1 &1988616307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1988616308}
+  - component: {fileID: 1988616310}
+  - component: {fileID: 1988616309}
+  m_Layer: 6
+  m_Name: QTE Touch 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1988616308
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988616307}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.6532815, y: -0.27059805, z: 0.27059805, w: 0.6532815}
+  m_LocalPosition: {x: 24.473, y: 10.215, z: -3.541}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1771799980}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 45}
+--- !u!65 &1988616309
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988616307}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 0.59, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1988616310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1988616307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Duration: 2
+  DelayBeforeSuccess: 1
+  QTEVisualEffect: {fileID: 8991229891232164902, guid: ce17515a0a0744f4e8b01ed56b771596, type: 3}
+  SpawnAnticipationVFX: {fileID: 1988616308}
+  SpawnResultQTEVFX: {fileID: 1661393295}
+  IsDestroyableAfterInteraction: 1
 --- !u!1 &1991196129
 GameObject:
   m_ObjectHideFlags: 0
