@@ -9432,14 +9432,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a801a5f9669217547b2d3e52c35a6463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 3
-  DelayBeforeSuccess: 2
+  Duration: 2
+  DelayBeforeSuccess: 1
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 790040583}
   SpawnResultQTEVFX: {fileID: 1410942014}
   IsDestroyableAfterInteraction: 0
-  _tolerance: 60
-  _correctDirection: 0
+  _tolerance: 90
+  _correctDirection: 3
 --- !u!114 &799002421 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1208384594324938751, guid: e013b0f89669a624896af9dc71092092, type: 3}
@@ -10356,14 +10356,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a801a5f9669217547b2d3e52c35a6463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 3
-  DelayBeforeSuccess: 2
+  Duration: 2
+  DelayBeforeSuccess: 1
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 982498909}
   SpawnResultQTEVFX: {fileID: 1410942014}
   IsDestroyableAfterInteraction: 0
-  _tolerance: 60
-  _correctDirection: 3
+  _tolerance: 90
+  _correctDirection: 0
 --- !u!1 &984229348
 GameObject:
   m_ObjectHideFlags: 0
@@ -12833,13 +12833,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1410942013}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.2286815, y: 0.644378, z: -0.66892016, w: -0.2915949}
+  m_LocalRotation: {x: 0.6165721, y: -0.2955624, z: 0.2685924, w: 0.67848355}
   m_LocalPosition: {x: 28.3, y: 10.25, z: 0.9}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 273319262}
-  m_LocalEulerAnglesHint: {x: 84.526, y: -47.078003, z: -270.301}
+  m_LocalEulerAnglesHint: {x: 84.526, y: -47.078003, z: 0}
 --- !u!1 &1428001452
 GameObject:
   m_ObjectHideFlags: 0
@@ -15504,14 +15504,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a801a5f9669217547b2d3e52c35a6463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 3
-  DelayBeforeSuccess: 2
+  Duration: 2
+  DelayBeforeSuccess: 1
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 1825724556}
   SpawnResultQTEVFX: {fileID: 1410942014}
   IsDestroyableAfterInteraction: 0
-  _tolerance: 60
-  _correctDirection: 0
+  _tolerance: 90
+  _correctDirection: 3
 --- !u!65 &1856737511
 BoxCollider:
   m_ObjectHideFlags: 0
