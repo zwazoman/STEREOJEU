@@ -13904,8 +13904,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a801a5f9669217547b2d3e52c35a6463, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 6
-  DelayBeforeSuccess: 5
+  Duration: 2.8
+  DelayBeforeSuccess: 2
   QTEVisualEffect: {fileID: 4021940561882588852, guid: a97cc4ea8cdec8b4792262793bf8b67e, type: 3}
   SpawnAnticipationVFX: {fileID: 735461311}
   SpawnResultQTEVFX: {fileID: 1036193645}
