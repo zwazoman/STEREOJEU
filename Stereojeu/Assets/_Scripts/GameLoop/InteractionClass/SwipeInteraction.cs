@@ -16,8 +16,6 @@ public class SwipeInteraction : Interactable
 
     private Vector2 _vectorDirection;
 
-    public bool IsDestroyableAfterInteraction;
-
     public bool SuccesSwipe { get; private set; }
     public event Action<bool> OnResult;
 
