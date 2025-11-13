@@ -2,12 +2,7 @@ using UnityEngine;
 
 public class EndTrigger : MonoBehaviour
 {
-    QTEScoring _scoring;
-
-    private void Start()
-    {
-        _scoring = FindAnyObjectByType<QTEScoring>();
-    }
+    [SerializeField] private QTEScoring _scoring;
 
     private void OnEnable()
     {
