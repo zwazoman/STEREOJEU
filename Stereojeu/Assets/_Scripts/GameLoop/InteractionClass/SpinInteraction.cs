@@ -52,7 +52,7 @@ public class SpinInteraction : Interactable
         _isDragging = false;
         _vfxSystem.Stop();
         SuccesRotation = Mathf.Abs(_totalRotation) >= (_requiredRotation - _tolerance);
-        Debug.Log($"Rotation totale: {_totalRotation:F1} Succ�s: {SuccesRotation}");
+        //Debug.Log($"Rotation totale: {_totalRotation:F1} Succ�s: {SuccesRotation}");
     }
 
     private async UniTaskVoid RotationLoop()
