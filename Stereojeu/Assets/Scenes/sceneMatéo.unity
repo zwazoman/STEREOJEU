@@ -360,7 +360,7 @@ Transform:
   m_GameObject: {fileID: 27201464}
   serializedVersion: 2
   m_LocalRotation: {x: 0.6532815, y: -0.27059805, z: 0.27059805, w: 0.6532815}
-  m_LocalPosition: {x: 24.132, y: 10.247701, z: -4.33}
+  m_LocalPosition: {x: 24.696, y: 10.247701, z: -3.766}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -7470,77 +7470,6 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!1 &394993525
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 394993526}
-  - component: {fileID: 394993527}
-  - component: {fileID: 394993528}
-  m_Layer: 6
-  m_Name: VisualQTE (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &394993526
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394993525}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0.6532815, y: -0.27059805, z: 0.27059805, w: 0.6532815}
-  m_LocalPosition: {x: 23.414, y: 10.247701, z: -4.198}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 1771799980}
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 45}
---- !u!114 &394993527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394993525}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Duration: 2
-  DelayBeforeSuccess: 1
-  QTEVisualEffect: {fileID: 8991229891232164902, guid: ce17515a0a0744f4e8b01ed56b771596, type: 3}
-  SpawnAnticipationVFX: {fileID: 394993526}
-  SpawnResultQTEVFX: {fileID: 1661393295}
---- !u!65 &394993528
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394993525}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &406670682
 GameObject:
   m_ObjectHideFlags: 0
@@ -10245,7 +10174,7 @@ GameObject:
   - component: {fileID: 790040583}
   - component: {fileID: 790040585}
   - component: {fileID: 790040584}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VisualQTE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11238,7 +11167,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 32.00505
+  field of view: 68.60505
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -11264,8 +11193,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900563409}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.66206706, y: 0.24832858, z: 0.24832882, w: -0.66206723}
-  m_LocalPosition: {x: 22.98606, y: 8.231679, z: -6.4879084}
+  m_LocalRotation: {x: 0.112067744, y: 0.69816965, z: -0.11168144, w: 0.6982315}
+  m_LocalPosition: {x: 8.232386, y: -3.658702, z: -1.5056362}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11417,7 +11346,7 @@ GameObject:
   - component: {fileID: 982498909}
   - component: {fileID: 982498911}
   - component: {fileID: 982498910}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VisualQTE 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14104,19 +14033,19 @@ MonoBehaviour:
   - {fileID: 27201466}
   - {fileID: 387895136}
   - {fileID: 1409313966}
-  - {fileID: 394993527}
+  - {fileID: 387895136}
   - {fileID: 27201466}
   - {fileID: 387895136}
   - {fileID: 1409313966}
-  - {fileID: 394993527}
+  - {fileID: 387895136}
   - {fileID: 27201466}
-  - {fileID: 394993527}
+  - {fileID: 387895136}
   - {fileID: 1409313966}
   - {fileID: 27201466}
   - {fileID: 1409313966}
   - {fileID: 387895136}
   - {fileID: 27201466}
-  - {fileID: 394993527}
+  - {fileID: 1409313966}
   - {fileID: 790040585}
   - {fileID: 1825724558}
   - {fileID: 982498911}
@@ -14542,7 +14471,7 @@ Transform:
   m_GameObject: {fileID: 1409313964}
   serializedVersion: 2
   m_LocalRotation: {x: 0.6532815, y: -0.27059805, z: 0.27059805, w: 0.6532815}
-  m_LocalPosition: {x: 24.274, y: 10.2727, z: -3.33}
+  m_LocalPosition: {x: 24.273, y: 10.2727, z: -3.331}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -17785,7 +17714,6 @@ Transform:
   - {fileID: 154191024}
   - {fileID: 1409313965}
   - {fileID: 27201465}
-  - {fileID: 394993526}
   - {fileID: 387895135}
   - {fileID: 1661393295}
   m_Father: {fileID: 1030402977}
@@ -18130,7 +18058,7 @@ GameObject:
   - component: {fileID: 1825724556}
   - component: {fileID: 1825724558}
   - component: {fileID: 1825724557}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: VisualQTE 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
