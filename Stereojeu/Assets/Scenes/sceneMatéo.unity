@@ -1022,7 +1022,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.55743647, y: 1, z: 0.5672208}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &98919941
 MonoBehaviour:
@@ -11167,7 +11167,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 68.60505
+  field of view: 32.00505
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -11193,8 +11193,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900563409}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.112067744, y: 0.69816965, z: -0.11168144, w: 0.6982315}
-  m_LocalPosition: {x: 8.232386, y: -3.658702, z: -1.5056362}
+  m_LocalRotation: {x: 0.66206706, y: 0.24832858, z: 0.24832882, w: -0.66206723}
+  m_LocalPosition: {x: 22.98606, y: 8.231679, z: -6.4879084}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15402,8 +15402,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.2616978, y: 1, z: 0.26064306}
+  m_Center: {x: -0.016827181, y: -0.0000000033806726, z: -0.018906087}
 --- !u!114 &1546234601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16311,7 +16311,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.55743647, y: 1, z: 0.5672208}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1598969851
 MonoBehaviour:
@@ -17059,8 +17059,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.24819285, y: 1, z: 0.26064306}
+  m_Center: {x: -0.0067524873, y: 1.4194712e-18, z: -2.2777362e-16}
 --- !u!114 &1711712208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18737,8 +18737,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e32508b02a1fdb40b9f36edffe14b99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 6
-  DelayBeforeSuccess: 4
+  Duration: 1.5
+  DelayBeforeSuccess: 0.7
   QTEVisualEffect: {fileID: 3942096764238518136, guid: d3403e12b08ef884c89fda0e34f3aad4, type: 3}
   SpawnAnticipationVFX: {fileID: 1929125573}
   SpawnResultQTEVFX: {fileID: 1059620081}
