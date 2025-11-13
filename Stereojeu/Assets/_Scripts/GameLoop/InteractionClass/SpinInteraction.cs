@@ -79,6 +79,10 @@ public class SpinInteraction : Interactable
             _previousAngle = currentAngle;
 
             transform.position = basePos; // verrouille la position
+
+            if (Mathf.Abs(_totalRotation) >= (_requiredRotation - _tolerance))
+                InteractionStop();
+
             //transform.localRotation = Quaternion.Euler(0f, 0f, transform.localEulerAngles.z - delta);
 
         }
