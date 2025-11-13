@@ -41,7 +41,6 @@ public class QTECreator : MonoBehaviour
             if (visual != null)
                 visual.SetResult(result == QTEResult.Success);
 
-
             // --- Résultat ---
             switch (result)
             {

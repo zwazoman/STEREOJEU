@@ -32,7 +32,7 @@ public class QTETimer
         }
         else
         {
-            while (_timeRemaining > 0)
+            while (_timeRemaining > 0 || (_interactable is SwipeInteraction && _timeRemaining > -0.3f))
             {
                 await UniTask.Yield();
                 _timeRemaining -= Time.deltaTime;
