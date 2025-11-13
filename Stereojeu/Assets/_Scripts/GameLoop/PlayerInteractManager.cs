@@ -23,6 +23,8 @@ public class PlayerInteractMananger : MonoBehaviour
 
     private void Awake()
     {
+        Input.multiTouchEnabled = false;
+
         _controls = new InteractionInput();
         //_controls.Game.Clic.performed += OnClickPerformed;
         //_controls.Game.Clic.canceled += OnClicCanceled;
