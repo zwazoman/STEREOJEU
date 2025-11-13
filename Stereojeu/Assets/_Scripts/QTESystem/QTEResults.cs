@@ -24,12 +24,7 @@ public class QTEResults : MonoBehaviour
 
         RemoveCollider(InteractionType.gameObject);
 
-        if (InteractionType is SwipeInteraction swipe)
-            if (swipe.IsDestroyableAfterInteraction)
-            {
-                await UniTask.Delay(300);
-                Destroy(InteractionType.gameObject);
-            }
+        await CleanQTEVFXVisual(InteractionType);
 
         await UniTask.Delay(1000);
     }
@@ -42,15 +37,21 @@ public class QTEResults : MonoBehaviour
 
         RemoveCollider(InteractionType.gameObject);
 
+        await CleanQTEVFXVisual(InteractionType);
+
+        await UniTask.Delay(1000);
+    }
+
+    private void RemoveCollider(GameObject QTEObject) => QTEObject.GetComponent<BoxCollider>().enabled = false;
+
+
+    private async UniTask CleanQTEVFXVisual(Interactable InteractionType)
+    {
         if (InteractionType is SwipeInteraction swipe)
             if (swipe.IsDestroyableAfterInteraction)
             {
                 await UniTask.Delay(300);
                 Destroy(InteractionType.gameObject);
             }
-
-        await UniTask.Delay(1000);
     }
-
-    private void RemoveCollider(GameObject QTEObject) => QTEObject.GetComponent<BoxCollider>().enabled = false;
 }

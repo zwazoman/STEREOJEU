@@ -11167,7 +11167,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 32.00505
+  field of view: 60.093998
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -11193,8 +11193,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900563409}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.66206706, y: 0.24832858, z: 0.24832882, w: -0.66206723}
-  m_LocalPosition: {x: 22.98606, y: 8.231679, z: -6.4879084}
+  m_LocalRotation: {x: 0.50013834, y: 0.49986163, z: -0.49986163, w: 0.50013834}
+  m_LocalPosition: {x: 4.2023854, y: -3.828702, z: -1.5056362}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15301,7 +15301,7 @@ MonoBehaviour:
   SpawnAnticipationVFX: {fileID: 4571469422570321659}
   SpawnResultQTEVFX: {fileID: 22509978}
   _center: {fileID: 1544208156}
-  _requiredRotation: 360
+  _requiredRotation: 540
   _tolerance: 30
   _frameInterval: 2
   _cam: {fileID: 900563415}
