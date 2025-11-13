@@ -7,6 +7,7 @@ public abstract class Interactable : MonoBehaviour
     public GameObject QTEVisualEffect;
     public Transform SpawnAnticipationVFX;
     public Transform SpawnResultQTEVFX;
+    public bool IsDestroyableAfterInteraction;
 
     public bool IsActive { get; private set; } = false;
 
