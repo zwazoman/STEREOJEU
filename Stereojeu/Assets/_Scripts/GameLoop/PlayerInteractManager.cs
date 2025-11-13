@@ -23,9 +23,11 @@ public class PlayerInteractMananger : MonoBehaviour
 
     private void Awake()
     {
+        Input.multiTouchEnabled = false;
+
         _controls = new InteractionInput();
-        _controls.Game.Clic.performed += OnClickPerformed;
-        _controls.Game.Clic.canceled += OnClicCanceled;
+        //_controls.Game.Clic.performed += OnClickPerformed;
+        //_controls.Game.Clic.canceled += OnClicCanceled;
 
         if (targetCamera == null)
             targetCamera = Camera.main;
@@ -34,17 +36,30 @@ public class PlayerInteractMananger : MonoBehaviour
     private void OnEnable() => _controls.Enable();
     private void OnDisable() => _controls.Disable();
 
-    private void OnClickPerformed(InputAction.CallbackContext context)
-    {
-        Vector2 screenPos = _controls.Game.Position.ReadValue<Vector2>();
-        DetectObject(screenPos);
-    }
+    //private void OnClickPerformed(InputAction.CallbackContext context)
+    //{
+    //    Vector2 screenPos = _controls.Game.Position.ReadValue<Vector2>();
+    //    DetectObject(screenPos);
+    //}
 
-    private void OnClicCanceled(InputAction.CallbackContext context)
-    {
-        _isHolding = false;
-    }
+    //private void OnClicCanceled(InputAction.CallbackContext context)
+    //{
+    //    _isHolding = false;
+    //}
     #endregion
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            Vector2 screenPos = Input.mousePosition;
+            DetectObject(screenPos);
+        }
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
+            _isHolding = false;
+        }
+    }
 
     private void DetectObject(Vector2 screenPosition)
     {
