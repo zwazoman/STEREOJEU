@@ -58,6 +58,19 @@ public class PlayerInteractMananger : MonoBehaviour
         {
             _isHolding = false;
         }
+
+        if (Input.touchCount > 0)
+        {
+            if (Input.GetTouch(0).phase == TouchPhase.Began)
+            {
+                Vector2 screenPos = Input.GetTouch(0).position;
+                DetectObject(screenPos);
+            }
+            if (Input.GetTouch(0).phase == TouchPhase.Canceled)
+            {
+                _isHolding = false;
+            }
+        }
     }
 
     private void DetectObject(Vector2 screenPosition)
