@@ -92,10 +92,12 @@ public class SpinInteraction : Interactable
 
     private Vector2 GetPointerPosition()
     {
-        if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed)
-            return Touchscreen.current.primaryTouch.position.ReadValue();
+        //if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed)
+        //    return Touchscreen.current.primaryTouch.position.ReadValue();
 
-        return Mouse.current.position.ReadValue();
+        //return Mouse.current.position.ReadValue();
+
+        return Input.mousePosition;
     }
 
     public void ResetState() { SuccesRotation = false; }
